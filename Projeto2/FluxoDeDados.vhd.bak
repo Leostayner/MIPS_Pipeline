@@ -1,0 +1,48 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity FluxoDeDados is
+  
+  generic
+    (
+        larguraDados        : natural := 32;
+        larguraEndBancoRegs : natural := 5
+    );
+	 
+	port
+	(
+		clk       : in std_logic;
+		sel_MuxPC : in std_logic;
+	);
+	 
+end entity;
+
+architecture arch of FluxoDeDados is
+
+----------Sinais------------
+
+--Rom--
+signal out_Rom  : std_logic_vector(31 downto 0);
+
+--registrador--
+signal out_PC : std_logic_vector(31 downto 0);
+
+
+--Mux-
+signal out_MuxPC : std_logic_vector(31 downto 0);
+
+begin
+
+	Mux1 :  entity work.mux2way
+		Port map(i1 => , i2=> , sel => sel_MuxPC, selected => out_MuxPC);
+	
+	PC : entity work.Registrador
+		Port map (DIN => out_MuxPC, DOUT => out_PC, ENABLE => "11111" ,CLK => clk, RST => '0');
+	
+	Rom : entity work.romMif
+		Port map (clk => clk, addr => out_PC, q => out_Rom);
+	
+
+	
+end architecture;
