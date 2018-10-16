@@ -1,0 +1,62 @@
+-- Full Adder
+
+Library ieee;
+use ieee.std_logic_1164.all;
+
+entity FullAdder32 is
+	port(
+		a,b:      in STD_LOGIC_vector(31 downto 0);   -- entradas
+		c: in  std_logic;
+		soma: out STD_LOGIC_vector(31 downto 0);  
+		vaium: out STD_LOGIC   -- sum e carry
+	);
+end entity;
+
+component FullAdder is
+	port(
+		a,b,c:      in STD_LOGIC;   -- entradas
+		soma,vaium: out STD_LOGIC   -- sum e carry
+	);
+end component;
+
+architecture arch_FullAdder of FullAdder32 is 
+
+signal carries: STD_LOGIC_vector(31 downto 0);
+
+
+begin
+	
+	a0: port map FullAdder(a=> a(0), b=> b(0), c => c, soma => soma(0), vaium => carries(0));
+	a1: port map FullAdder(a=> a(1), b=> b(1), c => carries(0), soma => soma(1), vaium => carries(1));
+	a2: port map FullAdder(a=> a(2), b=> b(2), c => carries(1), soma => soma(2), vaium => carries(2));
+	a3: port map FullAdder(a=> a(3), b=> b(3), c => carries(2), soma => soma(3), vaium => carries(3));
+	a4: port map FullAdder(a=> a(4), b=> b(4), c => carries(3), soma => soma(4), vaium => carries(4));
+	a5: port map FullAdder(a=> a(5), b=> b(5), c => carries(4), soma => soma(5), vaium => carries(5));
+	a6: port map FullAdder(a=> a(6), b=> b(6), c => carries(5), soma => soma(6), vaium => carries(6));
+	a7: port map FullAdder(a=> a(7), b=> b(7), c => carries(6), soma => soma(7), vaium => carries(7));
+	a8: port map FullAdder(a=> a(8), b=> b(8), c => carries(7), soma => soma(8), vaium => carries(8));
+	a9: port map FullAdder(a=> a(9), b=> b(9), c => carries(8), soma => soma(9), vaium => carries(9));
+	a10: port map FullAdder(a=> a(10), b=> b(10), c => carries(9), soma => soma(10), vaium => carries(10));
+	a11: port map FullAdder(a=> a(11), b=> b(11), c => carries(10), soma => soma(11), vaium => carries(11));
+	a12: port map FullAdder(a=> a(12), b=> b(12), c => carries(11), soma => soma(12), vaium => carries(12));
+	a13: port map FullAdder(a=> a(13), b=> b(13), c => carries(12), soma => soma(13), vaium => carries(13));
+	a14: port map FullAdder(a=> a(14), b=> b(14), c => carries(13), soma => soma(14), vaium => carries(14));
+	a15: port map FullAdder(a=> a(15), b=> b(15), c => carries(14), soma => soma(15), vaium => carries(15));
+	a16: port map FullAdder(a=> a(16), b=> b(16), c => carries(15), soma => soma(16), vaium => carries(16));
+	a17: port map FullAdder(a=> a(17), b=> b(17), c => carries(16), soma => soma(17), vaium => carries(17));
+	a18: port map FullAdder(a=> a(18), b=> b(18), c => carries(17), soma => soma(18), vaium => carries(18));
+	a19: port map FullAdder(a=> a(19), b=> b(19), c => carries(18), soma => soma(19), vaium => carries(19));
+	a20: port map FullAdder(a=> a(20), b=> b(20), c => carries(19), soma => soma(20), vaium => carries(20));
+	a21: port map FullAdder(a=> a(21), b=> b(21), c => carries(20), soma => soma(21), vaium => carries(21));
+	a22: port map FullAdder(a=> a(22), b=> b(22), c => carries(21), soma => soma(22), vaium => carries(22));
+	a23: port map FullAdder(a=> a(23), b=> b(23), c => carries(22), soma => soma(23), vaium => carries(23));
+	a24: port map FullAdder(a=> a(24), b=> b(24), c => carries(23), soma => soma(24), vaium => carries(24));
+	a25: port map FullAdder(a=> a(25), b=> b(25), c => carries(24), soma => soma(25), vaium => carries(25));
+	a26: port map FullAdder(a=> a(26), b=> b(26), c => carries(25), soma => soma(26), vaium => carries(26));
+	a27: port map FullAdder(a=> a(27), b=> b(27), c => carries(26), soma => soma(27), vaium => carries(27));
+	a28: port map FullAdder(a=> a(28), b=> b(28), c => carries(27), soma => soma(28), vaium => carries(28));
+	a29: port map FullAdder(a=> a(29), b=> b(29), c => carries(28), soma => soma(29), vaium => carries(29));
+	a30: port map FullAdder(a=> a(30), b=> b(30), c => carries(29), soma => soma(30), vaium => carries(30));
+	a31: port map FullAdder(a=> a(31), b=> b(31), c => carries(30), soma => soma(31), vaium => carries(31));
+	
+end architecture;

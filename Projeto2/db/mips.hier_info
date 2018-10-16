@@ -1,0 +1,1092 @@
+|alu
+A[0] => mux2way:choiceA.i1[0]
+A[0] => mux2way:choiceA.i2[0]
+A[1] => mux2way:choiceA.i1[1]
+A[1] => mux2way:choiceA.i2[1]
+A[2] => mux2way:choiceA.i1[2]
+A[2] => mux2way:choiceA.i2[2]
+A[3] => mux2way:choiceA.i1[3]
+A[3] => mux2way:choiceA.i2[3]
+A[4] => mux2way:choiceA.i1[4]
+A[4] => mux2way:choiceA.i2[4]
+A[5] => mux2way:choiceA.i1[5]
+A[5] => mux2way:choiceA.i2[5]
+A[6] => mux2way:choiceA.i1[6]
+A[6] => mux2way:choiceA.i2[6]
+A[7] => mux2way:choiceA.i1[7]
+A[7] => mux2way:choiceA.i2[7]
+A[8] => mux2way:choiceA.i1[8]
+A[8] => mux2way:choiceA.i2[8]
+A[9] => mux2way:choiceA.i1[9]
+A[9] => mux2way:choiceA.i2[9]
+A[10] => mux2way:choiceA.i1[10]
+A[10] => mux2way:choiceA.i2[10]
+A[11] => mux2way:choiceA.i1[11]
+A[11] => mux2way:choiceA.i2[11]
+A[12] => mux2way:choiceA.i1[12]
+A[12] => mux2way:choiceA.i2[12]
+A[13] => mux2way:choiceA.i1[13]
+A[13] => mux2way:choiceA.i2[13]
+A[14] => mux2way:choiceA.i1[14]
+A[14] => mux2way:choiceA.i2[14]
+A[15] => mux2way:choiceA.i1[15]
+A[15] => mux2way:choiceA.i2[15]
+A[16] => mux2way:choiceA.i1[16]
+A[16] => mux2way:choiceA.i2[16]
+A[17] => mux2way:choiceA.i1[17]
+A[17] => mux2way:choiceA.i2[17]
+A[18] => mux2way:choiceA.i1[18]
+A[18] => mux2way:choiceA.i2[18]
+A[19] => mux2way:choiceA.i1[19]
+A[19] => mux2way:choiceA.i2[19]
+A[20] => mux2way:choiceA.i1[20]
+A[20] => mux2way:choiceA.i2[20]
+A[21] => mux2way:choiceA.i1[21]
+A[21] => mux2way:choiceA.i2[21]
+A[22] => mux2way:choiceA.i1[22]
+A[22] => mux2way:choiceA.i2[22]
+A[23] => mux2way:choiceA.i1[23]
+A[23] => mux2way:choiceA.i2[23]
+A[24] => mux2way:choiceA.i1[24]
+A[24] => mux2way:choiceA.i2[24]
+A[25] => mux2way:choiceA.i1[25]
+A[25] => mux2way:choiceA.i2[25]
+A[26] => mux2way:choiceA.i1[26]
+A[26] => mux2way:choiceA.i2[26]
+A[27] => mux2way:choiceA.i1[27]
+A[27] => mux2way:choiceA.i2[27]
+A[28] => mux2way:choiceA.i1[28]
+A[28] => mux2way:choiceA.i2[28]
+A[29] => mux2way:choiceA.i1[29]
+A[29] => mux2way:choiceA.i2[29]
+A[30] => mux2way:choiceA.i1[30]
+A[30] => mux2way:choiceA.i2[30]
+A[31] => mux2way:choiceA.i1[31]
+A[31] => mux2way:choiceA.i2[31]
+B[0] => mux2way:choiceB.i1[0]
+B[0] => mux2way:choiceB.i2[0]
+B[1] => mux2way:choiceB.i1[1]
+B[1] => mux2way:choiceB.i2[1]
+B[2] => mux2way:choiceB.i1[2]
+B[2] => mux2way:choiceB.i2[2]
+B[3] => mux2way:choiceB.i1[3]
+B[3] => mux2way:choiceB.i2[3]
+B[4] => mux2way:choiceB.i1[4]
+B[4] => mux2way:choiceB.i2[4]
+B[5] => mux2way:choiceB.i1[5]
+B[5] => mux2way:choiceB.i2[5]
+B[6] => mux2way:choiceB.i1[6]
+B[6] => mux2way:choiceB.i2[6]
+B[7] => mux2way:choiceB.i1[7]
+B[7] => mux2way:choiceB.i2[7]
+B[8] => mux2way:choiceB.i1[8]
+B[8] => mux2way:choiceB.i2[8]
+B[9] => mux2way:choiceB.i1[9]
+B[9] => mux2way:choiceB.i2[9]
+B[10] => mux2way:choiceB.i1[10]
+B[10] => mux2way:choiceB.i2[10]
+B[11] => mux2way:choiceB.i1[11]
+B[11] => mux2way:choiceB.i2[11]
+B[12] => mux2way:choiceB.i1[12]
+B[12] => mux2way:choiceB.i2[12]
+B[13] => mux2way:choiceB.i1[13]
+B[13] => mux2way:choiceB.i2[13]
+B[14] => mux2way:choiceB.i1[14]
+B[14] => mux2way:choiceB.i2[14]
+B[15] => mux2way:choiceB.i1[15]
+B[15] => mux2way:choiceB.i2[15]
+B[16] => mux2way:choiceB.i1[16]
+B[16] => mux2way:choiceB.i2[16]
+B[17] => mux2way:choiceB.i1[17]
+B[17] => mux2way:choiceB.i2[17]
+B[18] => mux2way:choiceB.i1[18]
+B[18] => mux2way:choiceB.i2[18]
+B[19] => mux2way:choiceB.i1[19]
+B[19] => mux2way:choiceB.i2[19]
+B[20] => mux2way:choiceB.i1[20]
+B[20] => mux2way:choiceB.i2[20]
+B[21] => mux2way:choiceB.i1[21]
+B[21] => mux2way:choiceB.i2[21]
+B[22] => mux2way:choiceB.i1[22]
+B[22] => mux2way:choiceB.i2[22]
+B[23] => mux2way:choiceB.i1[23]
+B[23] => mux2way:choiceB.i2[23]
+B[24] => mux2way:choiceB.i1[24]
+B[24] => mux2way:choiceB.i2[24]
+B[25] => mux2way:choiceB.i1[25]
+B[25] => mux2way:choiceB.i2[25]
+B[26] => mux2way:choiceB.i1[26]
+B[26] => mux2way:choiceB.i2[26]
+B[27] => mux2way:choiceB.i1[27]
+B[27] => mux2way:choiceB.i2[27]
+B[28] => mux2way:choiceB.i1[28]
+B[28] => mux2way:choiceB.i2[28]
+B[29] => mux2way:choiceB.i1[29]
+B[29] => mux2way:choiceB.i2[29]
+B[30] => mux2way:choiceB.i1[30]
+B[30] => mux2way:choiceB.i2[30]
+B[31] => mux2way:choiceB.i1[31]
+B[31] => mux2way:choiceB.i2[31]
+cin => FullAdder32:adder.c
+invA => mux2way:choiceA.sel
+invB => mux2way:choiceB.sel
+func[0] => mux4way:final.sel[0]
+func[1] => mux4way:final.sel[1]
+output[0] << mux4way:final.selected[0]
+output[1] << mux4way:final.selected[1]
+output[2] << mux4way:final.selected[2]
+output[3] << mux4way:final.selected[3]
+output[4] << mux4way:final.selected[4]
+output[5] << mux4way:final.selected[5]
+output[6] << mux4way:final.selected[6]
+output[7] << mux4way:final.selected[7]
+output[8] << mux4way:final.selected[8]
+output[9] << mux4way:final.selected[9]
+output[10] << mux4way:final.selected[10]
+output[11] << mux4way:final.selected[11]
+output[12] << mux4way:final.selected[12]
+output[13] << mux4way:final.selected[13]
+output[14] << mux4way:final.selected[14]
+output[15] << mux4way:final.selected[15]
+output[16] << mux4way:final.selected[16]
+output[17] << mux4way:final.selected[17]
+output[18] << mux4way:final.selected[18]
+output[19] << mux4way:final.selected[19]
+output[20] << mux4way:final.selected[20]
+output[21] << mux4way:final.selected[21]
+output[22] << mux4way:final.selected[22]
+output[23] << mux4way:final.selected[23]
+output[24] << mux4way:final.selected[24]
+output[25] << mux4way:final.selected[25]
+output[26] << mux4way:final.selected[26]
+output[27] << mux4way:final.selected[27]
+output[28] << mux4way:final.selected[28]
+output[29] << mux4way:final.selected[29]
+output[30] << mux4way:final.selected[30]
+output[31] << mux4way:final.selected[31]
+zero << or32:flag.output
+cout << FullAdder32:adder.vaium
+
+
+|alu|mux2way:choiceA
+i1[0] => selected.DATAB
+i1[1] => selected.DATAB
+i1[2] => selected.DATAB
+i1[3] => selected.DATAB
+i1[4] => selected.DATAB
+i1[5] => selected.DATAB
+i1[6] => selected.DATAB
+i1[7] => selected.DATAB
+i1[8] => selected.DATAB
+i1[9] => selected.DATAB
+i1[10] => selected.DATAB
+i1[11] => selected.DATAB
+i1[12] => selected.DATAB
+i1[13] => selected.DATAB
+i1[14] => selected.DATAB
+i1[15] => selected.DATAB
+i1[16] => selected.DATAB
+i1[17] => selected.DATAB
+i1[18] => selected.DATAB
+i1[19] => selected.DATAB
+i1[20] => selected.DATAB
+i1[21] => selected.DATAB
+i1[22] => selected.DATAB
+i1[23] => selected.DATAB
+i1[24] => selected.DATAB
+i1[25] => selected.DATAB
+i1[26] => selected.DATAB
+i1[27] => selected.DATAB
+i1[28] => selected.DATAB
+i1[29] => selected.DATAB
+i1[30] => selected.DATAB
+i1[31] => selected.DATAB
+i2[0] => selected.DATAA
+i2[1] => selected.DATAA
+i2[2] => selected.DATAA
+i2[3] => selected.DATAA
+i2[4] => selected.DATAA
+i2[5] => selected.DATAA
+i2[6] => selected.DATAA
+i2[7] => selected.DATAA
+i2[8] => selected.DATAA
+i2[9] => selected.DATAA
+i2[10] => selected.DATAA
+i2[11] => selected.DATAA
+i2[12] => selected.DATAA
+i2[13] => selected.DATAA
+i2[14] => selected.DATAA
+i2[15] => selected.DATAA
+i2[16] => selected.DATAA
+i2[17] => selected.DATAA
+i2[18] => selected.DATAA
+i2[19] => selected.DATAA
+i2[20] => selected.DATAA
+i2[21] => selected.DATAA
+i2[22] => selected.DATAA
+i2[23] => selected.DATAA
+i2[24] => selected.DATAA
+i2[25] => selected.DATAA
+i2[26] => selected.DATAA
+i2[27] => selected.DATAA
+i2[28] => selected.DATAA
+i2[29] => selected.DATAA
+i2[30] => selected.DATAA
+i2[31] => selected.DATAA
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+selected[0] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[1] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[2] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[3] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[4] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[5] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[6] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[7] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[8] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[9] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[10] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[11] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[12] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[13] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[14] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[15] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[16] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[17] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[18] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[19] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[20] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[21] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[22] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[23] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[24] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[25] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[26] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[27] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[28] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[29] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[30] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[31] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|mux2way:choiceB
+i1[0] => selected.DATAB
+i1[1] => selected.DATAB
+i1[2] => selected.DATAB
+i1[3] => selected.DATAB
+i1[4] => selected.DATAB
+i1[5] => selected.DATAB
+i1[6] => selected.DATAB
+i1[7] => selected.DATAB
+i1[8] => selected.DATAB
+i1[9] => selected.DATAB
+i1[10] => selected.DATAB
+i1[11] => selected.DATAB
+i1[12] => selected.DATAB
+i1[13] => selected.DATAB
+i1[14] => selected.DATAB
+i1[15] => selected.DATAB
+i1[16] => selected.DATAB
+i1[17] => selected.DATAB
+i1[18] => selected.DATAB
+i1[19] => selected.DATAB
+i1[20] => selected.DATAB
+i1[21] => selected.DATAB
+i1[22] => selected.DATAB
+i1[23] => selected.DATAB
+i1[24] => selected.DATAB
+i1[25] => selected.DATAB
+i1[26] => selected.DATAB
+i1[27] => selected.DATAB
+i1[28] => selected.DATAB
+i1[29] => selected.DATAB
+i1[30] => selected.DATAB
+i1[31] => selected.DATAB
+i2[0] => selected.DATAA
+i2[1] => selected.DATAA
+i2[2] => selected.DATAA
+i2[3] => selected.DATAA
+i2[4] => selected.DATAA
+i2[5] => selected.DATAA
+i2[6] => selected.DATAA
+i2[7] => selected.DATAA
+i2[8] => selected.DATAA
+i2[9] => selected.DATAA
+i2[10] => selected.DATAA
+i2[11] => selected.DATAA
+i2[12] => selected.DATAA
+i2[13] => selected.DATAA
+i2[14] => selected.DATAA
+i2[15] => selected.DATAA
+i2[16] => selected.DATAA
+i2[17] => selected.DATAA
+i2[18] => selected.DATAA
+i2[19] => selected.DATAA
+i2[20] => selected.DATAA
+i2[21] => selected.DATAA
+i2[22] => selected.DATAA
+i2[23] => selected.DATAA
+i2[24] => selected.DATAA
+i2[25] => selected.DATAA
+i2[26] => selected.DATAA
+i2[27] => selected.DATAA
+i2[28] => selected.DATAA
+i2[29] => selected.DATAA
+i2[30] => selected.DATAA
+i2[31] => selected.DATAA
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+sel => selected.OUTPUTSELECT
+selected[0] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[1] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[2] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[3] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[4] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[5] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[6] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[7] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[8] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[9] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[10] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[11] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[12] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[13] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[14] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[15] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[16] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[17] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[18] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[19] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[20] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[21] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[22] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[23] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[24] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[25] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[26] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[27] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[28] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[29] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[30] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[31] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder
+a[0] => FullAdder:a0.a
+a[1] => FullAdder:cddddd:1:c1to31.a
+a[2] => FullAdder:cddddd:2:c1to31.a
+a[3] => FullAdder:cddddd:3:c1to31.a
+a[4] => FullAdder:cddddd:4:c1to31.a
+a[5] => FullAdder:cddddd:5:c1to31.a
+a[6] => FullAdder:cddddd:6:c1to31.a
+a[7] => FullAdder:cddddd:7:c1to31.a
+a[8] => FullAdder:cddddd:8:c1to31.a
+a[9] => FullAdder:cddddd:9:c1to31.a
+a[10] => FullAdder:cddddd:10:c1to31.a
+a[11] => FullAdder:cddddd:11:c1to31.a
+a[12] => FullAdder:cddddd:12:c1to31.a
+a[13] => FullAdder:cddddd:13:c1to31.a
+a[14] => FullAdder:cddddd:14:c1to31.a
+a[15] => FullAdder:cddddd:15:c1to31.a
+a[16] => FullAdder:cddddd:16:c1to31.a
+a[17] => FullAdder:cddddd:17:c1to31.a
+a[18] => FullAdder:cddddd:18:c1to31.a
+a[19] => FullAdder:cddddd:19:c1to31.a
+a[20] => FullAdder:cddddd:20:c1to31.a
+a[21] => FullAdder:cddddd:21:c1to31.a
+a[22] => FullAdder:cddddd:22:c1to31.a
+a[23] => FullAdder:cddddd:23:c1to31.a
+a[24] => FullAdder:cddddd:24:c1to31.a
+a[25] => FullAdder:cddddd:25:c1to31.a
+a[26] => FullAdder:cddddd:26:c1to31.a
+a[27] => FullAdder:cddddd:27:c1to31.a
+a[28] => FullAdder:cddddd:28:c1to31.a
+a[29] => FullAdder:cddddd:29:c1to31.a
+a[30] => FullAdder:cddddd:30:c1to31.a
+a[31] => FullAdder:cddddd:31:c1to31.a
+b[0] => FullAdder:a0.b
+b[1] => FullAdder:cddddd:1:c1to31.b
+b[2] => FullAdder:cddddd:2:c1to31.b
+b[3] => FullAdder:cddddd:3:c1to31.b
+b[4] => FullAdder:cddddd:4:c1to31.b
+b[5] => FullAdder:cddddd:5:c1to31.b
+b[6] => FullAdder:cddddd:6:c1to31.b
+b[7] => FullAdder:cddddd:7:c1to31.b
+b[8] => FullAdder:cddddd:8:c1to31.b
+b[9] => FullAdder:cddddd:9:c1to31.b
+b[10] => FullAdder:cddddd:10:c1to31.b
+b[11] => FullAdder:cddddd:11:c1to31.b
+b[12] => FullAdder:cddddd:12:c1to31.b
+b[13] => FullAdder:cddddd:13:c1to31.b
+b[14] => FullAdder:cddddd:14:c1to31.b
+b[15] => FullAdder:cddddd:15:c1to31.b
+b[16] => FullAdder:cddddd:16:c1to31.b
+b[17] => FullAdder:cddddd:17:c1to31.b
+b[18] => FullAdder:cddddd:18:c1to31.b
+b[19] => FullAdder:cddddd:19:c1to31.b
+b[20] => FullAdder:cddddd:20:c1to31.b
+b[21] => FullAdder:cddddd:21:c1to31.b
+b[22] => FullAdder:cddddd:22:c1to31.b
+b[23] => FullAdder:cddddd:23:c1to31.b
+b[24] => FullAdder:cddddd:24:c1to31.b
+b[25] => FullAdder:cddddd:25:c1to31.b
+b[26] => FullAdder:cddddd:26:c1to31.b
+b[27] => FullAdder:cddddd:27:c1to31.b
+b[28] => FullAdder:cddddd:28:c1to31.b
+b[29] => FullAdder:cddddd:29:c1to31.b
+b[30] => FullAdder:cddddd:30:c1to31.b
+b[31] => FullAdder:cddddd:31:c1to31.b
+c => v.IN1
+c => FullAdder:a0.c
+soma[0] <= FullAdder:a0.soma
+soma[1] <= FullAdder:cddddd:1:c1to31.soma
+soma[2] <= FullAdder:cddddd:2:c1to31.soma
+soma[3] <= FullAdder:cddddd:3:c1to31.soma
+soma[4] <= FullAdder:cddddd:4:c1to31.soma
+soma[5] <= FullAdder:cddddd:5:c1to31.soma
+soma[6] <= FullAdder:cddddd:6:c1to31.soma
+soma[7] <= FullAdder:cddddd:7:c1to31.soma
+soma[8] <= FullAdder:cddddd:8:c1to31.soma
+soma[9] <= FullAdder:cddddd:9:c1to31.soma
+soma[10] <= FullAdder:cddddd:10:c1to31.soma
+soma[11] <= FullAdder:cddddd:11:c1to31.soma
+soma[12] <= FullAdder:cddddd:12:c1to31.soma
+soma[13] <= FullAdder:cddddd:13:c1to31.soma
+soma[14] <= FullAdder:cddddd:14:c1to31.soma
+soma[15] <= FullAdder:cddddd:15:c1to31.soma
+soma[16] <= FullAdder:cddddd:16:c1to31.soma
+soma[17] <= FullAdder:cddddd:17:c1to31.soma
+soma[18] <= FullAdder:cddddd:18:c1to31.soma
+soma[19] <= FullAdder:cddddd:19:c1to31.soma
+soma[20] <= FullAdder:cddddd:20:c1to31.soma
+soma[21] <= FullAdder:cddddd:21:c1to31.soma
+soma[22] <= FullAdder:cddddd:22:c1to31.soma
+soma[23] <= FullAdder:cddddd:23:c1to31.soma
+soma[24] <= FullAdder:cddddd:24:c1to31.soma
+soma[25] <= FullAdder:cddddd:25:c1to31.soma
+soma[26] <= FullAdder:cddddd:26:c1to31.soma
+soma[27] <= FullAdder:cddddd:27:c1to31.soma
+soma[28] <= FullAdder:cddddd:28:c1to31.soma
+soma[29] <= FullAdder:cddddd:29:c1to31.soma
+soma[30] <= FullAdder:cddddd:30:c1to31.soma
+soma[31] <= FullAdder:cddddd:31:c1to31.soma
+vaium <= FullAdder:cddddd:31:c1to31.vaium
+v <= v.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:a0
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:1:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:2:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:3:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:4:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:5:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:6:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:7:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:8:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:9:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:10:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:11:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:12:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:13:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:14:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:15:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:16:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:17:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:18:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:19:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:20:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:21:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:22:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:23:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:24:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:25:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:26:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:27:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:28:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:29:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:30:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|FullAdder32:adder|FullAdder:\cddddd:31:c1to31
+a => w1.IN0
+a => w2.IN0
+b => w1.IN1
+b => w2.IN1
+c => w3.IN1
+c => soma.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|mux4way:final
+i1[0] => selected.DATAB
+i1[1] => selected.DATAB
+i1[2] => selected.DATAB
+i1[3] => selected.DATAB
+i1[4] => selected.DATAB
+i1[5] => selected.DATAB
+i1[6] => selected.DATAB
+i1[7] => selected.DATAB
+i1[8] => selected.DATAB
+i1[9] => selected.DATAB
+i1[10] => selected.DATAB
+i1[11] => selected.DATAB
+i1[12] => selected.DATAB
+i1[13] => selected.DATAB
+i1[14] => selected.DATAB
+i1[15] => selected.DATAB
+i1[16] => selected.DATAB
+i1[17] => selected.DATAB
+i1[18] => selected.DATAB
+i1[19] => selected.DATAB
+i1[20] => selected.DATAB
+i1[21] => selected.DATAB
+i1[22] => selected.DATAB
+i1[23] => selected.DATAB
+i1[24] => selected.DATAB
+i1[25] => selected.DATAB
+i1[26] => selected.DATAB
+i1[27] => selected.DATAB
+i1[28] => selected.DATAB
+i1[29] => selected.DATAB
+i1[30] => selected.DATAB
+i1[31] => selected.DATAB
+i2[0] => selected.DATAB
+i2[1] => selected.DATAB
+i2[2] => selected.DATAB
+i2[3] => selected.DATAB
+i2[4] => selected.DATAB
+i2[5] => selected.DATAB
+i2[6] => selected.DATAB
+i2[7] => selected.DATAB
+i2[8] => selected.DATAB
+i2[9] => selected.DATAB
+i2[10] => selected.DATAB
+i2[11] => selected.DATAB
+i2[12] => selected.DATAB
+i2[13] => selected.DATAB
+i2[14] => selected.DATAB
+i2[15] => selected.DATAB
+i2[16] => selected.DATAB
+i2[17] => selected.DATAB
+i2[18] => selected.DATAB
+i2[19] => selected.DATAB
+i2[20] => selected.DATAB
+i2[21] => selected.DATAB
+i2[22] => selected.DATAB
+i2[23] => selected.DATAB
+i2[24] => selected.DATAB
+i2[25] => selected.DATAB
+i2[26] => selected.DATAB
+i2[27] => selected.DATAB
+i2[28] => selected.DATAB
+i2[29] => selected.DATAB
+i2[30] => selected.DATAB
+i2[31] => selected.DATAB
+i3[0] => selected.DATAB
+i3[1] => selected.DATAB
+i3[2] => selected.DATAB
+i3[3] => selected.DATAB
+i3[4] => selected.DATAB
+i3[5] => selected.DATAB
+i3[6] => selected.DATAB
+i3[7] => selected.DATAB
+i3[8] => selected.DATAB
+i3[9] => selected.DATAB
+i3[10] => selected.DATAB
+i3[11] => selected.DATAB
+i3[12] => selected.DATAB
+i3[13] => selected.DATAB
+i3[14] => selected.DATAB
+i3[15] => selected.DATAB
+i3[16] => selected.DATAB
+i3[17] => selected.DATAB
+i3[18] => selected.DATAB
+i3[19] => selected.DATAB
+i3[20] => selected.DATAB
+i3[21] => selected.DATAB
+i3[22] => selected.DATAB
+i3[23] => selected.DATAB
+i3[24] => selected.DATAB
+i3[25] => selected.DATAB
+i3[26] => selected.DATAB
+i3[27] => selected.DATAB
+i3[28] => selected.DATAB
+i3[29] => selected.DATAB
+i3[30] => selected.DATAB
+i3[31] => selected.DATAB
+i4[0] => selected.DATAA
+i4[1] => selected.DATAA
+i4[2] => selected.DATAA
+i4[3] => selected.DATAA
+i4[4] => selected.DATAA
+i4[5] => selected.DATAA
+i4[6] => selected.DATAA
+i4[7] => selected.DATAA
+i4[8] => selected.DATAA
+i4[9] => selected.DATAA
+i4[10] => selected.DATAA
+i4[11] => selected.DATAA
+i4[12] => selected.DATAA
+i4[13] => selected.DATAA
+i4[14] => selected.DATAA
+i4[15] => selected.DATAA
+i4[16] => selected.DATAA
+i4[17] => selected.DATAA
+i4[18] => selected.DATAA
+i4[19] => selected.DATAA
+i4[20] => selected.DATAA
+i4[21] => selected.DATAA
+i4[22] => selected.DATAA
+i4[23] => selected.DATAA
+i4[24] => selected.DATAA
+i4[25] => selected.DATAA
+i4[26] => selected.DATAA
+i4[27] => selected.DATAA
+i4[28] => selected.DATAA
+i4[29] => selected.DATAA
+i4[30] => selected.DATAA
+i4[31] => selected.DATAA
+sel[0] => Equal0.IN1
+sel[0] => Equal1.IN1
+sel[0] => Equal2.IN0
+sel[1] => Equal0.IN0
+sel[1] => Equal1.IN0
+sel[1] => Equal2.IN1
+selected[0] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[1] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[2] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[3] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[4] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[5] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[6] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[7] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[8] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[9] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[10] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[11] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[12] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[13] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[14] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[15] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[16] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[17] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[18] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[19] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[20] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[21] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[22] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[23] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[24] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[25] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[26] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[27] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[28] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[29] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[30] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+selected[31] <= selected.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|or32:flag
+input[0] => carries[0].IN0
+input[1] => carries[0].IN1
+input[2] => carries[1].IN1
+input[3] => carries[2].IN1
+input[4] => carries[3].IN1
+input[5] => carries[4].IN1
+input[6] => carries[5].IN1
+input[7] => carries[6].IN1
+input[8] => carries[7].IN1
+input[9] => carries[8].IN1
+input[10] => carries[9].IN1
+input[11] => carries[10].IN1
+input[12] => carries[11].IN1
+input[13] => carries[12].IN1
+input[14] => carries[13].IN1
+input[15] => carries[14].IN1
+input[16] => carries[15].IN1
+input[17] => carries[16].IN1
+input[18] => carries[17].IN1
+input[19] => carries[18].IN1
+input[20] => carries[19].IN1
+input[21] => carries[20].IN1
+input[22] => carries[21].IN1
+input[23] => carries[22].IN1
+input[24] => carries[23].IN1
+input[25] => carries[24].IN1
+input[26] => carries[25].IN1
+input[27] => carries[26].IN1
+input[28] => carries[27].IN1
+input[29] => carries[28].IN1
+input[30] => carries[29].IN1
+input[31] => carries.IN1
+output <= carries.DB_MAX_OUTPUT_PORT_TYPE
+
+
