@@ -10,7 +10,7 @@ entity dmux32way is
 	 );	 
 end dmux32way;
  
-architecture dmux_arch of dmux2way is
+architecture dmux_arch of dmux32way is
 begin
 	process (all) begin
 		if sel = "00000" then

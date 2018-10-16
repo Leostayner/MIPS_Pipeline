@@ -7,7 +7,7 @@ use IEEE.STD_LOGIC_1164.ALL;
     );
       port (DIN : in    std_logic_vector(larguraDados-1 downto 0);
            DOUT : out   std_logic_vector(larguraDados-1 downto 0);
-           ENABLE : in  std_logic;
+           ENABLE : in  std_logic_vector(4 downto 0);
            CLK,RST : in std_logic);
  end entity;
 
@@ -27,7 +27,7 @@ use IEEE.STD_LOGIC_1164.ALL;
             -- If none of these takes precedence, update the register output
             -- to be the register input.
             if (rising_edge(CLK)) then
-                if (ENABLE = "111111") then
+                if (ENABLE = "11111") then
                         DOUT <= DIN;
                 end if;
             end if;
