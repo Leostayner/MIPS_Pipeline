@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+ 
+entity UCFd is
+	 Port ( 
+	 opcode : in std_logic_vector(5 downto 0);
+	 Mux1,Mux2,HabEscritaReg,Mux3,Mux4,BEQ,HabLeMEM,HabEscMEM: out std_logic;
+	 ULAop: out std_logic_vector(1 downto 0));
+end UCFd;
+ 
+architecture mux_arch of UCFd is
+begin
+	process (all) begin
+		if(opcode = "000000") then
+			Mux1 <= '0';
+			Mux2 <= '1';
+			HabEscritaReg <= '1';
+			Mux3 <= 0;
+			Mux4 <= 0;
+			BEQ <= 0
+			
+		end if;
+	end process;		
+end architecture;

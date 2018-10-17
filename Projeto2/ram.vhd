@@ -17,8 +17,9 @@ entity ram is
 		clk		: in std_logic;
 		addr	: in natural range 0 to 2**ADDR_WIDTH - 1;
 		data	: in std_logic_vector((DATA_WIDTH-1) downto 0);
-		we		: in std_logic := '1';
-		q		: out std_logic_vector((DATA_WIDTH -1) downto 0)
+		canRead	: in std_logic;
+		canWrite: in std_logic;
+		q	: out std_logic_vector((DATA_WIDTH -1) downto 0)
 	);
 
 end entity;
@@ -40,12 +41,13 @@ begin
 	process(clk)
 	begin
 	if(rising_edge(clk)) then
-		if(we = '1') then
+		if(canWrite = '1') then
 			ram(addr) <= data;
 		end if;
-
-		-- Register the address for reading
-		addr_reg <= addr;
+		
+		if(canRead = '1') then
+			addr_reg <= addr;
+		end if;
 	end if;
 	end process;
 

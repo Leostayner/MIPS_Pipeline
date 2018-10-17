@@ -1,31 +1,24 @@
-Analysis & Synthesis report for mips
-Tue Oct 16 14:36:47 2018
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Analysis & Elaboration report for mips
+Wed Oct 17 19:14:52 2018
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "mux4way:final"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "mux4way:final"
+  6. Analysis & Elaboration Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2016  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -33,39 +26,51 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 16 14:36:46 2018       ;
-; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name                   ; mips                                        ;
-; Top-level Entity Name           ; alu                                         ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 103                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Wed Oct 17 19:14:52 2018       ;
+; Quartus Prime Version         ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                 ; mips                                        ;
+; Top-level Entity Name         ; alu                                         ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -81,7 +86,7 @@ refer to the applicable agreement for further details.
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
 ; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
 ; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
 ; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
 ; State Machine Processing                                                        ; Auto               ; Auto               ;
 ; Safe State Machine                                                              ; Off                ; Off                ;
@@ -131,7 +136,7 @@ refer to the applicable agreement for further details.
 ; Report Connectivity Checks                                                      ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
 ; HDL message level                                                               ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
@@ -152,129 +157,6 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
-; alu.vhd                          ; yes             ; User VHDL File  ; /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/alu.vhd         ;         ;
-; mux2way.vhd                      ; yes             ; User VHDL File  ; /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/mux2way.vhd     ;         ;
-; mux4way.vhd                      ; yes             ; User VHDL File  ; /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/mux4way.vhd     ;         ;
-; FullAdder.vhd                    ; yes             ; User VHDL File  ; /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/FullAdder.vhd   ;         ;
-; FullAdder32.vhd                  ; yes             ; User VHDL File  ; /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/FullAdder32.vhd ;         ;
-; or32.vhd                         ; yes             ; User VHDL File  ; /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/or32.vhd        ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
-
-
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 93         ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 158        ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 27         ;
-;     -- 5 input functions                    ; 30         ;
-;     -- 4 input functions                    ; 20         ;
-;     -- <=3 input functions                  ; 81         ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 103        ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; invA~input ;
-; Maximum fan-out                             ; 37         ;
-; Total fan-out                               ; 694        ;
-; Average fan-out                             ; 1.91       ;
-+---------------------------------------------+------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
-+-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name ; Library Name ;
-+-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
-; |alu                                    ; 158 (0)             ; 0 (0)                     ; 0                 ; 0          ; 103  ; 0            ; |alu                                                   ; alu         ; work         ;
-;    |FullAdder32:adder|                  ; 45 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder                                 ; FullAdder32 ; work         ;
-;       |FullAdder:\addsloop:10:add1to31| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:10:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:12:add1to31| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:12:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:13:add1to31| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:13:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:14:add1to31| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:14:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:15:add1to31| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:15:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:17:add1to31| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:17:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:18:add1to31| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:18:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:19:add1to31| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:19:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:1:add1to31|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:1:add1to31  ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:20:add1to31| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:20:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:22:add1to31| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:22:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:23:add1to31| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:23:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:24:add1to31| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:24:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:25:add1to31| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:25:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:27:add1to31| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:27:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:28:add1to31| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:28:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:29:add1to31| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:29:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:2:add1to31|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:2:add1to31  ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:30:add1to31| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:30:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:31:add1to31| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:31:add1to31 ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:3:add1to31|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:3:add1to31  ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:4:add1to31|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:4:add1to31  ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:5:add1to31|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:5:add1to31  ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:7:add1to31|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:7:add1to31  ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:8:add1to31|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:8:add1to31  ; FullAdder   ; work         ;
-;       |FullAdder:\addsloop:9:add1to31|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:\addsloop:9:add1to31  ; FullAdder   ; work         ;
-;       |FullAdder:a0|                    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|FullAdder32:adder|FullAdder:a0                    ; FullAdder   ; work         ;
-;    |mux2way:choiceA|                    ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux2way:choiceA                                   ; mux2way     ; work         ;
-;    |mux2way:choiceB|                    ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux2way:choiceB                                   ; mux2way     ; work         ;
-;    |mux4way:final|                      ; 43 (43)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|mux4way:final                                     ; mux4way     ; work         ;
-;    |or32:flag|                          ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu|or32:flag                                         ; or32        ; work         ;
-+-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |alu|mux4way:final|selected[16] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-
-
 +---------------------------------------------+
 ; Port Connectivity Checks: "mux4way:final"   ;
 +-----------+-------+----------+--------------+
@@ -284,105 +166,75 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+-------+----------+--------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 159                         ;
-;     normal            ; 159                         ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 78                          ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 20                          ;
-;         5 data inputs ; 30                          ;
-;         6 data inputs ; 27                          ;
-; boundary_port         ; 103                         ;
-;                       ;                             ;
-; Max LUT depth         ; 16.00                       ;
-; Average LUT depth     ; 11.62                       ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:02     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Oct 16 14:36:26 2018
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Wed Oct 17 19:14:34 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c mips --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: alu-alu_arch File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/alu.vhd Line: 18
-    Info (12023): Found entity 1: alu File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/alu.vhd Line: 5
+    Info (12022): Found design unit 1: alu-alu_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/alu.vhd Line: 18
+    Info (12023): Found entity 1: alu File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/alu.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux2way.vhd
-    Info (12022): Found design unit 1: mux2way-mux_arch File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/mux2way.vhd Line: 13
-    Info (12023): Found entity 1: mux2way File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/mux2way.vhd Line: 5
+    Info (12022): Found design unit 1: mux2way-mux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux2way.vhd Line: 13
+    Info (12023): Found entity 1: mux2way File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux2way.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux4way.vhd
-    Info (12022): Found design unit 1: mux4way-mux_arch File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/mux4way.vhd Line: 15
-    Info (12023): Found entity 1: mux4way File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/mux4way.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file FullAdder.vhd
-    Info (12022): Found design unit 1: FullAdder-arch_FullAdder File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/FullAdder.vhd Line: 13
-    Info (12023): Found entity 1: FullAdder File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/FullAdder.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file FullAdder32.vhd
-    Info (12022): Found design unit 1: FullAdder32-arch_FullAdder File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/FullAdder32.vhd Line: 15
-    Info (12023): Found entity 1: FullAdder32 File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/FullAdder32.vhd Line: 6
+    Info (12022): Found design unit 1: mux4way-mux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux4way.vhd Line: 15
+    Info (12023): Found entity 1: mux4way File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux4way.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file fulladder.vhd
+    Info (12022): Found design unit 1: FullAdder-arch_FullAdder File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd Line: 13
+    Info (12023): Found entity 1: FullAdder File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file fulladder32.vhd
+    Info (12022): Found design unit 1: FullAdder32-arch_FullAdder File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd Line: 15
+    Info (12023): Found entity 1: FullAdder32 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file or32.vhd
-    Info (12022): Found design unit 1: or32-arch_or32 File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/or32.vhd Line: 12
-    Info (12023): Found entity 1: or32 File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/or32.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file UCAlu.vhd
-    Info (12022): Found design unit 1: UCAlu-mux_arch File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/UCAlu.vhd Line: 13
-    Info (12023): Found entity 1: UCAlu File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/UCAlu.vhd Line: 5
+    Info (12022): Found design unit 1: or32-arch_or32 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/or32.vhd Line: 12
+    Info (12023): Found entity 1: or32 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/or32.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ucalu.vhd
+    Info (12022): Found design unit 1: UCAlu-mux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/UCAlu.vhd Line: 13
+    Info (12023): Found entity 1: UCAlu File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/UCAlu.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
-    Info (12022): Found design unit 1: ram-rtl File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/ram.vhd Line: 26
-    Info (12023): Found entity 1: ram File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/ram.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file romMif.vhd
-    Info (12022): Found design unit 1: romMif-initFileROM File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/romMif.vhd Line: 20
-    Info (12023): Found entity 1: romMif File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/romMif.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-arch File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd Line: 31
-    Info (12023): Found entity 1: bancoRegistradores File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file Registrador.vhd
-    Info (12022): Found design unit 1: Registrador-comportamento File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/Registrador.vhd Line: 14
-    Info (12023): Found entity 1: Registrador File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/Registrador.vhd Line: 4
+    Info (12022): Found design unit 1: ram-rtl File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/ram.vhd Line: 27
+    Info (12023): Found entity 1: ram File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/ram.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file rommif.vhd
+    Info (12022): Found design unit 1: romMif-initFileROM File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/romMif.vhd Line: 20
+    Info (12023): Found entity 1: romMif File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/romMif.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
+    Info (12022): Found design unit 1: bancoRegistradores-arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd Line: 31
+    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file registrador.vhd
+    Info (12022): Found design unit 1: Registrador-comportamento File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/Registrador.vhd Line: 14
+    Info (12023): Found entity 1: Registrador File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/Registrador.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file extend16to32.vhd
-    Info (12022): Found design unit 1: extend16to32-arch_or32 File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/extend16to32.vhd Line: 12
-    Info (12023): Found entity 1: extend16to32 File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/extend16to32.vhd Line: 5
+    Info (12022): Found design unit 1: extend16to32-arch_or32 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/extend16to32.vhd Line: 12
+    Info (12023): Found entity 1: extend16to32 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/extend16to32.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux32way.vhd
-    Info (12022): Found design unit 1: mux32way-mux_arch File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/mux32way.vhd Line: 12
-    Info (12023): Found entity 1: mux32way File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/mux32way.vhd Line: 5
+    Info (12022): Found design unit 1: mux32way-mux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd Line: 12
+    Info (12023): Found entity 1: mux32way File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dmux32way.vhd
-    Info (12022): Found design unit 1: dmux32way-dmux_arch File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/dmux32way.vhd Line: 13
-    Info (12023): Found entity 1: dmux32way File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/dmux32way.vhd Line: 5
+    Info (12022): Found design unit 1: dmux32way-dmux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd Line: 13
+    Info (12023): Found entity 1: dmux32way File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file fluxodedados.vhd
+    Info (12022): Found design unit 1: FluxoDeDados-arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 29
+    Info (12023): Found entity 1: FluxoDeDados File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ucfd.vhd
+    Info (12022): Found design unit 1: UCFd-mux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/UCfd.vhd Line: 12
+    Info (12023): Found entity 1: UCFd File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/UCfd.vhd Line: 5
 Info (12127): Elaborating entity "alu" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "out4[31..1]" at alu.vhd(53) File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/alu.vhd Line: 53
-Info (12128): Elaborating entity "mux2way" for hierarchy "mux2way:choiceA" File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/alu.vhd Line: 59
-Info (12128): Elaborating entity "FullAdder32" for hierarchy "FullAdder32:adder" File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/alu.vhd Line: 65
-Info (12128): Elaborating entity "FullAdder" for hierarchy "FullAdder32:adder|FullAdder:a0" File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/FullAdder32.vhd Line: 29
-Info (12128): Elaborating entity "mux4way" for hierarchy "mux4way:final" File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/alu.vhd Line: 69
-Info (12128): Elaborating entity "or32" for hierarchy "or32:flag" File: /home/martimfj/Dropbox/Insper/designcomp-2018/MIPS_Pipeline/Projeto2/alu.vhd Line: 75
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 261 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 69 input pins
-    Info (21059): Implemented 34 output pins
-    Info (21061): Implemented 158 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 1023 megabytes
-    Info: Processing ended: Tue Oct 16 14:36:47 2018
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:35
+Warning (10873): Using initial value X (don't care) for net "out4[31..1]" at alu.vhd(53) File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/alu.vhd Line: 53
+Info (12128): Elaborating entity "mux2way" for hierarchy "mux2way:choiceA" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/alu.vhd Line: 59
+Info (12128): Elaborating entity "FullAdder32" for hierarchy "FullAdder32:adder" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/alu.vhd Line: 65
+Info (12128): Elaborating entity "FullAdder" for hierarchy "FullAdder32:adder|FullAdder:a0" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd Line: 29
+Info (12128): Elaborating entity "mux4way" for hierarchy "mux4way:final" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/alu.vhd Line: 69
+Info (12128): Elaborating entity "or32" for hierarchy "or32:flag" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/alu.vhd Line: 75
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Wed Oct 17 19:14:52 2018
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:40
 
 
