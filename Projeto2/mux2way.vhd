@@ -3,11 +3,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
  
 entity mux2way is
+  generic
+    (
+        dataLength        : natural := 32
+    );
 	 Port ( 
-	 i1 : in std_logic_vector(31 downto 0);
-	 i2 : in std_logic_vector(31 downto 0);
+	 i1 : in std_logic_vector((dataLength - 1) downto 0);
+	 i2 : in std_logic_vector((dataLength - 1) downto 0);
 	 sel : in std_logic;
-	 selected : out std_logic_vector(31 downto 0));
+	 selected : out std_logic_vector((dataLength - 1) downto 0));
 end mux2way;
  
 architecture mux_arch of mux2way is

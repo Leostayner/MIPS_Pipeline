@@ -9,7 +9,7 @@ entity ram is
 	generic 
 	(
 		DATA_WIDTH : natural := 32;
-		ADDR_WIDTH : natural := 8
+		ADDR_WIDTH : natural := 9
 	);
 
 	port 
@@ -41,11 +41,11 @@ begin
 	process(clk)
 	begin
 	if(rising_edge(clk)) then
-		if(canWrite = '1') then
+		if((canWrite = '1') and (addr < 512)) then
 			ram(addr) <= data;
 		end if;
 		
-		if(canRead = '1') then
+		if((canRead = '1') and (addr < 512)) then
 			addr_reg <= addr;
 		end if;
 	end if;

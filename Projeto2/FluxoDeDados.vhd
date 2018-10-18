@@ -3,13 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity FluxoDeDados is
-  
-  generic
-    (
-        larguraDados        : natural := 32;
-        larguraEndBancoRegs : natural := 5
-    );
-	 
+  	 
 	port
 	(
 		clk       	: in std_logic;
@@ -21,7 +15,8 @@ entity FluxoDeDados is
 		habLeituraMem: in std_logic;
 		habEscritaMem: in std_logic;
 		BEQ: in std_logic;
-		ULAop: in std_logic_vector(1 downto 0)
+		ULAop: in std_logic_vector(1 downto 0);
+		opcode: out std_logic_vector(5 downto 0)
 	);
 	 
 end entity;
@@ -55,7 +50,7 @@ signal aluFlag: std_logic;
 --Mux--
 signal out_MuxPC : std_logic_vector(31 downto 0);
 signal out_MuxBeq : std_logic_vector(31 downto 0);
-signal out_MuxRtRd : std_logic_vector(31 downto 0);
+signal out_MuxRtRd : std_logic_vector(4 downto 0);
 signal out_MuxBankRegister: std_logic_vector(31 downto 0);
 signal out_MuxRegRam: std_logic_vector(31 downto 0);
 
@@ -67,11 +62,13 @@ signal out_BankRB : std_logic_vector(31 downto 0);
 signal ram_out : std_logic_vector(31 downto 0);
 	
 begin
+	
+	opcode <= out_Rom(31 downto 26);
 
 	extendedImmediateShifted <= extendedImmediate(29 downto 0) & "00";
 
 	beqAnd <= aluFlag and BEQ;
-	
+		
 	shiftedImme <= out_Rom(23 downto 0) & "00";
 	
 	pcorjump <= pcAddOut(31 downto 28) & shiftedImme & "00";
@@ -79,7 +76,7 @@ begin
 	MuxPC :  entity work.mux2way
 		port map(i1 => out_MuxBeq , i2 => pcorjump , sel => sel_MuxPC, selected => out_MuxPC);
 	
-	PC : entity work.Registrador
+	PC : entity work.Registrador 
 		port map (DIN => out_MuxPC, DOUT => out_PC, ENABLE => "11111" ,CLK => clk, RST => '0');
 		
 	adder: entity work.FullAdder32
@@ -88,8 +85,8 @@ begin
 	Rom : entity work.romMif
 		port map (clk => clk, addr => to_integer(unsigned(out_PC)), q => out_Rom);
 		
-	MuxRtRd : entity work.mux2way
-		port map(i1 => out_Rom(20 downto 16), i2=> out_Rom(15 downto 11), sel => sel_MuxRtRd, selected => out_MuxRtRd);
+	MuxRtRd : entity work.mux2way generic map (dataLength => 5)
+		port map(i1 => out_Rom(20 downto 16), i2 => out_Rom(15 downto 11), sel => sel_MuxRtRd, selected => out_MuxRtRd);
 	
 	BankRegister: entity work.bancoRegistradores
 		port map(clk => clk, enderecoA => out_Rom(25 downto 21), enderecoB => out_Rom(20 downto 16), enderecoC => out_MuxRtRd,
@@ -106,7 +103,7 @@ begin
 		
 	--checar qm controla o invA invB e o Cin	
 	ALU: entity work.alu
-		port map(A =>out_BankRA, B=>out_MuxBankRegister, cin => '0', invA => '0', invB => '0', func => UCAluOut, output => AluOut, zero => aluFlag);
+		port map(A =>out_BankRA, B=>out_MuxBankRegister, cin => UCAluOut(2), invA => UCAluOut(3), invB => UCAluOut(2), func => UCAluOut(1 downto 0), output => AluOut, zero => aluFlag);
 			
 	MuxRegRam: entity work.mux2way
 		port map(i1 => AluOut, i2=> ram_out, sel => sel_MuxRegRam, selected => out_MuxRegRam);
