@@ -80,7 +80,7 @@ begin
 		port map (DIN => out_MuxPC, DOUT => out_PC, ENABLE => "11111" ,CLK => clk, RST => '0');
 		
 	adder: entity work.FullAdder32
-		port map (a => "00000000000000000000000000000100",b => out_PC, c => '0', soma => pcAddOut);
+		port map (a => "00000000000000000000000000000001",b => out_PC, c => '0', soma => pcAddOut);
 	
 	Rom : entity work.romMif
 		port map (clk => clk, addr => to_integer(unsigned(out_PC)), q => out_Rom);

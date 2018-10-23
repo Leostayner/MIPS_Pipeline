@@ -9,7 +9,7 @@ entity ram is
 	generic 
 	(
 		DATA_WIDTH : natural := 32;
-		ADDR_WIDTH : natural := 9
+		ADDR_WIDTH : natural := 5
 	);
 
 	port 
@@ -26,15 +26,14 @@ end entity;
 
 architecture rtl of ram is
 
-	-- Build a 2-D array type for the RAM
-	subtype word_t is std_logic_vector((DATA_WIDTH-1) downto 0);
-	type memory_t is array(2**ADDR_WIDTH-1 downto 0) of word_t;
-
-	-- Declare the RAM signal.	
-	signal ram : memory_t;
+type memory_t is array (2**ADDR_WIDTH-1 downto 0) of std_logic_vector (DATA_WIDTH-1 downto 0);
+signal ram: memory_t;
+attribute ram_init_file : string;
+attribute ram_init_file of ram:
+signal is "initRAM.mif";
 
 	-- Register to hold the address 
-	signal addr_reg : natural range 0 to 2**ADDR_WIDTH-1;
+signal addr_reg : natural range 0 to 2**ADDR_WIDTH-1;
 
 begin
 
