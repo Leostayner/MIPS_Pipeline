@@ -1,0 +1,747 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/simulation/modelsim
+Ealu
+Z1 w1539710546
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/alu.vhd
+Z6 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/alu.vhd
+l0
+L5
+Vegd?0S[YJH6fI?7kohGMY0
+!s100 PLz[>oS96GYN@aj]iQeiO2
+Z7 OV;C;10.5b;63
+33
+Z8 !s110 1540425146
+!i10b 1
+Z9 !s108 1540425146.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/alu.vhd|
+Z11 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/alu.vhd|
+!i113 1
+Z12 o-2008 -work work
+Z13 tExplicit 1 CvgOpt 0
+Aalu_arch
+R2
+R3
+R4
+Z14 DEx4 work 3 alu 0 22 egd?0S[YJH6fI?7kohGMY0
+l57
+L18
+ViG?^HMnOlnkm8Ua>09SMT3
+!s100 o]:VdmNJdGK=VcC7VUdT<2
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ebancoregistradores
+Z15 w1540414561
+R2
+R3
+R4
+R0
+Z16 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd
+Z17 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd
+l0
+L6
+V_0]OSUiNo^AN3TROTfka_3
+!s100 ^h5m>BzAT4Pe>^iHaJkGa0
+R7
+33
+Z18 !s110 1540425149
+!i10b 1
+Z19 !s108 1540425149.000000
+Z20 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd|
+Z21 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+Z22 DEx4 work 18 bancoregistradores 0 22 _0]OSUiNo^AN3TROTfka_3
+l74
+L42
+Vg>AdMQYal90iF?V0kA^Jc1
+!s100 7Kd;BGQVm31b0:>li6]Mj3
+R7
+33
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Ecomputador_tb
+Z23 w1540423815
+R2
+R3
+R4
+R0
+Z24 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Computador_tb.vhd
+Z25 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Computador_tb.vhd
+l0
+L5
+V5XO`Lk1[C4l<326A_F9eF0
+!s100 4LYnA^MUL834NGcEk?V;[0
+R7
+32
+Z26 !s110 1540425334
+!i10b 1
+Z27 !s108 1540425334.000000
+Z28 !s90 -reportprogress|300|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Computador_tb.vhd|
+Z29 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Computador_tb.vhd|
+!i113 1
+Z30 o-work work
+R13
+Artl
+R2
+R3
+R4
+Z31 DEx4 work 13 computador_tb 0 22 5XO`Lk1[C4l<326A_F9eF0
+l35
+L8
+Z32 V^7:cn>LN2?TL@Z=Tj6ML`3
+Z33 !s100 [nbZlbJJ5_ncdg^RZB2]M2
+R7
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R30
+R13
+Edmux32way
+Z34 w1540421193
+R2
+R3
+R4
+R0
+Z35 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd
+Z36 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd
+l0
+L5
+V:zdlHDTd;LG:XhC0n74H11
+!s100 e`:j<8JA>J3i01QePegCo0
+R7
+33
+Z37 !s110 1540425150
+!i10b 1
+Z38 !s108 1540425150.000000
+Z39 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd|
+Z40 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd|
+!i113 1
+R12
+R13
+Admux_arch
+R2
+R3
+R4
+DEx4 work 9 dmux32way 0 22 :zdlHDTd;LG:XhC0n74H11
+l15
+L14
+VX5kIm0jQ0T>bZZ6_HN5b]3
+!s100 VNbQDf705nBm>9D^?;T7b3
+R7
+33
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R12
+R13
+Eextend16to32
+R1
+R3
+R4
+R0
+Z41 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/extend16to32.vhd
+Z42 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/extend16to32.vhd
+l0
+L5
+V55Q8PTm4cVO2SIVm?dfjb0
+!s100 ^cV5^[SQ2Qk>Z9n4V^OhV3
+R7
+33
+R37
+!i10b 1
+R38
+Z43 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/extend16to32.vhd|
+Z44 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/extend16to32.vhd|
+!i113 1
+R12
+R13
+Aarch_or32
+R3
+R4
+Z45 DEx4 work 12 extend16to32 0 22 55Q8PTm4cVO2SIVm?dfjb0
+l16
+L12
+VeZmBhWXKTK0K9ko`7=KFN0
+!s100 DkzX^C`3BT^TXUBPf12oO1
+R7
+33
+R37
+!i10b 1
+R38
+R43
+R44
+!i113 1
+R12
+R13
+Efluxodedados
+Z46 w1540414643
+R2
+R3
+R4
+R0
+Z47 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd
+Z48 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd
+l0
+L5
+V<Oih4bd[obIfT1ImOHOXM1
+!s100 H5Ako@0giBlm86mg2NDG^3
+R7
+33
+Z49 !s110 1540425151
+!i10b 1
+Z50 !s108 1540425151.000000
+Z51 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd|
+Z52 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd|
+!i113 1
+R12
+R13
+Aarch
+Z53 DEx4 work 3 ram 0 22 g1K0<UTC[8f5SSCU]W0>S1
+R14
+Z54 DEx4 work 5 ucalu 0 22 <MdU[gJf7o;]@_[33Pa053
+R45
+R22
+Z55 DEx4 work 6 rommif 0 22 GkE3^V<COn@70deFZWB5T3
+Z56 DEx4 work 11 fulladder32 0 22 gd`hESNc5Q^HP<=Wg@L6G0
+Z57 DEx4 work 11 registrador 0 22 g?bNEJFh_jlD^Ji^FUGOD0
+Z58 DEx4 work 7 mux2way 0 22 ^M5UiVN^Xz23=I7:2m9eG1
+R2
+R3
+R4
+Z59 DEx4 work 12 fluxodedados 0 22 <Oih4bd[obIfT1ImOHOXM1
+l75
+L35
+VzEze1>JlCSQ[6:Q@k]1Zc2
+!s100 lGVI:lj7KJURXGRMejG_23
+R7
+33
+R49
+!i10b 1
+R50
+R51
+R52
+!i113 1
+R12
+R13
+Efulladder
+R1
+R3
+R4
+R0
+Z60 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd
+Z61 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd
+l0
+L6
+V8=8bU[>1k3B6feJRPBJck2
+!s100 KKWX3KabLPRUA7EI<:S@31
+R7
+33
+Z62 !s110 1540425147
+!i10b 1
+Z63 !s108 1540425147.000000
+Z64 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd|
+Z65 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd|
+!i113 1
+R12
+R13
+Aarch_fulladder
+R3
+R4
+DEx4 work 9 fulladder 0 22 8=8bU[>1k3B6feJRPBJck2
+l16
+L13
+VSQnme4nQ@_cU^MTm:><8i1
+!s100 =4QSmB0<8fU=W_YC5JoMU2
+R7
+33
+R62
+!i10b 1
+R63
+R64
+R65
+!i113 1
+R12
+R13
+Efulladder32
+R1
+R3
+R4
+R0
+Z66 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd
+Z67 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd
+l0
+L6
+Vgd`hESNc5Q^HP<=Wg@L6G0
+!s100 Go3O8zUSDgccT60mo;XKP3
+R7
+33
+R62
+!i10b 1
+R63
+Z68 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd|
+Z69 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd|
+!i113 1
+R12
+R13
+Aarch_fulladder
+R3
+R4
+R56
+l28
+L15
+VRD?[EF<[E`YBEKVlb[4L`1
+!s100 MoI?S>EejE=h7A<Ekf:Po2
+R7
+33
+R62
+!i10b 1
+R63
+R68
+R69
+!i113 1
+R12
+R13
+Emips
+Z70 w1540423033
+R2
+R3
+R4
+R0
+Z71 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mips.vhd
+Z72 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mips.vhd
+l0
+L5
+VCf?G>PE922MaS9CNbZ=4O2
+!s100 EP_]:EAGBT_U`>kl1l3N@2
+R7
+33
+R49
+!i10b 1
+R50
+Z73 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mips.vhd|
+Z74 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mips.vhd|
+!i113 1
+R12
+R13
+Amux_arch
+Z75 DEx4 work 4 ucfd 0 22 MJ]ITa`;UGjG`8DQ5nQ;H3
+R59
+R2
+R3
+R4
+DEx4 work 4 mips 0 22 Cf?G>PE922MaS9CNbZ=4O2
+l55
+L37
+VFh3[AG6YQ]G7`AkD8c^Z^3
+!s100 `fY];3:jHXj4HjcZ>@LzV1
+R7
+33
+R49
+!i10b 1
+R50
+R73
+R74
+!i113 1
+R12
+R13
+Emux2way
+Z76 w1540411738
+R2
+R3
+R4
+R0
+Z77 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux2way.vhd
+Z78 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux2way.vhd
+l0
+L5
+V^M5UiVN^Xz23=I7:2m9eG1
+!s100 E9ORkhk[2V6KAhe[@8G;31
+R7
+33
+R8
+!i10b 1
+R9
+Z79 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux2way.vhd|
+Z80 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux2way.vhd|
+!i113 1
+R12
+R13
+Amux_arch
+R2
+R3
+R4
+R58
+l18
+L17
+VBI7e11QT7f;K^BDaL;h1Z2
+!s100 8iE9o=T]QdBmbQ]zajM3n3
+R7
+33
+R8
+!i10b 1
+R9
+R79
+R80
+!i113 1
+R12
+R13
+Emux32way
+R1
+R2
+R3
+R4
+R0
+Z81 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd
+Z82 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd
+l0
+L5
+VF5<I[Pl2?iM]PG4dCg8M31
+!s100 >S[X]Yk2@2cGN@OZ@UYK71
+R7
+33
+R37
+!i10b 1
+R38
+Z83 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd|
+Z84 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd|
+!i113 1
+R12
+R13
+Amux_arch
+R2
+R3
+R4
+DEx4 work 8 mux32way 0 22 F5<I[Pl2?iM]PG4dCg8M31
+l13
+L12
+VYI^bQTeHZ65aX30z]ciN]3
+!s100 cRnN`PQaimUiIO1k6cNGX0
+R7
+33
+R37
+!i10b 1
+R38
+R83
+R84
+!i113 1
+R12
+R13
+Emux4way
+R1
+R2
+R3
+R4
+R0
+Z85 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux4way.vhd
+Z86 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux4way.vhd
+l0
+L5
+Vg@e=zaZE;?iMGI]4ccEZF0
+!s100 7I1U<M;O2DIe]YHIl>;`b2
+R7
+33
+R62
+!i10b 1
+R63
+Z87 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux4way.vhd|
+Z88 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux4way.vhd|
+!i113 1
+R12
+R13
+Amux_arch
+R2
+R3
+R4
+DEx4 work 7 mux4way 0 22 g@e=zaZE;?iMGI]4ccEZF0
+l16
+L15
+VB71ZXUV;BaTKC42G47M8`3
+!s100 EJJo9oI;3AZ?8eSknkW=22
+R7
+33
+R62
+!i10b 1
+R63
+R87
+R88
+!i113 1
+R12
+R13
+Eor32
+Z89 w1539710547
+R3
+R4
+R0
+Z90 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/or32.vhd
+Z91 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/or32.vhd
+l0
+L5
+V67AGh:F833jIRM>ID0Tfz3
+!s100 WA9M5n`X:]6U_D=637gIk1
+R7
+33
+Z92 !s110 1540425148
+!i10b 1
+Z93 !s108 1540425148.000000
+Z94 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/or32.vhd|
+Z95 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/or32.vhd|
+!i113 1
+R12
+R13
+Aarch_or32
+R3
+R4
+DEx4 work 4 or32 0 22 67AGh:F833jIRM>ID0Tfz3
+l16
+L12
+VG<A3B34kA<5TObFe4oQg:3
+!s100 L9DeHWXZD1QN<bmo<2k943
+R7
+33
+R92
+!i10b 1
+R93
+R94
+R95
+!i113 1
+R12
+R13
+Eram
+R76
+R3
+R4
+R0
+Z96 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/ram.vhd
+Z97 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/ram.vhd
+l0
+L7
+Vg1K0<UTC[8f5SSCU]W0>S1
+!s100 @0gWeoOPBkY3mJV4<BBzo1
+R7
+33
+R92
+!i10b 1
+R93
+Z98 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/ram.vhd|
+Z99 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/ram.vhd|
+!i113 1
+R12
+R13
+Artl
+R3
+R4
+R53
+l38
+L27
+V:0;aaWS@e@7d6?h]kDWo41
+!s100 i3D1^]2lheQVV1B_FXXeX1
+R7
+33
+R92
+!i10b 1
+R93
+R98
+R99
+!i113 1
+R12
+R13
+Eregistrador
+Z100 w1539716010
+R3
+R4
+R0
+Z101 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Registrador.vhd
+Z102 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Registrador.vhd
+l0
+L4
+Vg?bNEJFh_jlD^Ji^FUGOD0
+!s100 ==Mc;<0;0mgihC5HRoi491
+R7
+33
+R18
+!i10b 1
+R19
+Z103 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Registrador.vhd|
+Z104 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Registrador.vhd|
+!i113 1
+R12
+R13
+Acomportamento
+R3
+R4
+R57
+l15
+L14
+V5`zIeTEkX:cGlN_THfiIQ2
+!s100 >VX`IL:HU7KfclEC7jZ3[0
+R7
+33
+R18
+!i10b 1
+R19
+R103
+R104
+!i113 1
+R12
+R13
+Erommif
+Z105 w1540425045
+R2
+R3
+R4
+R0
+Z106 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/romMif.vhd
+Z107 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/romMif.vhd
+l0
+L5
+VGkE3^V<COn@70deFZWB5T3
+!s100 oG>m?5i4J4ffz4m]>U]7;0
+R7
+33
+R18
+!i10b 1
+R93
+Z108 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/romMif.vhd|
+Z109 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/romMif.vhd|
+!i113 1
+R12
+R13
+Ainitfilerom
+R2
+R3
+R4
+R55
+l29
+L20
+VnFBLDZ;Qn>hh<e3UAb3@:3
+!s100 F?9@^iBPm2iiAN1=0II<g1
+R7
+33
+R18
+!i10b 1
+R93
+R108
+R109
+!i113 1
+R12
+R13
+Eucalu
+R1
+R2
+R3
+R4
+R0
+Z110 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCAlu.vhd
+Z111 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCAlu.vhd
+l0
+L5
+V<MdU[gJf7o;]@_[33Pa053
+!s100 <eQdz;7zc3Yc=Do>OOlhH3
+R7
+33
+R92
+!i10b 1
+R93
+Z112 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCAlu.vhd|
+Z113 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCAlu.vhd|
+!i113 1
+R12
+R13
+Amux_arch
+R2
+R3
+R4
+R54
+l14
+L13
+VZQiFW>G2BhT98@ill;LTV1
+!s100 f2g2OIK4zhPB1U`CozO4f1
+R7
+33
+R92
+!i10b 1
+R93
+R112
+R113
+!i113 1
+R12
+R13
+Eucfd
+Z114 w1540411737
+R2
+R3
+R4
+R0
+Z115 8C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCfd.vhd
+Z116 FC:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCfd.vhd
+l0
+L5
+VMJ]ITa`;UGjG`8DQ5nQ;H3
+!s100 [m=Z68NKFBzQjlR3Q9eXI3
+R7
+33
+R49
+!i10b 1
+R38
+Z117 !s90 -reportprogress|300|-2008|-work|work|C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCfd.vhd|
+Z118 !s107 C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCfd.vhd|
+!i113 1
+R12
+R13
+Amux_arch
+R2
+R3
+R4
+R75
+l13
+L12
+VABeBf@Qbf>f1]S8Y:A<PX0
+!s100 3NA:P53dWSOTnb_>h;eF>1
+R7
+33
+R49
+!i10b 1
+R38
+R117
+R118
+!i113 1
+R12
+R13
