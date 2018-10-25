@@ -1,4 +1,4 @@
-# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# Reading C:/intelFPGA/16.1/modelsim_ase/tcl/vsim/pref.tcl
 # do mips_run_msim_rtl_vhdl.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -7,187 +7,187 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA/16.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/alu.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:26 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/alu.vhd 
+# Start time: 18:54:00 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture alu_arch of alu
-# End time: 20:52:26 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:00 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux2way.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux2way.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:26 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux2way.vhd 
+# Start time: 18:54:00 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux2way.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2way
 # -- Compiling architecture mux_arch of mux2way
-# End time: 20:52:26 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:00 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux4way.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux4way.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:27 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux4way.vhd 
+# Start time: 18:54:00 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux4way.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux4way
 # -- Compiling architecture mux_arch of mux4way
-# End time: 20:52:27 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:01 on Oct 25,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:27 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd 
+# Start time: 18:54:01 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FullAdder
 # -- Compiling architecture arch_FullAdder of FullAdder
-# End time: 20:52:27 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:01 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:27 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd 
+# Start time: 18:54:01 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FullAdder32
 # -- Compiling architecture arch_FullAdder of FullAdder32
-# End time: 20:52:28 on Oct 24,2018, Elapsed time: 0:00:01
+# End time: 18:54:01 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/or32.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/or32.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:28 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/or32.vhd 
+# Start time: 18:54:01 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/or32.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity or32
 # -- Compiling architecture arch_or32 of or32
-# End time: 20:52:28 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:01 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCAlu.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/UCAlu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:28 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCAlu.vhd 
+# Start time: 18:54:01 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/UCAlu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity UCAlu
 # -- Compiling architecture mux_arch of UCAlu
-# End time: 20:52:28 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:01 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/ram.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/ram.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:28 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/ram.vhd 
+# Start time: 18:54:01 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/ram.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ram
 # -- Compiling architecture rtl of ram
-# End time: 20:52:28 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:01 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/romMif.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/romMif.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:28 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/romMif.vhd 
+# Start time: 18:54:01 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/romMif.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity romMif
 # -- Compiling architecture initFileROM of romMif
-# End time: 20:52:29 on Oct 24,2018, Elapsed time: 0:00:01
+# End time: 18:54:01 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:29 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd 
+# Start time: 18:54:01 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity bancoRegistradores
 # -- Compiling architecture arch of bancoRegistradores
-# End time: 20:52:29 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:01 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Registrador.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/Registrador.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:29 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Registrador.vhd 
+# Start time: 18:54:01 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/Registrador.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Registrador
 # -- Compiling architecture comportamento of Registrador
-# End time: 20:52:29 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:01 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/extend16to32.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/extend16to32.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:30 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/extend16to32.vhd 
+# Start time: 18:54:01 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/extend16to32.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity extend16to32
 # -- Compiling architecture arch_or32 of extend16to32
-# End time: 20:52:30 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:02 on Oct 25,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:30 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd 
+# Start time: 18:54:02 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux32way
 # -- Compiling architecture mux_arch of mux32way
-# End time: 20:52:30 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:02 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:30 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd 
+# Start time: 18:54:02 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity dmux32way
 # -- Compiling architecture dmux_arch of dmux32way
-# End time: 20:52:30 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:02 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCfd.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/UCfd.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:30 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/UCfd.vhd 
+# Start time: 18:54:02 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/UCfd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity UCFd
 # -- Compiling architecture mux_arch of UCFd
-# End time: 20:52:31 on Oct 24,2018, Elapsed time: 0:00:01
+# End time: 18:54:02 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:31 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd 
+# Start time: 18:54:02 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -203,12 +203,12 @@
 # -- Loading entity UCAlu
 # -- Loading entity alu
 # -- Loading entity ram
-# End time: 20:52:31 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:02 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mips.vhd}
+# vcom -2008 -work work {C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mips.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:31 on Oct 24,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/mips.vhd 
+# Start time: 18:54:02 on Oct 25,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mips.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -217,116 +217,6 @@
 # -- Compiling architecture mux_arch of mips
 # -- Loading entity FluxoDeDados
 # -- Loading entity UCFd
-# End time: 20:52:31 on Oct 24,2018, Elapsed time: 0:00:00
+# End time: 18:54:02 on Oct 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vcom -reportprogress 300 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Computador_tb.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:52:44 on Oct 24,2018
-# vcom -reportprogress 300 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Computador_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Computador_tb
-# -- Compiling architecture rtl of Computador_tb
-# End time: 20:52:44 on Oct 24,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.computador_tb
-# vsim work.computador_tb 
-# Start time: 20:52:48 on Oct 24,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.computador_tb(rtl)
-# Loading work.mips(mux_arch)
-# Loading work.fluxodedados(arch)
-# Loading work.mux2way(mux_arch)
-# Loading work.registrador(comportamento)
-# Loading work.fulladder32(arch_fulladder)
-# Loading work.fulladder(arch_fulladder)
-# Loading work.rommif(initfilerom)
-# Loading work.bancoregistradores(arch)
-# Loading work.mux32way(mux_arch)
-# Loading work.dmux32way(dmux_arch)
-# Loading work.extend16to32(arch_or32)
-# Loading work.ucalu(mux_arch)
-# Loading work.alu(alu_arch)
-# Loading work.mux4way(mux_arch)
-# Loading work.or32(arch_or32)
-# Loading work.ram(rtl)
-# Loading work.ucfd(mux_arch)
-# ** Warning: (vsim-8683) Uninitialized out port /computador_tb/c1/ucfd/HabEscMEM has no driver.
-# This port will contribute value (U) to the signal network.
-add wave -position insertpoint sim:/computador_tb/c1/fd/Rom/*
-restart
-# ** Warning: (vsim-8683) Uninitialized out port /computador_tb/c1/ucfd/HabEscMEM has no driver.
-# This port will contribute value (U) to the signal network.
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /computador_tb/c1/fd
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /computador_tb/c1/fd
-run
-run
-add wave -position end  sim:/computador_tb/c1/fd/PC/larguraDados
-add wave -position end  sim:/computador_tb/c1/fd/PC/DIN
-add wave -position end  sim:/computador_tb/c1/fd/PC/DOUT
-add wave -position end  sim:/computador_tb/c1/fd/PC/ENABLE
-add wave -position end  sim:/computador_tb/c1/fd/PC/CLK
-add wave -position end  sim:/computador_tb/c1/fd/PC/RST
-restart
-# ** Warning: (vsim-8683) Uninitialized out port /computador_tb/c1/ucfd/HabEscMEM has no driver.
-# This port will contribute value (U) to the signal network.
-restart
-# ** Warning: (vsim-8683) Uninitialized out port /computador_tb/c1/ucfd/HabEscMEM has no driver.
-# This port will contribute value (U) to the signal network.
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /computador_tb/c1/fd
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /computador_tb/c1/fd
-restart
-# ** Warning: (vsim-8683) Uninitialized out port /computador_tb/c1/ucfd/HabEscMEM has no driver.
-# This port will contribute value (U) to the signal network.
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /computador_tb/c1/fd
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /computador_tb/c1/fd
-restart
-# ** Warning: (vsim-8683) Uninitialized out port /computador_tb/c1/ucfd/HabEscMEM has no driver.
-# This port will contribute value (U) to the signal network.
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /computador_tb/c1/fd
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /computador_tb/c1/fd
-vcom -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Computador_tb.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:55:34 on Oct 24,2018
-# vcom -reportprogress 300 -work work C:/Users/leo_v/Desktop/GitHub/MIPS_Pipeline/Projeto2/Computador_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Computador_tb
-# -- Compiling architecture rtl of Computador_tb
-# End time: 20:55:34 on Oct 24,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading work.computador_tb(rtl)
-# ** Warning: (vsim-8683) Uninitialized out port /computador_tb/c1/ucfd/HabEscMEM has no driver.
-# This port will contribute value (U) to the signal network.
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /computador_tb/c1/fd
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /computador_tb/c1/fd
-restart
-# ** Warning: (vsim-8683) Uninitialized out port /computador_tb/c1/ucfd/HabEscMEM has no driver.
-# This port will contribute value (U) to the signal network.
-add wave -position end  sim:/computador_tb/c1/fd/Ext/lastbit
-# End time: 21:16:12 on Oct 24,2018, Elapsed time: 0:23:24
-# Errors: 0, Warnings: 18

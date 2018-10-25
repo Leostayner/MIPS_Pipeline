@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed Oct 24 20:41:17 2018
-Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Fitter Status : Successful - Thu Oct 25 18:39:05 2018
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : mips
 Top-level Entity Name : mips
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 2,144 / 114,480 ( 2 % )
-    Total combinational functions : 1,938 / 114,480 ( 2 % )
-    Dedicated logic registers : 1,107 / 114,480 ( < 1 % )
-Total registers : 1107
+Total logic elements : 568 / 114,480 ( < 1 % )
+    Total combinational functions : 491 / 114,480 ( < 1 % )
+    Dedicated logic registers : 287 / 114,480 ( < 1 % )
+Total registers : 287
 Total pins : 225 / 529 ( 43 % )
 Total virtual pins : 0
-Total memory bits : 2,098,176 / 3,981,312 ( 53 % )
+Total memory bits : 0 / 3,981,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )
