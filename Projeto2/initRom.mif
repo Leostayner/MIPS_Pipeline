@@ -1,5 +1,4 @@
- 
-DEPTH = 11;                   -- The size of data in bits
+DEPTH = 12;                   -- The size of data in bits
 WIDTH = 32;                    -- The size of memory in words
 ADDRESS_RADIX = BIN;          -- The radix for address values
 DATA_RADIX = BIN;             -- The radix for data values

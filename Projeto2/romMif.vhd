@@ -21,6 +21,7 @@ architecture initFileROM of romMif is
 
 type memory_t is array (2**ADDR_WIDTH-1 downto 0) of std_logic_vector (DATA_WIDTH-1 downto 0);
 signal content: memory_t;
+
 attribute ram_init_file : string;
 attribute ram_init_file of content:
 signal is "initROM.mif";
@@ -29,7 +30,14 @@ begin
     process(clk)
     begin
         if (RISING_EDGE(clk)) then
-            q <= content(addr);
+				if(addr = 0) then
+					q <= "10001100000000100000000000000001";
+				elsif( addr = 1) then
+					q <= "10001100000000010000000000000100";
+				else
+					q <= (others => '0');
+				end if;
+            --q <= content(addr);
         end if;
     end process;
 end architecture;

@@ -23,7 +23,18 @@ entity bancoRegistradores is
         escreveC      : in std_logic := '1';
 --
         saidaA          : out std_logic_vector((larguraDados -1) downto 0);
-        saidaB          : out std_logic_vector((larguraDados -1) downto 0)
+        saidaB          : out std_logic_vector((larguraDados -1) downto 0);
+		  
+		  ---------Teste Wave Froms----------------
+		  outR1 : out std_logic_vector(31 downto 0);
+		  outR2 : out std_logic_vector(31 downto 0);
+		  outR3 : out std_logic_vector(31 downto 0);
+		  outR4 : out std_logic_vector(31 downto 0);
+		  outR5 : out std_logic_vector(31 downto 0);
+		  outR6 : out std_logic_vector(31 downto 0);
+		  outR7 : out std_logic_vector(31 downto 0)  
+		  ------------------------------------------
+		  
     );
 end entity;
 
@@ -103,6 +114,15 @@ begin
 
 	--demux
 	dmuxC: dmux32way port map(enderecoC, dadoEscritaC, i0, i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15,i16,i17,i18,i19,i20,i21,i22,i23,i24,i25,i26,i27,i28,i29,i30,i31);
+	
+	
+	outR1 <= o0;
+	outR2 <= o1;
+	outR3 <= o2;
+	outR4 <= o3;
+	outR5 <= o4;
+	outR6 <= o5;	
+	outR7 <= o6;
 	
 end architecture; 
 

@@ -16,7 +16,18 @@ entity FluxoDeDados is
 		habEscritaMem: in std_logic;
 		BEQ: in std_logic;
 		ULAop: in std_logic_vector(1 downto 0);
-		opcode: out std_logic_vector(5 downto 0)
+		opcode: out std_logic_vector(5 downto 0);
+		
+	
+			  ---------Teste Wave Froms----------------
+	  outR1 : out std_logic_vector(31 downto 0);
+	  outR2 : out std_logic_vector(31 downto 0);
+	  outR3 : out std_logic_vector(31 downto 0);
+	  outR4 : out std_logic_vector(31 downto 0);
+	  outR5 : out std_logic_vector(31 downto 0);
+	  outR6 : out std_logic_vector(31 downto 0);
+	  outR7 : out std_logic_vector(31 downto 0)  
+	  ------------------------------------------
 	);
 	 
 end entity;
@@ -90,13 +101,21 @@ begin
 	
 	BankRegister: entity work.bancoRegistradores
 		port map(clk => clk, enderecoA => out_Rom(25 downto 21), enderecoB => out_Rom(20 downto 16), enderecoC => out_MuxRtRd,
-					dadoEscritaC => out_MuxRegRam, escreveC => hab_Escrita, saidaA => out_BankRA, saidaB => out_BankRB);
+					dadoEscritaC => out_MuxRegRam, escreveC => hab_Escrita, saidaA => out_BankRA, saidaB => out_BankRB,  outR1 => outR1,
+		  outR2 => outR2,
+		  outR3 => outR3,
+		  outR4 => outR4,
+		  outR5 => outR5,
+		  outR6 => outR6, 
+		  outR7 => outR7);
 
 	Ext: entity work.extend16to32
 		port map(input => out_Rom(15 downto 0), output => extendedImmediate );
 	
 	MuxSaidaBankRegister : entity work.mux2way
 		port map(i1 => out_BankRB , i2=> extendedImmediate, sel => sel_MuxSaidaBankReg, selected => out_MuxBankRegister);
+		 
+		  ------------------------------------------
 		
 	UCalu: entity work.UCAlu
 		port map(funct => out_Rom(5 downto 0), CUfd => ULAop, output => UCAluOut );
