@@ -26,7 +26,11 @@ entity FluxoDeDados is
 	  outR4 : out std_logic_vector(31 downto 0);
 	  outR5 : out std_logic_vector(31 downto 0);
 	  outR6 : out std_logic_vector(31 downto 0);
-	  outR7 : out std_logic_vector(31 downto 0)  
+	  outR7 : out std_logic_vector(31 downto 0);
+	  pcDebug: out std_logic_vector(31 downto 0);
+	  testAluA : out STD_LOGIC_vector(31 downto 0);
+	  testAluB : out STD_LOGIC_vector(31 downto 0);
+	  testeAluRes: out STD_LOGIC_vector(31 downto 0)
 	  ------------------------------------------
 	);
 	 
@@ -73,6 +77,8 @@ signal out_BankRB : std_logic_vector(31 downto 0);
 signal ram_out : std_logic_vector(31 downto 0);
 	
 begin
+
+	pcDebug <= out_PC;
 	
 	opcode <= out_Rom(31 downto 26);
 
@@ -94,7 +100,7 @@ begin
 		port map (a => "00000000000000000000000000000001",b => out_PC, c => '0', soma => pcAddOut);
 	
 	Rom : entity work.romMif
-		port map (clk => clk, addr => to_integer(unsigned(out_PC)), q => out_Rom);
+		port map (addr => to_integer(unsigned(out_PC)), q => out_Rom);
 		
 	MuxRtRd : entity work.mux2way generic map (dataLength => 5)
 		port map(i1 => out_Rom(20 downto 16), i2 => out_Rom(15 downto 11), sel => sel_MuxRtRd, selected => out_MuxRtRd);
@@ -123,7 +129,11 @@ begin
 	--checar qm controla o invA invB e o Cin	
 	ALU: entity work.alu
 		port map(A =>out_BankRA, B=>out_MuxBankRegister, cin => UCAluOut(2), invA => UCAluOut(3), invB => UCAluOut(2), func => UCAluOut(1 downto 0), output => AluOut, zero => aluFlag);
-			
+	
+  testAluA <= out_BankRA;
+  testAluB <= out_MuxBankRegister;
+  testeAluRes <= AluOut;
+	
 	MuxRegRam: entity work.mux2way
 		port map(i1 => AluOut, i2=> ram_out, sel => sel_MuxRegRam, selected => out_MuxRegRam);
 		

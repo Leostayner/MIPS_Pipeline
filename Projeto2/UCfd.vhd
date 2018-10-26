@@ -20,7 +20,7 @@ begin
 			Mux4 <= '0';
 			BEQ <= '0';
 			HabLeMEM <= '0';
-			HabLeMEM <= '0';
+			HabEscMEM <= '0';
 			ULAop <= "10";
 		elsif(opcode = "100011") then 
 			Mux1 <= '0';
@@ -30,7 +30,7 @@ begin
 			Mux4 <= '1';
 			BEQ <= '0';
 			HabLeMEM <= '1';
-			HabLeMEM <= '0';
+			HabEscMEM <= '0';
 			ULAop <= "00";
 		elsif(opcode = "101011") then 
 			Mux1 <= '0';
@@ -40,7 +40,7 @@ begin
 			Mux4 <= '0';
 			BEQ <= '0';
 			HabLeMEM <= '0';
-			HabLeMEM <= '1';
+			HabEscMEM <= '1';
 			ULAop <= "00";
 		elsif(opcode = "000100") then 
 			Mux1 <= '0';
@@ -50,7 +50,7 @@ begin
 			Mux4 <= '0';
 			BEQ <= '1';
 			HabLeMEM <= '0';
-			HabLeMEM <= '0';
+			HabEscMEM <= '0';
 			ULAop <= "01";	
 		elsif(opcode = "000010") then 
 			Mux1 <= '1';
@@ -60,7 +60,7 @@ begin
 			Mux4 <= '0';
 			BEQ <= '0';
 			HabLeMEM <= '0';
-			HabLeMEM <= '0';
+			HabEscMEM <= '0';
 			ULAop <= "00";
 		else
 			Mux1 <= '0';
@@ -70,7 +70,7 @@ begin
 			Mux4 <= '0';
 			BEQ <= '0';
 			HabLeMEM <= '0';
-			HabLeMEM <= '0';
+			HabEscMEM <= '0';
 			ULAop <= "00";
 		end if;
 	end process;		

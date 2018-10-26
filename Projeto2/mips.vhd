@@ -26,11 +26,23 @@ entity mips is
 	   otR4 : out std_logic_vector(31 downto 0);
 	   otR5 : out std_logic_vector(31 downto 0);
 	   otR6 : out std_logic_vector(31 downto 0);
-	   otR7 : out std_logic_vector(31 downto 0)  
-	   ------------------------------------------
-
-		
-		
+	   otR7 : out std_logic_vector(31 downto 0);
+		 opcodeDebug: out std_logic_vector(5 downto 0);
+		 Mux1Debug : out std_logic;
+		 Mux2Debug : out std_logic;
+		 HabEscritaRegDebug : out std_logic;
+		 Mux3Debug : out std_logic;
+		 Mux4Debug : out std_logic;
+		 BEQDebug: out std_logic;
+		 HabLeMEMDebug: out std_logic;
+		 HabEscMEMDebug : out std_logic;
+		 ULAopDebug: out std_logic_vector(1 downto 0);
+		 out_PCTeste :  out std_logic_vector(31 downto 0);
+		 
+	   testAluA : out STD_LOGIC_vector(31 downto 0);
+	   testAluB : out STD_LOGIC_vector(31 downto 0);
+	   testeAluRes: out STD_LOGIC_vector(31 downto 0)
+	   ------------------------------------------		
 	 );
 end mips;
  
@@ -75,7 +87,14 @@ begin
 	   outR4 => outR4,
 	   outR5 => outR5,
 	   outR6 => outR6, 
-	   outR7 => outR7);	
+	   outR7 => outR7,
+		pcDebug  => out_PCTeste,
+		testAluA => testAluA,
+		testAluB => testAluB,
+		testeAluRes => testeAluRes
+		);	
+		
+	-- Registers Debug
 	
 	otR1 <= outR1;
 	otR2 <= outR2;
@@ -84,6 +103,19 @@ begin
 	otR5 <= outR5;
 	otR6 <= outR6;
 	otR7 <= outR7;
+	
+	
+--- teste debug sinais unidade de controle - 
+	 opcodeDebug <= opcode;
+	 Mux1Debug <= Mux1;
+	 Mux2Debug <= Mux2;
+	 HabEscritaRegDebug <= HabEscritaReg;
+	 Mux3Debug <= Mux3;
+	 Mux4Debug <= Mux4;
+	 BEQDebug <= BEQ;
+	 HabLeMEMDebug <= HabLeMEM;
+	 HabEscMEMDebug <= HabEscMEM;
+	 ULAopDebug <= ULAop;
 	
 	ucfd: entity work.UCfd 
 			port map(

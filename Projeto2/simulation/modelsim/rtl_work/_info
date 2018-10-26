@@ -22,9 +22,9 @@ Vegd?0S[YJH6fI?7kohGMY0
 !s100 PLz[>oS96GYN@aj]iQeiO2
 Z7 OV;C;10.5b;63
 33
-Z8 !s110 1540504440
+Z8 !s110 1540507287
 !i10b 1
-Z9 !s108 1540504440.000000
+Z9 !s108 1540507287.000000
 Z10 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/alu.vhd|
 Z11 !s107 C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/alu.vhd|
 !i113 1
@@ -63,9 +63,9 @@ V_0]OSUiNo^AN3TROTfka_3
 !s100 ^h5m>BzAT4Pe>^iHaJkGa0
 R7
 33
-Z17 !s110 1540504441
+Z17 !s110 1540507288
 !i10b 1
-Z18 !s108 1540504441.000000
+Z18 !s108 1540507288.000000
 Z19 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd|
 Z20 !s107 C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/bancoRegistradores.vhd|
 !i113 1
@@ -104,9 +104,9 @@ V:zdlHDTd;LG:XhC0n74H11
 !s100 e`:j<8JA>J3i01QePegCo0
 R7
 33
-Z24 !s110 1540504442
+Z24 !s110 1540507289
 !i10b 1
-Z25 !s108 1540504442.000000
+Z25 !s108 1540507289.000000
 Z26 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd|
 Z27 !s107 C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/dmux32way.vhd|
 !i113 1
@@ -144,7 +144,7 @@ V55Q8PTm4cVO2SIVm?dfjb0
 !s100 ^cV5^[SQ2Qk>Z9n4V^OhV3
 R7
 33
-R24
+R17
 !i10b 1
 R18
 Z30 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/extend16to32.vhd|
@@ -162,7 +162,7 @@ VeZmBhWXKTK0K9ko`7=KFN0
 !s100 DkzX^C`3BT^TXUBPf12oO1
 R7
 33
-R24
+R17
 !i10b 1
 R18
 R30
@@ -233,9 +233,9 @@ V8=8bU[>1k3B6feJRPBJck2
 !s100 KKWX3KabLPRUA7EI<:S@31
 R7
 33
-R17
+R8
 !i10b 1
-R18
+R9
 Z46 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd|
 Z47 !s107 C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder.vhd|
 !i113 1
@@ -251,9 +251,9 @@ VSQnme4nQ@_cU^MTm:><8i1
 !s100 =4QSmB0<8fU=W_YC5JoMU2
 R7
 33
-R17
+R8
 !i10b 1
-R18
+R9
 R46
 R47
 !i113 1
@@ -272,9 +272,9 @@ Vgd`hESNc5Q^HP<=Wg@L6G0
 !s100 Go3O8zUSDgccT60mo;XKP3
 R7
 33
-R17
+R8
 !i10b 1
-R18
+R9
 Z50 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd|
 Z51 !s107 C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/FullAdder32.vhd|
 !i113 1
@@ -290,9 +290,9 @@ VRD?[EF<[E`YBEKVlb[4L`1
 !s100 MoI?S>EejE=h7A<Ekf:Po2
 R7
 33
-R17
+R8
 !i10b 1
-R18
+R9
 R50
 R51
 !i113 1
@@ -398,7 +398,7 @@ R7
 33
 R24
 !i10b 1
-R25
+R18
 Z63 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd|
 Z64 !s107 C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux32way.vhd|
 !i113 1
@@ -417,7 +417,7 @@ R7
 33
 R24
 !i10b 1
-R25
+R18
 R63
 R64
 !i113 1
@@ -437,7 +437,7 @@ Vg@e=zaZE;?iMGI]4ccEZF0
 !s100 7I1U<M;O2DIe]YHIl>;`b2
 R7
 33
-R17
+R8
 !i10b 1
 R9
 Z67 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/mux4way.vhd|
@@ -456,7 +456,7 @@ VB71ZXUV;BaTKC42G47M8`3
 !s100 EJJo9oI;3AZ?8eSknkW=22
 R7
 33
-R17
+R8
 !i10b 1
 R9
 R67
@@ -479,7 +479,7 @@ R7
 33
 R17
 !i10b 1
-R18
+R9
 Z71 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/or32.vhd|
 Z72 !s107 C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/or32.vhd|
 !i113 1
@@ -497,7 +497,7 @@ R7
 33
 R17
 !i10b 1
-R18
+R9
 R71
 R72
 !i113 1
