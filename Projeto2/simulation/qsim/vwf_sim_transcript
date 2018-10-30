@@ -1,18 +1,18 @@
 Determining the location of the ModelSim executable...
 
-Using: C:\intelFPGA\16.1\modelsim_ase\win32aloem
+Using: C:\intelFPGA_lite\18.0\modelsim_ase\win32aloem
 
 To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
 Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off mips -c mips --vector_source="C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/Waveform9.vwf" --testbench_file="C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/simulation/qsim/Waveform9.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off mips -c mips --vector_source="C:/Users/leo_v/MIPS_Pipeline/Projeto2/Waveform9.vwf" --testbench_file="C:/Users/leo_v/MIPS_Pipeline/Projeto2/simulation/qsim/Waveform9.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Copyright (C) 2016  Intel Corporation. All rights reserved.
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.
     Info: Your use of Intel Corporation's design tools, logic functions 
     Info: and other software and tools, and its AMPP partner logic 
     Info: functions, and any output files from any of the foregoing 
@@ -20,33 +20,27 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: associated documentation or information are expressly subject 
     Info: to the terms and conditions of the Intel Program License 
     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
-    Info: the Intel MegaCore Function License Agreement, or other 
-    Info: applicable license agreement, including, without limitation, 
-    Info: that your use is for the sole purpose of programming logic 
-    Info: devices manufactured by Intel and sold by Intel or its 
-    Info: authorized distributors.  Please refer to the applicable 
-    Info: agreement for further details.
-    Info: Processing started: Thu Oct 25 21:03:42 2018
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off mips -c mips --vector_source=C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/Waveform9.vwf --testbench_file=C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/simulation/qsim/Waveform9.vwf.vht
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Tue Oct 30 00:42:35 2018
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off mips -c mips --vector_source=C:/Users/leo_v/MIPS_Pipeline/Projeto2/Waveform9.vwf --testbench_file=C:/Users/leo_v/MIPS_Pipeline/Projeto2/simulation/qsim/Waveform9.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-Waveform9.vwf.vht for simulation
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 382 warnings
-    Info: Peak virtual memory: 4658 megabytes
-    Info: Processing ended: Thu Oct 25 21:03:43 2018
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+: Ignoring output pin "resultadoSoma[10]" in vector source file when writing test bench files
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/simulation/qsim/" mips -c mips
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/leo_v/MIPS_Pipeline/Projeto2/simulation/qsim/" mips -c mips
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Copyright (C) 2016  Intel Corporation. All rights reserved.
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.
     Info: Your use of Intel Corporation's design tools, logic functions 
     Info: and other software and tools, and its AMPP partner logic 
     Info: functions, and any output files from any of the foregoing 
@@ -54,19 +48,18 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: associated documentation or information are expressly subject 
     Info: to the terms and conditions of the Intel Program License 
     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
-    Info: the Intel MegaCore Function License Agreement, or other 
-    Info: applicable license agreement, including, without limitation, 
-    Info: that your use is for the sole purpose of programming logic 
-    Info: devices manufactured by Intel and sold by Intel or its 
-    Info: authorized distributors.  Please refer to the applicable 
-    Info: agreement for further details.
-    Info: Processing started: Thu Oct 25 21:03:43 2018
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/simulation/qsim/ mips -c mips
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Tue Oct 30 00:42:37 2018
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/leo_v/MIPS_Pipeline/Projeto2/simulation/qsim/ mips -c mips
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file mips.vho in folder "C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file mips.vho in folder "C:/Users/leo_v/MIPS_Pipeline/Projeto2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4670 megabytes
-    Info: Processing ended: Thu Oct 25 21:03:44 2018
+    Info: Peak virtual memory: 4665 megabytes
+    Info: Processing ended: Tue Oct 30 00:42:38 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -74,24 +67,24 @@ Completed successfully.
 
 **** Generating the ModelSim .do script ****
 
-C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/simulation/qsim/mips.do generated.
+C:/Users/leo_v/MIPS_Pipeline/Projeto2/simulation/qsim/mips.do generated.
 
 Completed successfully. 
 
 **** Running the ModelSim simulation ****
 
-C:/intelFPGA/16.1/modelsim_ase/win32aloem/vsim -c -do mips.do
+C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/vsim -c -do mips.do
 
-Reading C:/intelFPGA/16.1/modelsim_ase/tcl/vsim/pref.tcl
+Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
-
 
 # do mips.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
+
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:03:45 on Oct 25,2018
+# Start time: 00:42:40 on Oct 30,2018
 # vcom -work work mips.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -101,18 +94,17 @@ Reading C:/intelFPGA/16.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
 # -- Compiling entity hard_block
-
 # -- Compiling architecture structure of hard_block
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
 # -- Compiling entity mips
 # -- Compiling architecture structure of mips
 
-# End time: 21:03:46 on Oct 25,2018, Elapsed time: 0:00:01
+# End time: 00:42:41 on Oct 30,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:03:46 on Oct 25,2018
+# Start time: 00:42:41 on Oct 30,2018
 # vcom -work work Waveform9.vwf.vht 
 # -- Loading package STANDARD
 
@@ -120,11 +112,11 @@ Reading C:/intelFPGA/16.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package std_logic_1164
 # -- Compiling entity mips_vhd_vec_tst
 # -- Compiling architecture mips_arch of mips_vhd_vec_tst
-# End time: 21:03:46 on Oct 25,2018, Elapsed time: 0:00:00
+# End time: 00:42:41 on Oct 30,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.mips_vhd_vec_tst 
-# Start time: 21:03:46 on Oct 25,2018
+# Start time: 00:42:42 on Oct 30,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -147,24 +139,25 @@ Reading C:/intelFPGA/16.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cycloneive.cycloneive_ram_block(block_arch)
 # Loading cycloneive.cycloneive_ram_register(reg_arch)
 # Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 159550 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 179098 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
+
 # after#35
 
-# End time: 21:03:48 on Oct 25,2018, Elapsed time: 0:00:02
+# End time: 00:42:44 on Oct 30,2018, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/Waveform9.vwf...
+Reading C:/Users/leo_v/MIPS_Pipeline/Projeto2/Waveform9.vwf...
 
-Reading C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/simulation/qsim/mips.msim.vcd...
+Reading C:/Users/leo_v/MIPS_Pipeline/Projeto2/simulation/qsim/mips.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/simulation/qsim/mips_20181025210348.sim.vwf
+Writing the resulting VWF to C:/Users/leo_v/MIPS_Pipeline/Projeto2/simulation/qsim/mips_20181030004245.sim.vwf
 
 Finished VCD to VWF conversion.
 

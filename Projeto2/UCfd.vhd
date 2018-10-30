@@ -22,6 +22,7 @@ begin
 			HabLeMEM <= '0';
 			HabEscMEM <= '0';
 			ULAop <= "10";
+			
 		elsif(opcode = "100011") then 
 			Mux1 <= '0';
 			Mux2 <= '0';
@@ -32,6 +33,7 @@ begin
 			HabLeMEM <= '1';
 			HabEscMEM <= '0';
 			ULAop <= "00";
+		
 		elsif(opcode = "101011") then 
 			Mux1 <= '0';
 			Mux2 <= '0';
@@ -42,6 +44,7 @@ begin
 			HabLeMEM <= '0';
 			HabEscMEM <= '1';
 			ULAop <= "00";
+		
 		elsif(opcode = "000100") then 
 			Mux1 <= '0';
 			Mux2 <= '0';
@@ -52,6 +55,7 @@ begin
 			HabLeMEM <= '0';
 			HabEscMEM <= '0';
 			ULAop <= "01";	
+		
 		elsif(opcode = "000010") then 
 			Mux1 <= '1';
 			Mux2 <= '0';
@@ -62,6 +66,7 @@ begin
 			HabLeMEM <= '0';
 			HabEscMEM <= '0';
 			ULAop <= "00";
+		
 		else
 			Mux1 <= '0';
 			Mux2 <= '0';
@@ -72,6 +77,7 @@ begin
 			HabLeMEM <= '0';
 			HabEscMEM <= '0';
 			ULAop <= "00";
+			
 		end if;
 	end process;		
 end architecture;

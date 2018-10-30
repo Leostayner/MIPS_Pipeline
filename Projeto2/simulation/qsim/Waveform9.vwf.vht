@@ -1,4 +1,4 @@
--- Copyright (C) 2016  Intel Corporation. All rights reserved.
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
 -- and other software and tools, and its AMPP partner logic 
 -- functions, and any output files from any of the foregoing 
@@ -6,12 +6,11 @@
 -- associated documentation or information are expressly subject 
 -- to the terms and conditions of the Intel Program License 
 -- Subscription Agreement, the Intel Quartus Prime License Agreement,
--- the Intel MegaCore Function License Agreement, or other 
--- applicable license agreement, including, without limitation, 
--- that your use is for the sole purpose of programming logic 
--- devices manufactured by Intel and sold by Intel or its 
--- authorized distributors.  Please refer to the applicable 
--- agreement for further details.
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
 
 -- *****************************************************************************
 -- This file contains a Vhdl test bench with test vectors .The test vectors     
@@ -19,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/25/2018 21:03:42"
+-- Generated on "10/30/2018 00:42:36"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          mips
 -- 
@@ -43,7 +42,9 @@ SIGNAL Mux1Debug : STD_LOGIC;
 SIGNAL Mux2Debug : STD_LOGIC;
 SIGNAL Mux3Debug : STD_LOGIC;
 SIGNAL Mux4Debug : STD_LOGIC;
+SIGNAL mux_beq : STD_LOGIC;
 SIGNAL opcodeDebug : STD_LOGIC_VECTOR(5 DOWNTO 0);
+SIGNAL otR0 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL otR1 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL otR2 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL otR3 : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -52,9 +53,12 @@ SIGNAL otR5 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL otR6 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL otR7 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL out_PCTeste : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL overflow : STD_LOGIC;
+SIGNAL resultadoSoma : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL testAluA : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL testAluB : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL testeAluRes : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL testeOutRam : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL ULAopDebug : STD_LOGIC_VECTOR(1 DOWNTO 0);
 COMPONENT mips
 	PORT (
@@ -67,7 +71,9 @@ COMPONENT mips
 	Mux2Debug : OUT STD_LOGIC;
 	Mux3Debug : OUT STD_LOGIC;
 	Mux4Debug : OUT STD_LOGIC;
+	mux_beq : OUT STD_LOGIC;
 	opcodeDebug : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+	otR0 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	otR1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	otR2 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	otR3 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -76,9 +82,12 @@ COMPONENT mips
 	otR6 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	otR7 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	out_PCTeste : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	overflow : OUT STD_LOGIC;
+	resultadoSoma : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	testAluA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	testAluB : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	testeAluRes : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	testeOutRam : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	ULAopDebug : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
 	);
 END COMPONENT;
@@ -95,7 +104,9 @@ BEGIN
 	Mux2Debug => Mux2Debug,
 	Mux3Debug => Mux3Debug,
 	Mux4Debug => Mux4Debug,
+	mux_beq => mux_beq,
 	opcodeDebug => opcodeDebug,
+	otR0 => otR0,
 	otR1 => otR1,
 	otR2 => otR2,
 	otR3 => otR3,
@@ -104,23 +115,24 @@ BEGIN
 	otR6 => otR6,
 	otR7 => otR7,
 	out_PCTeste => out_PCTeste,
+	overflow => overflow,
+	resultadoSoma => resultadoSoma,
 	testAluA => testAluA,
 	testAluB => testAluB,
 	testeAluRes => testeAluRes,
+	testeOutRam => testeOutRam,
 	ULAopDebug => ULAopDebug
 	);
 
 -- clk
 t_prcs_clk: PROCESS
 BEGIN
-	FOR i IN 1 TO 12
-	LOOP
-		clk <= '0';
-		WAIT FOR 40000 ps;
-		clk <= '1';
-		WAIT FOR 40000 ps;
-	END LOOP;
+LOOP
 	clk <= '0';
-WAIT;
+	WAIT FOR 50000 ps;
+	clk <= '1';
+	WAIT FOR 50000 ps;
+	IF (NOW >= 1200000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_clk;
 END mips_arch;

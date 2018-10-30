@@ -12,7 +12,11 @@ entity alu is
 	 func : in std_logic_vector(1 downto 0);
 	 output : out std_logic_vector(31 downto 0);
 	 zero: out std_logic;
-	 cout: out std_logic);
+	 cout: out std_logic;
+	 resultadoSoma : out std_logic_vector(31 downto 0);
+	 overflow: out STD_LOGIC);
+	 
+	 
 end alu;
  
 architecture alu_arch of alu is
@@ -50,7 +54,7 @@ component FullAdder32 is
 	);
 end component;
 
-signal out1, out2, out3,out4, fa,fb, tempOutput :std_logic_vector(31 downto 0);
+signal out1, out2, out3, out4, fa, fb, tempOutput : std_logic_vector(31 downto 0);
 signal v: std_logic;
 signal tempFlag: std_logic;
 	
@@ -61,10 +65,11 @@ begin
 
 
 	out1 <= fa and fb;
-	out2 <= fa or fb;
+	out2 <= fa or  fb;
 	adder: FullAdder32 port map(a => fa, b => fb, c => cin, soma => out3, vaium => cout, v => v);
 	out4(0) <= out3(31) xor v;
-	
+	overflow <= v;
+	resultadoSoma <= out3;
 	
 	final: mux4way port map(
 		i1 => out1, i2 => out2, i3 => out3, i4 => out4, sel => func, selected => tempOutput

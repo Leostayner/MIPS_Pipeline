@@ -1,4 +1,4 @@
--- Copyright (C) 2016  Intel Corporation. All rights reserved.
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
 -- and other software and tools, and its AMPP partner logic 
 -- functions, and any output files from any of the foregoing 
@@ -6,12 +6,11 @@
 -- associated documentation or information are expressly subject 
 -- to the terms and conditions of the Intel Program License 
 -- Subscription Agreement, the Intel Quartus Prime License Agreement,
--- the Intel MegaCore Function License Agreement, or other 
--- applicable license agreement, including, without limitation, 
--- that your use is for the sole purpose of programming logic 
--- devices manufactured by Intel and sold by Intel or its 
--- authorized distributors.  Please refer to the applicable 
--- agreement for further details.
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
 
 -- *****************************************************************************
 -- This file contains a Vhdl test bench with test vectors .The test vectors     
@@ -19,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/11/2018 17:29:04"
+-- Generated on "10/29/2018 18:39:29"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          UCAlu
+-- Vhdl Test Bench(with test vectors) for design  :          mips
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,75 +28,99 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY UCAlu_vhd_vec_tst IS
-END UCAlu_vhd_vec_tst;
-ARCHITECTURE UCAlu_arch OF UCAlu_vhd_vec_tst IS
+ENTITY mips_vhd_vec_tst IS
+END mips_vhd_vec_tst;
+ARCHITECTURE mips_arch OF mips_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL CUfd : STD_LOGIC_VECTOR(1 DOWNTO 0);
-SIGNAL funct : STD_LOGIC_VECTOR(5 DOWNTO 0);
-SIGNAL output : STD_LOGIC_VECTOR(3 DOWNTO 0);
-COMPONENT UCAlu
+SIGNAL BEQDebug : STD_LOGIC;
+SIGNAL clk : STD_LOGIC;
+SIGNAL HabEscMEMDebug : STD_LOGIC;
+SIGNAL HabEscritaRegDebug : STD_LOGIC;
+SIGNAL HabLeMEMDebug : STD_LOGIC;
+SIGNAL Mux1Debug : STD_LOGIC;
+SIGNAL Mux2Debug : STD_LOGIC;
+SIGNAL Mux3Debug : STD_LOGIC;
+SIGNAL Mux4Debug : STD_LOGIC;
+SIGNAL opcodeDebug : STD_LOGIC_VECTOR(5 DOWNTO 0);
+SIGNAL otR0 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL otR1 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL otR2 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL otR3 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL otR4 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL otR5 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL otR6 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL out_PCTeste : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL testAluA : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL testAluB : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL testeAluRes : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL testeOutRam : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL ULAopDebug : STD_LOGIC_VECTOR(1 DOWNTO 0);
+COMPONENT mips
 	PORT (
-	CUfd : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-	funct : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-	output : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+	BEQDebug : OUT STD_LOGIC;
+	clk : IN STD_LOGIC;
+	HabEscMEMDebug : OUT STD_LOGIC;
+	HabEscritaRegDebug : OUT STD_LOGIC;
+	HabLeMEMDebug : OUT STD_LOGIC;
+	Mux1Debug : OUT STD_LOGIC;
+	Mux2Debug : OUT STD_LOGIC;
+	Mux3Debug : OUT STD_LOGIC;
+	Mux4Debug : OUT STD_LOGIC;
+	opcodeDebug : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+	otR0 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	otR1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	otR2 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	otR3 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	otR4 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	otR5 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	otR6 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	out_PCTeste : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	testAluA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	testAluB : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	testeAluRes : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	testeOutRam : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	ULAopDebug : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : UCAlu
+	i1 : mips
 	PORT MAP (
 -- list connections between master ports and signals
-	CUfd => CUfd,
-	funct => funct,
-	output => output
+	BEQDebug => BEQDebug,
+	clk => clk,
+	HabEscMEMDebug => HabEscMEMDebug,
+	HabEscritaRegDebug => HabEscritaRegDebug,
+	HabLeMEMDebug => HabLeMEMDebug,
+	Mux1Debug => Mux1Debug,
+	Mux2Debug => Mux2Debug,
+	Mux3Debug => Mux3Debug,
+	Mux4Debug => Mux4Debug,
+	opcodeDebug => opcodeDebug,
+	otR0 => otR0,
+	otR1 => otR1,
+	otR2 => otR2,
+	otR3 => otR3,
+	otR4 => otR4,
+	otR5 => otR5,
+	otR6 => otR6,
+	out_PCTeste => out_PCTeste,
+	testAluA => testAluA,
+	testAluB => testAluB,
+	testeAluRes => testeAluRes,
+	testeOutRam => testeOutRam,
+	ULAopDebug => ULAopDebug
 	);
--- CUfd[1]
-t_prcs_CUfd_1: PROCESS
+
+-- clk
+t_prcs_clk: PROCESS
 BEGIN
-	CUfd(1) <= '1';
-WAIT;
-END PROCESS t_prcs_CUfd_1;
--- CUfd[0]
-t_prcs_CUfd_0: PROCESS
-BEGIN
-	CUfd(0) <= '0';
-WAIT;
-END PROCESS t_prcs_CUfd_0;
--- funct[5]
-t_prcs_funct_5: PROCESS
-BEGIN
-	funct(5) <= '1';
-WAIT;
-END PROCESS t_prcs_funct_5;
--- funct[4]
-t_prcs_funct_4: PROCESS
-BEGIN
-	funct(4) <= '0';
-WAIT;
-END PROCESS t_prcs_funct_4;
--- funct[3]
-t_prcs_funct_3: PROCESS
-BEGIN
-	funct(3) <= '0';
-WAIT;
-END PROCESS t_prcs_funct_3;
--- funct[2]
-t_prcs_funct_2: PROCESS
-BEGIN
-	funct(2) <= '0';
-WAIT;
-END PROCESS t_prcs_funct_2;
--- funct[1]
-t_prcs_funct_1: PROCESS
-BEGIN
-	funct(1) <= '1';
-WAIT;
-END PROCESS t_prcs_funct_1;
--- funct[0]
-t_prcs_funct_0: PROCESS
-BEGIN
-	funct(0) <= '0';
-WAIT;
-END PROCESS t_prcs_funct_0;
-END UCAlu_arch;
+LOOP
+	clk <= '0';
+	WAIT FOR 50000 ps;
+	clk <= '1';
+	WAIT FOR 50000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_clk;
+END mips_arch;

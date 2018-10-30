@@ -97,25 +97,25 @@ R22
 R16
 R17
 Ehard_block
-Z23 w1540512224
+Z23 w1540870958
 R2
-Z24 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 K`kJb<]?z4U5EbkG_:lMO3
+Z24 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 U]E`hi0:`oKa5cWiFZ>hl3
 R4
 R6
 R7
-Z25 DPx10 cycloneive 21 cycloneive_components 0 22 HFZ8mBI5?[8TM9e2YGWCa2
-Z26 dC:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/Projeto2/simulation/qsim
+Z25 DPx10 cycloneive 21 cycloneive_components 0 22 7:=`d=[QUY_aUcbj<lC000
+Z26 dC:/Users/leo_v/MIPS_Pipeline/Projeto2/simulation/qsim
 R9
 R10
 l0
-L35
-VB]0;STalBkCB1_B4BXQDW2
-!s100 >mXi5[`cD`bFC`UBKA<om3
+L34
+VOgIg9T_BR7joedFDVM>H13
+!s100 A`ID_i56<Ua56=ZD=[EG=2
 R11
 32
-Z27 !s110 1540512225
+Z27 !s110 1540870960
 !i10b 1
-Z28 !s108 1540512225.000000
+Z28 !s108 1540870960.000000
 R14
 R15
 !i113 1
@@ -128,11 +128,11 @@ R4
 R6
 R7
 R25
-DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
-l65
-L51
-Via>5o7W??azG@W@@eFOTF0
-!s100 [5;Wd8QGQ>@2NGoJ1I]Y43
+DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
+l64
+L50
+V`^CmQg<48W[ez[JL_5@Yn2
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
 R11
 32
 R27
@@ -148,18 +148,18 @@ R23
 R24
 R25
 R2
-Z29 DPx6 altera 11 dffeas_pack 0 22 zWCf]NF6heG=Dhmc@B0=T2
+Z29 DPx6 altera 11 dffeas_pack 0 22 Dg`GWTC`^Q8GNSMPeo22;3
 R4
 R6
 R7
-Z30 DPx6 altera 28 altera_primitives_components 0 22 _Q9E2TD5YB<<@P0[5jYTG0
+Z30 DPx6 altera 28 altera_primitives_components 0 22 _LNC5n6B?5VN@W;M4Dg@k1
 R26
 R9
 R10
 l0
-L80
-Ve]^5F1eI2_?So0eIe?onh2
-!s100 `^dC5dU@7>5Qd=1PZzA2>0
+L79
+V46E3@OSXg]nm1o6aS`NIf3
+!s100 3MDjW6YnD<:SV2JZZToV70
 R11
 32
 R27
@@ -179,14 +179,14 @@ R4
 R6
 R7
 R30
-DEx4 work 4 mips 0 22 e]^5F1eI2_?So0eIe?onh2
-l1665
-L479
-VPW1Hmh8RmF?`g57;hoWOk3
-!s100 E:`I8UFFN;Ofkkl2KP6Wa1
+DEx4 work 4 mips 0 22 46E3@OSXg]nm1o6aS`NIf3
+l2230
+L581
+VfzWz5g5@o^oUiXjV6P4bF3
+!s100 QbTn33bfkBojN]P<dmoU12
 R11
 32
-Z31 !s110 1540512226
+R27
 !i10b 1
 R28
 R14
@@ -195,21 +195,21 @@ R15
 R16
 R17
 Emips_vhd_vec_tst
-Z32 w1540512222
+Z31 w1540870956
 R6
 R7
 R26
-Z33 8Waveform9.vwf.vht
-Z34 FWaveform9.vwf.vht
+Z32 8Waveform9.vwf.vht
+Z33 FWaveform9.vwf.vht
 l0
-L32
-VKO4hPTTI3n6nfE_TcF9IV0
-!s100 l;go`YHaQaYD^G?nG;^6m3
+L31
+V9DlO:XLN`VbaHK^H76nVA3
+!s100 H7f7B9Gbj_T4GFE4m1]5D2
 R11
 32
-R31
+Z34 !s110 1540870961
 !i10b 1
-Z35 !s108 1540512226.000000
+Z35 !s108 1540870961.000000
 Z36 !s90 -work|work|Waveform9.vwf.vht|
 Z37 !s107 Waveform9.vwf.vht|
 !i113 1
@@ -218,14 +218,14 @@ R17
 Amips_arch
 R6
 R7
-Z38 DEx4 work 16 mips_vhd_vec_tst 0 22 KO4hPTTI3n6nfE_TcF9IV0
-l85
-L34
-V]DV<OLfA5mnJiXcPe_;zz3
-!s100 0=L9fn4UDVAS;ATRF;NAb1
+Z38 DEx4 work 16 mips_vhd_vec_tst 0 22 9DlO:XLN`VbaHK^H76nVA3
+l94
+L33
+V>[YcaJP>MPQ6QT>V_U45U3
+!s100 V<UVizLJXnXPhKgV=BlEM2
 R11
 32
-R31
+R34
 !i10b 1
 R35
 R36

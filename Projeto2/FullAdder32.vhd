@@ -10,6 +10,7 @@ entity FullAdder32 is
 		soma: out STD_LOGIC_vector(31 downto 0);  
 		vaium,v : out STD_LOGIC
 	);
+
 end entity;
 
 architecture arch_FullAdder of FullAdder32 is 
@@ -20,6 +21,7 @@ component FullAdder is
 		soma,vaium: out STD_LOGIC   -- sum e carry
 	);
 end component;
+
 
 
 signal carries: STD_LOGIC_vector(31 downto 0);
@@ -33,6 +35,6 @@ begin
 
 	vaium <= carries(31);
 	
-	v <= c xor carries(31);
+	v <=  ((not a(31)) and (not b(31)) and (soma(31)) ) or ( a(31) and b(31) and (not soma(31)) ); 
 	
 end architecture;

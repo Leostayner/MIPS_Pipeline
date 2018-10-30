@@ -15,20 +15,28 @@ begin
 	process (all) begin
 		if(CUfd = "00") then
 			output <= "0010";
-		elsif(Cufd = "01") then
+	
+   	elsif(Cufd = "01") then
 			output <= "0110";
-		else
+	
+   	else
+			
 			if(funct = "100000") then
 				output <= "0010";
+			
 			elsif(funct = "100010") then
 				output <= "0110";
+			
 			elsif(funct = "100100") then
 				output <= "0000";
+			
 			elsif(funct = "100101") then
 				output <= "0001";
+			
 			elsif(funct = "101010") then
 				output <= "0111";
+			
 			end if;
-		end if;
+		end if;	
 	end process;		
 end architecture;

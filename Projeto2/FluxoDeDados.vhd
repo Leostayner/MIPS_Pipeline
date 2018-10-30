@@ -14,12 +14,16 @@ entity FluxoDeDados is
 		hab_Escrita : in std_logic;
 		habLeituraMem: in std_logic;
 		habEscritaMem: in std_logic;
+		
 		BEQ: in std_logic;
+		mux_beq: out std_logic;
+		
 		ULAop: in std_logic_vector(1 downto 0);
 		opcode: out std_logic_vector(5 downto 0);
 		
 	
 			  ---------Teste Wave Froms----------------
+	  outR0 : out std_logic_vector(31 downto 0);
 	  outR1 : out std_logic_vector(31 downto 0);
 	  outR2 : out std_logic_vector(31 downto 0);
 	  outR3 : out std_logic_vector(31 downto 0);
@@ -30,7 +34,10 @@ entity FluxoDeDados is
 	  pcDebug: out std_logic_vector(31 downto 0);
 	  testAluA : out STD_LOGIC_vector(31 downto 0);
 	  testAluB : out STD_LOGIC_vector(31 downto 0);
-	  testeAluRes: out STD_LOGIC_vector(31 downto 0)
+	  testeAluRes: out STD_LOGIC_vector(31 downto 0);
+	  testeOutRam : out std_logic_vector((32 -1) downto 0);
+	  resultadoSoma: out std_logic_vector((32 -1) downto 0);
+	  overflow : out STD_LOGIC
 	  ------------------------------------------
 	);
 	 
@@ -82,13 +89,9 @@ begin
 	
 	opcode <= out_Rom(31 downto 26);
 
-	extendedImmediateShifted <= extendedImmediate(29 downto 0) & "00";
-
 	beqAnd <= aluFlag and BEQ;
-		
-	shiftedImme <= out_Rom(23 downto 0) & "00";
 	
-	pcorjump <= pcAddOut(31 downto 28) & shiftedImme & "00";
+	pcorjump <= pcAddOut(31 downto 26) & out_Rom(25 downto 0);
 
 	MuxPC :  entity work.mux2way
 		port map(i1 => out_MuxBeq , i2 => pcorjump , sel => sel_MuxPC, selected => out_MuxPC);
@@ -100,14 +103,16 @@ begin
 		port map (a => "00000000000000000000000000000001",b => out_PC, c => '0', soma => pcAddOut);
 	
 	Rom : entity work.romMif
-		port map (addr => to_integer(unsigned(out_PC)), q => out_Rom);
+		port map (addr => to_integer(unsigned(out_PC)), q => out_Rom, clk => clk);
 		
 	MuxRtRd : entity work.mux2way generic map (dataLength => 5)
 		port map(i1 => out_Rom(20 downto 16), i2 => out_Rom(15 downto 11), sel => sel_MuxRtRd, selected => out_MuxRtRd);
 	
 	BankRegister: entity work.bancoRegistradores
 		port map(clk => clk, enderecoA => out_Rom(25 downto 21), enderecoB => out_Rom(20 downto 16), enderecoC => out_MuxRtRd,
-					dadoEscritaC => out_MuxRegRam, escreveC => hab_Escrita, saidaA => out_BankRA, saidaB => out_BankRB,  outR1 => outR1,
+					dadoEscritaC => out_MuxRegRam, escreveC => hab_Escrita, saidaA => out_BankRA, saidaB => out_BankRB,  
+		  outR0 => outR0,
+		  outR1 => outR1,
 		  outR2 => outR2,
 		  outR3 => outR3,
 		  outR4 => outR4,
@@ -128,11 +133,11 @@ begin
 		
 	--checar qm controla o invA invB e o Cin	
 	ALU: entity work.alu
-		port map(A =>out_BankRA, B=>out_MuxBankRegister, cin => UCAluOut(2), invA => UCAluOut(3), invB => UCAluOut(2), func => UCAluOut(1 downto 0), output => AluOut, zero => aluFlag);
+		port map(A =>out_BankRA, B=>out_MuxBankRegister, cin => UCAluOut(2), invA => UCAluOut(3), invB => UCAluOut(2), func => UCAluOut(1 downto 0), output => AluOut, zero => aluFlag, overflow => overflow, resultadoSoma => resultadoSoma);
 	
-  testAluA <= out_BankRA;
-  testAluB <= out_MuxBankRegister;
-  testeAluRes <= AluOut;
+   testAluA <= out_BankRA;
+   testAluB <= out_MuxBankRegister;
+   testeAluRes <= AluOut;
 	
 	MuxRegRam: entity work.mux2way
 		port map(i1 => AluOut, i2=> ram_out, sel => sel_MuxRegRam, selected => out_MuxRegRam);
@@ -140,10 +145,14 @@ begin
 	Ram: entity work.ram
 		port map(clk => clk,addr => to_integer(unsigned(AluOut)), data => out_BankRB , canRead => habLeituraMem ,canWrite => habEscritaMem ,q =>ram_out);
 		
+	testeOutRam <= ram_out;
+	
 	adder2: entity work.FullAdder32
-		port map (a => pcAddOut,b => extendedImmediateShifted, c => '0', soma => pcImmeAddOut);
+		port map (a => pcAddOut,b => extendedImmediate, c => '0', soma => pcImmeAddOut);
 		
 	MuxBeq : entity work.mux2way
 		port map(i1 => pcAddOut, i2 => pcImmeAddOut, sel => beqAnd, selected => out_MuxBeq);
+	
+	mux_beq <= beqAnd;
 		
 end architecture;

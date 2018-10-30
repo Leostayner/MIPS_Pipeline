@@ -1,4 +1,4 @@
- -- Quartus Prime VHDL Template
+-- Quartus Prime VHDL Template
 -- Single port RAM with single read/write address 
 
 library ieee;
@@ -40,11 +40,11 @@ begin
 	process(clk)
 	begin
 	if(rising_edge(clk)) then
-		if((canWrite = '1') and (addr < 512)) then
+		if((canWrite = '1')) then
 			ram(addr) <= data;
 		end if;
 		
-		if((canRead = '1') and (addr < 512)) then
+		if((canRead = '1')) then
 			addr_reg <= addr;
 		end if;
 	end if;
