@@ -54,7 +54,7 @@ component FullAdder32 is
 	);
 end component;
 
-signal out1, out2, out3, out4, fa, fb, tempOutput : std_logic_vector(31 downto 0);
+signal out1, out2, out3, out4, fa, fb, tempOutput : std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
 signal v: std_logic;
 signal tempFlag: std_logic;
 	
@@ -74,9 +74,7 @@ begin
 	final: mux4way port map(
 		i1 => out1, i2 => out2, i3 => out3, i4 => out4, sel => func, selected => tempOutput
 	);
-	
 	output <=  tempOutput;
-	
 	flag: or32 port map( input => tempOutput, output => tempFlag);
 	zero <= not tempFlag;
   

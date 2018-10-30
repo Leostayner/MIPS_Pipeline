@@ -4,23 +4,22 @@ use IEEE.NUMERIC_STD.ALL;
  
 entity mips is
 	 Port ( 
-		--KEY: in std_logic_vector(3 downto 0);
+		KEY: in std_logic_vector(3 downto 0);
 		
 		-----------Teste Clock--------
 		clk: in std_logic;
 		------------------------------
 		
-		
-	/*
+		HEX1 : out std_logic_vector(6 downto 0); 
 		HEX2 : out std_logic_vector(6 downto 0); 
 		HEX3 : out std_logic_vector(6 downto 0); 
 		HEX4 : out std_logic_vector(6 downto 0); 
 		HEX5 : out std_logic_vector(6 downto 0); 
 		HEX6 : out std_logic_vector(6 downto 0); 
 		HEX7 : out std_logic_vector(6 downto 0); 
-	*/
+
 			  ---------Teste Wave Froms----------------
-	   otR0 : out std_logic_vector(31 downto 0);
+	   --otR0 : out std_logic_vector(31 downto 0);
 	   otR1 : out std_logic_vector(31 downto 0);
 	   otR2 : out std_logic_vector(31 downto 0);
 	   otR3 : out std_logic_vector(31 downto 0);
@@ -74,7 +73,7 @@ begin
 
 	fd: entity work.FluxoDeDados
 		port map(
-		clk => clk,
+		clk =>  not KEY(0),
 		sel_MuxPC => Mux1,
 		sel_MuxRtRd => Mux2,
 		sel_MuxSaidaBankReg => Mux3,
@@ -83,13 +82,10 @@ begin
 		habLeituraMem => HabLeMEM,
 		habEscritaMem => HabEscMEM,
 		BEQ => BEQ,
-		mux_beq => mux_beq,
-		
-		
+		mux_beq => mux_beq,	
 		ULAop => ULAop,
-		opcode => opcode,
-		   
-		outR0 => otR0,
+		opcode => opcode,		   
+		--outR0 => otR0,
 	   outR1 => otR1,
 	   outR2 => otR2,
 	   outR3 => otR3,
@@ -97,7 +93,6 @@ begin
 	   outR5 => otR5, 
 	   outR6 => otR6,
 		outR7 => otR7,
-		
 		overflow => overflow,
 		resultadoSoma => resultadoSoma,
 		pcDebug  => out_PCTeste,
@@ -105,6 +100,16 @@ begin
 		testAluB => testAluB,
 		testeAluRes => testeAluRes,
 		testeOutRam => testeOutRam);	
+		
+		--outR0 <= otR0;
+	   outR1 <= otR1;
+	   outR2 <= otR2;
+	   outR3 <= otR3;
+	   outR4 <= otR4;
+	   outR5 <= otR5; 
+	   outR6 <= otR6;
+		outR7 <= otR7;
+		
 		
 	
 --- teste debug sinais unidade de controle - 
@@ -132,5 +137,13 @@ begin
 			 HabEscMEM => HabEscMEM,
 			 ULAop => ULAop
 			);
+	
+	convhex1: entity work.conversorHex7Seg port map ( dadoHex => outR1(3 downto 0), saida7seg => HEX1);
+	convhex2: entity work.conversorHex7Seg port map ( dadoHex => outR2(3 downto 0), saida7seg => HEX2);
+	convhex3: entity work.conversorHex7Seg port map ( dadoHex => outR3(3 downto 0), saida7seg => HEX3);
+	convhex4: entity work.conversorHex7Seg port map ( dadoHex => outR4(3 downto 0), saida7seg => HEX4);
+	convhex5: entity work.conversorHex7Seg port map ( dadoHex => outR5(3 downto 0), saida7seg => HEX5);
+	convhex6: entity work.conversorHex7Seg port map ( dadoHex => outR6(3 downto 0), saida7seg => HEX6);
+	convhex7: entity work.conversorHex7Seg port map ( dadoHex => outR7(3 downto 0), saida7seg => HEX7);
 		
 end architecture;

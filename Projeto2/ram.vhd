@@ -43,13 +43,12 @@ begin
 		if((canWrite = '1')) then
 			ram(addr) <= data;
 		end if;
-		
-		if((canRead = '1')) then
-			addr_reg <= addr;
-		end if;
 	end if;
 	end process;
+	
+	q <= ram(addr) when canRead = '1' else
+	     (others => '0');
 
-	q <= ram(addr_reg);
+	
 
 end rtl;

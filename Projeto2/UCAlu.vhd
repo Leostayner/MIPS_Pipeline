@@ -35,7 +35,8 @@ begin
 			
 			elsif(funct = "101010") then
 				output <= "0111";
-			
+			else
+				output <= (others =>'0');
 			end if;
 		end if;	
 	end process;		
