@@ -90,8 +90,9 @@ begin
 	opcode <= out_Rom(31 downto 26);
 
 	beqAnd <= aluFlag and BEQ;
+	extendedImmediateShifted <= extendedImmediate(29 downto 0) & "00";
 	
-	pcorjump <= pcAddOut(31 downto 26) & out_Rom(25 downto 0);
+	pcorjump <= pcAddOut(31 downto 28) & out_Rom(25 downto 0) & "00";
 
 	MuxPC :  entity work.mux2way
 		port map(i1 => out_MuxBeq , i2 => pcorjump , sel => sel_MuxPC, selected => out_MuxPC);
@@ -100,10 +101,10 @@ begin
 		port map (DIN => out_MuxPC, DOUT => out_PC, ENABLE => "11111" ,CLK => clk, RST => '0');
 		
 	adder: entity work.FullAdder32
-		port map (a => "00000000000000000000000000000001",b => out_PC, c => '0', soma => pcAddOut);
+		port map (a => "00000000000000000000000000000100",b => out_PC, c => '0', soma => pcAddOut);
 	
 	Rom : entity work.romMif
-		port map (addr => to_integer(unsigned(out_PC)), q => out_Rom, clk => clk);
+		port map (addr => to_integer(unsigned(out_PC(31 downto 2))), q => out_Rom, clk => clk);
 		
 	MuxRtRd : entity work.mux2way generic map (dataLength => 5)
 		port map(i1 => out_Rom(20 downto 16), i2 => out_Rom(15 downto 11), sel => sel_MuxRtRd, selected => out_MuxRtRd);
@@ -148,7 +149,7 @@ begin
 	testeOutRam <= ram_out;
 	
 	adder2: entity work.FullAdder32
-		port map (a => pcAddOut,b => extendedImmediate, c => '0', soma => pcImmeAddOut);
+		port map (a => pcAddOut,b => extendedImmediateShifted, c => '0', soma => pcImmeAddOut);
 		
 	MuxBeq : entity work.mux2way
 		port map(i1 => pcAddOut, i2 => pcImmeAddOut, sel => beqAnd, selected => out_MuxBeq);

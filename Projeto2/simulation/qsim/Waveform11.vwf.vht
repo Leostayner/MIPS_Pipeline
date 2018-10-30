@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/26/2018 17:31:53"
+-- Generated on "10/30/2018 18:17:45"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          mips
 -- 
@@ -38,10 +38,19 @@ SIGNAL clk : STD_LOGIC;
 SIGNAL HabEscMEMDebug : STD_LOGIC;
 SIGNAL HabEscritaRegDebug : STD_LOGIC;
 SIGNAL HabLeMEMDebug : STD_LOGIC;
+SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX5 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX6 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX7 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL Mux1Debug : STD_LOGIC;
 SIGNAL Mux2Debug : STD_LOGIC;
 SIGNAL Mux3Debug : STD_LOGIC;
 SIGNAL Mux4Debug : STD_LOGIC;
+SIGNAL mux_beq : STD_LOGIC;
 SIGNAL opcodeDebug : STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL otR1 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL otR2 : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -51,6 +60,8 @@ SIGNAL otR5 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL otR6 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL otR7 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL out_PCTeste : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL overflow : STD_LOGIC;
+SIGNAL resultadoSoma : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL testAluA : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL testAluB : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL testeAluRes : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -63,10 +74,19 @@ COMPONENT mips
 	HabEscMEMDebug : OUT STD_LOGIC;
 	HabEscritaRegDebug : OUT STD_LOGIC;
 	HabLeMEMDebug : OUT STD_LOGIC;
+	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX6 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX7 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	Mux1Debug : OUT STD_LOGIC;
 	Mux2Debug : OUT STD_LOGIC;
 	Mux3Debug : OUT STD_LOGIC;
 	Mux4Debug : OUT STD_LOGIC;
+	mux_beq : OUT STD_LOGIC;
 	opcodeDebug : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
 	otR1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	otR2 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -76,6 +96,8 @@ COMPONENT mips
 	otR6 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	otR7 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	out_PCTeste : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	overflow : OUT STD_LOGIC;
+	resultadoSoma : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	testAluA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	testAluB : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	testeAluRes : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -92,10 +114,19 @@ BEGIN
 	HabEscMEMDebug => HabEscMEMDebug,
 	HabEscritaRegDebug => HabEscritaRegDebug,
 	HabLeMEMDebug => HabLeMEMDebug,
+	HEX1 => HEX1,
+	HEX2 => HEX2,
+	HEX3 => HEX3,
+	HEX4 => HEX4,
+	HEX5 => HEX5,
+	HEX6 => HEX6,
+	HEX7 => HEX7,
+	KEY => KEY,
 	Mux1Debug => Mux1Debug,
 	Mux2Debug => Mux2Debug,
 	Mux3Debug => Mux3Debug,
 	Mux4Debug => Mux4Debug,
+	mux_beq => mux_beq,
 	opcodeDebug => opcodeDebug,
 	otR1 => otR1,
 	otR2 => otR2,
@@ -105,6 +136,8 @@ BEGIN
 	otR6 => otR6,
 	otR7 => otR7,
 	out_PCTeste => out_PCTeste,
+	overflow => overflow,
+	resultadoSoma => resultadoSoma,
 	testAluA => testAluA,
 	testAluB => testAluB,
 	testeAluRes => testeAluRes,
@@ -115,14 +148,21 @@ BEGIN
 -- clk
 t_prcs_clk: PROCESS
 BEGIN
-	FOR i IN 1 TO 12
-	LOOP
-		clk <= '0';
-		WAIT FOR 40000 ps;
-		clk <= '1';
-		WAIT FOR 40000 ps;
-	END LOOP;
 	clk <= '0';
 WAIT;
 END PROCESS t_prcs_clk;
+
+-- KEY[0]
+t_prcs_KEY_0: PROCESS
+BEGIN
+	FOR i IN 1 TO 12
+	LOOP
+		KEY(0) <= '0';
+		WAIT FOR 40000 ps;
+		KEY(0) <= '1';
+		WAIT FOR 40000 ps;
+	END LOOP;
+	KEY(0) <= '0';
+WAIT;
+END PROCESS t_prcs_KEY_0;
 END mips_arch;
