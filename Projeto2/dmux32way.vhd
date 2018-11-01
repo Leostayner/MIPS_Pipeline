@@ -4,9 +4,13 @@ use IEEE.NUMERIC_STD.ALL;
  
 entity dmux32way is
 	 Port ( 
-	 sel: in std_logic_vector(4 downto 0);
-	 input : in std_logic_vector(31 downto 0);
-	 o0, o1,o2,o3,o4,o5,o6,o7,o8,o9,o10,o11,o12,o13,o14,o15,o16,o17,o18,o19,o20,o21,o22,o23,o24,o25,o26,o27,o28,o29,o30,o31: out std_logic_vector(31 downto 0) 
+	 
+		 --INPUT
+		 sel   : in std_logic_vector(4 downto 0);
+		 input : in std_logic_vector(31 downto 0);
+		 
+		 --OUTPUT
+		 o0, o1,o2,o3,o4,o5,o6,o7,o8,o9,o10,o11,o12,o13,o14,o15,o16,o17,o18,o19,o20,o21,o22,o23,o24,o25,o26,o27,o28,o29,o30,o31: out std_logic_vector(31 downto 0) 
 	 );	 
 end dmux32way;
 

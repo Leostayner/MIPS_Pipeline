@@ -5,9 +5,13 @@ use ieee.std_logic_1164.all;
 
 entity FullAdder32 is
 	port(
-		a,b:      in STD_LOGIC_vector(31 downto 0);   -- entradas
-		c: in  std_logic;
-		soma: out STD_LOGIC_vector(31 downto 0);  
+		
+		--INPUT
+		a,b : in STD_LOGIC_vector(31 downto 0);   -- entradas
+		c   : in  std_logic;
+		
+		--OUTPUT
+		soma    : out STD_LOGIC_vector(31 downto 0);  
 		vaium,v : out STD_LOGIC
 	);
 
@@ -15,6 +19,7 @@ end entity;
 
 architecture arch_FullAdder of FullAdder32 is 
 
+--COMPONENT FULL ADDER
 component FullAdder is
 	port(
 		a,b,c:      in STD_LOGIC;   -- entradas
@@ -22,13 +27,15 @@ component FullAdder is
 	);
 end component;
 
-
-
+--SIGNAL
 signal carries: STD_LOGIC_vector(31 downto 0);
 
 
 begin
+
+	--PORT MAP FULL ADDER
 	a0: FullAdder port map(a=> a(0), b=> b(0), c => c, soma => soma(0), vaium => carries(0));
+	
 	addsloop: for i IN 1 to 31 generate
 	  add1to31: FullAdder port map(a=> a(i), b=> b(i), c => carries(i-1), soma => soma(i), vaium => carries(i));
 	end generate;

@@ -11,9 +11,12 @@ entity romMif is
     );
 
     port (
+		  --INPUT
 		  clk : in std_logic;
         addr: in natural range 0 to 2**ADDR_WIDTH-1 := 0;
-        q: out std_logic_vector (DATA_WIDTH-1 downto 0)
+        
+		  --OUTPUT
+		  q: out std_logic_vector (DATA_WIDTH-1 downto 0)
     );
 end entity;
 
@@ -26,6 +29,7 @@ attribute ram_init_file of content:
 signal is "initROM.mif";
 
 begin
-       q <= content(addr);
+      
+	q <= content(addr);
 	 
 end architecture;

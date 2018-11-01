@@ -4,9 +4,14 @@ use IEEE.NUMERIC_STD.ALL;
  
 entity UCFd is
 	 Port ( 
-	 opcode : in std_logic_vector(5 downto 0);
-	 Mux1,Mux2,HabEscritaReg,Mux3,Mux4,BEQ,HabLeMEM,HabEscMEM: out std_logic;
-	 ULAop: out std_logic_vector(1 downto 0));
+	 
+		 --INPUT
+		 opcode : in std_logic_vector(5 downto 0);
+		 
+		 --OUTPUT
+		 Mux1,Mux2,HabEscritaReg,Mux3,Mux4,BEQ,HabLeMEM,HabEscMEM: out std_logic;
+		 ULAop: out std_logic_vector(1 downto 0));
+
 end UCFd;
  
 architecture mux_arch of UCFd is

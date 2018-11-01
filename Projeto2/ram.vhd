@@ -14,11 +14,14 @@ entity ram is
 
 	port 
 	(
+		--INPUT
 		clk		: in std_logic;
-		addr	: in natural range 0 to 2**ADDR_WIDTH - 1;
-		data	: in std_logic_vector((DATA_WIDTH-1) downto 0);
+		addr	   : in natural range 0 to 2**ADDR_WIDTH - 1;
+		data	   : in std_logic_vector((DATA_WIDTH-1) downto 0);
 		canRead	: in std_logic;
-		canWrite: in std_logic;
+		canWrite : in std_logic;
+		
+		--OUTPUT
 		q	: out std_logic_vector((DATA_WIDTH -1) downto 0)
 	);
 
@@ -36,16 +39,19 @@ signal is "initRAM.mif";
 begin
 
 	process(clk)
-	begin
-	if(rising_edge(clk)) then
-		if((canWrite = '1')) then
-			ram(addr) <= data;
-		end if;
-	end if;
+		begin
+			if(rising_edge(clk)) then
+				
+				if((canWrite = '1')) then
+					ram(addr) <= data;
+				
+				end if;
+			
+			end if;
+			
 	end process;
-	
+			
 	q <= ram(addr) when canRead = '1' else
-	     (others => '0');
-
+		  (others => '0');
 
 end rtl;

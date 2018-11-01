@@ -5,16 +5,25 @@ use IEEE.STD_LOGIC_1164.ALL;
     generic (
         larguraDados : natural := 32
     );
-      port (DIN : in    std_logic_vector(larguraDados-1 downto 0);
-           DOUT : out   std_logic_vector(larguraDados-1 downto 0);
-           ENABLE : in  std_logic;
-           CLK,RST : in std_logic);
+      port (
+		
+			  --INPUT
+			  DIN     : in    std_logic_vector(larguraDados-1 downto 0);
+           ENABLE  : in  std_logic;
+			  CLK,RST : in std_logic;
+			  
+			  --OUTPUT
+			  DOUT : out   std_logic_vector(larguraDados-1 downto 0)
+           
+           );
  end entity;
 
  architecture comportamento of Registrador is
  begin
+ 
     process(RST, CLK)
-    begin
+ 
+		begin
         if (RST = '1') then
             DOUT <= (others => '0');
         else

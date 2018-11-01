@@ -3,10 +3,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
  
 entity mux32way is
-	 Port ( 
+	 Port (
+	 
+	 --INPUT
 	 i0, i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15,i16,i17,i18,i19,i20,i21,i22,i23,i24,i25,i26,i27,i28,i29,i30,i31: in std_logic_vector(31 downto 0);
 	 sel: in std_logic_vector(4 downto 0);
+	 
+	 --OUTPUT
 	 selected : out std_logic_vector(31 downto 0));
+
 end mux32way;
  
 architecture mux_arch of mux32way is
