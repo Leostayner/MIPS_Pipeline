@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips
-Tue Oct 30 18:15:01 2018
+Thu Nov 01 19:15:08 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -27,23 +27,26 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  19. Parameter Settings for User Entity Instance: FluxoDeDados:fd|mux2way:MuxRegRam
  20. Parameter Settings for User Entity Instance: FluxoDeDados:fd|ram:Ram
  21. Parameter Settings for User Entity Instance: FluxoDeDados:fd|mux2way:MuxBeq
- 22. Port Connectivity Checks: "conversorHex7Seg:convhex7"
- 23. Port Connectivity Checks: "conversorHex7Seg:convhex6"
- 24. Port Connectivity Checks: "conversorHex7Seg:convhex5"
- 25. Port Connectivity Checks: "conversorHex7Seg:convhex4"
- 26. Port Connectivity Checks: "conversorHex7Seg:convhex3"
- 27. Port Connectivity Checks: "conversorHex7Seg:convhex2"
- 28. Port Connectivity Checks: "conversorHex7Seg:convhex1"
- 29. Port Connectivity Checks: "FluxoDeDados:fd|FullAdder32:adder2"
- 30. Port Connectivity Checks: "FluxoDeDados:fd|alu:ALU|mux4way:final"
- 31. Port Connectivity Checks: "FluxoDeDados:fd|alu:ALU"
- 32. Port Connectivity Checks: "FluxoDeDados:fd|FullAdder32:adder"
- 33. Port Connectivity Checks: "FluxoDeDados:fd|Registrador:PC"
- 34. Port Connectivity Checks: "FluxoDeDados:fd|mux2way:MuxPC"
- 35. Port Connectivity Checks: "FluxoDeDados:fd"
- 36. Post-Synthesis Netlist Statistics for Top Partition
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
+ 22. Parameter Settings for User Entity Instance: FluxoDeDados:fd|Decoder:Dec
+ 23. Parameter Settings for User Entity Instance: FluxoDeDados:fd|Registrador:Led_Reg
+ 24. Port Connectivity Checks: "conversorHex7Seg:convhex7"
+ 25. Port Connectivity Checks: "conversorHex7Seg:convhex6"
+ 26. Port Connectivity Checks: "conversorHex7Seg:convhex5"
+ 27. Port Connectivity Checks: "conversorHex7Seg:convhex4"
+ 28. Port Connectivity Checks: "conversorHex7Seg:convhex3"
+ 29. Port Connectivity Checks: "conversorHex7Seg:convhex2"
+ 30. Port Connectivity Checks: "conversorHex7Seg:convhex1"
+ 31. Port Connectivity Checks: "FluxoDeDados:fd|Registrador:Led_Reg"
+ 32. Port Connectivity Checks: "FluxoDeDados:fd|FullAdder32:adder2"
+ 33. Port Connectivity Checks: "FluxoDeDados:fd|alu:ALU|mux4way:final"
+ 34. Port Connectivity Checks: "FluxoDeDados:fd|alu:ALU"
+ 35. Port Connectivity Checks: "FluxoDeDados:fd|FullAdder32:adder"
+ 36. Port Connectivity Checks: "FluxoDeDados:fd|Registrador:PC"
+ 37. Port Connectivity Checks: "FluxoDeDados:fd|mux2way:MuxPC"
+ 38. Port Connectivity Checks: "FluxoDeDados:fd"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
 
 
 
@@ -69,16 +72,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 30 18:15:01 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 01 19:15:08 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; mips                                        ;
 ; Top-level Entity Name              ; mips                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 955                                         ;
-;     Total combinational functions  ; 731                                         ;
-;     Dedicated logic registers      ; 286                                         ;
-; Total registers                    ; 286                                         ;
-; Total pins                         ; 488                                         ;
+; Total logic elements               ; 28,779                                      ;
+;     Total combinational functions  ; 12,213                                      ;
+;     Dedicated logic registers      ; 16,672                                      ;
+; Total registers                    ; 16672                                       ;
+; Total pins                         ; 273                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -183,10 +186,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -211,39 +215,41 @@ refer to the applicable agreement for further details.
 ; UCfd.vhd                         ; yes             ; User VHDL File  ; C:/Users/leo_v/MIPS_Pipeline/Projeto2/UCfd.vhd               ;         ;
 ; mips.vhd                         ; yes             ; User VHDL File  ; C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd               ;         ;
 ; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/leo_v/MIPS_Pipeline/Projeto2/conversorHex7Seg.vhd   ;         ;
+; Decoder.vhd                      ; yes             ; User VHDL File  ; C:/Users/leo_v/MIPS_Pipeline/Projeto2/Decoder.vhd            ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/leo_v/MIPS_Pipeline/Projeto2/edgeDetector.vhd       ;         ;
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 955          ;
-;                                             ;              ;
-; Total combinational functions               ; 731          ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 636          ;
-;     -- 3 input functions                    ; 58           ;
-;     -- <=2 input functions                  ; 37           ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 731          ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 286          ;
-;     -- Dedicated logic registers            ; 286          ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 488          ;
-;                                             ;              ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; KEY[0]~input ;
-; Maximum fan-out                             ; 286          ;
-; Total fan-out                               ; 4584         ;
-; Average fan-out                             ; 2.30         ;
-+---------------------------------------------+--------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                  ;
++---------------------------------------------+--------------------------------+
+; Resource                                    ; Usage                          ;
++---------------------------------------------+--------------------------------+
+; Estimated Total logic elements              ; 28,779                         ;
+;                                             ;                                ;
+; Total combinational functions               ; 12213                          ;
+; Logic element usage by number of LUT inputs ;                                ;
+;     -- 4 input functions                    ; 12073                          ;
+;     -- 3 input functions                    ; 94                             ;
+;     -- <=2 input functions                  ; 46                             ;
+;                                             ;                                ;
+; Logic elements by mode                      ;                                ;
+;     -- normal mode                          ; 12213                          ;
+;     -- arithmetic mode                      ; 0                              ;
+;                                             ;                                ;
+; Total registers                             ; 16672                          ;
+;     -- Dedicated logic registers            ; 16672                          ;
+;     -- I/O registers                        ; 0                              ;
+;                                             ;                                ;
+; I/O pins                                    ; 273                            ;
+;                                             ;                                ;
+; Embedded Multiplier 9-bit elements          ; 0                              ;
+;                                             ;                                ;
+; Maximum fan-out node                        ; edgeDetector:detectorSub|saida ;
+; Maximum fan-out                             ; 16671                          ;
+; Total fan-out                               ; 99186                          ;
+; Average fan-out                             ; 3.37                           ;
++---------------------------------------------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -251,12 +257,12 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Entity Name        ; Library Name ;
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------------+--------------+
-; |mips                                         ; 731 (0)             ; 286 (0)                   ; 0           ; 0            ; 0       ; 0         ; 488  ; 0            ; |mips                                                                           ; mips               ; work         ;
-;    |FluxoDeDados:fd|                          ; 677 (14)            ; 286 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd                                                           ; FluxoDeDados       ; work         ;
-;       |FullAdder32:adder2|                    ; 41 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2                                        ; FullAdder32        ; work         ;
-;          |FullAdder:\addsloop:10:add1to31|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2|FullAdder:\addsloop:10:add1to31        ; FullAdder          ; work         ;
-;          |FullAdder:\addsloop:11:add1to31|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2|FullAdder:\addsloop:11:add1to31        ; FullAdder          ; work         ;
-;          |FullAdder:\addsloop:12:add1to31|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2|FullAdder:\addsloop:12:add1to31        ; FullAdder          ; work         ;
+; |mips                                         ; 12213 (0)           ; 16672 (0)                 ; 0           ; 0            ; 0       ; 0         ; 273  ; 0            ; |mips                                                                           ; mips               ; work         ;
+;    |FluxoDeDados:fd|                          ; 12158 (14)          ; 16671 (0)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd                                                           ; FluxoDeDados       ; work         ;
+;       |FullAdder32:adder2|                    ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2                                        ; FullAdder32        ; work         ;
+;          |FullAdder:\addsloop:10:add1to31|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2|FullAdder:\addsloop:10:add1to31        ; FullAdder          ; work         ;
+;          |FullAdder:\addsloop:11:add1to31|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2|FullAdder:\addsloop:11:add1to31        ; FullAdder          ; work         ;
+;          |FullAdder:\addsloop:12:add1to31|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2|FullAdder:\addsloop:12:add1to31        ; FullAdder          ; work         ;
 ;          |FullAdder:\addsloop:13:add1to31|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2|FullAdder:\addsloop:13:add1to31        ; FullAdder          ; work         ;
 ;          |FullAdder:\addsloop:14:add1to31|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2|FullAdder:\addsloop:14:add1to31        ; FullAdder          ; work         ;
 ;          |FullAdder:\addsloop:15:add1to31|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2|FullAdder:\addsloop:15:add1to31        ; FullAdder          ; work         ;
@@ -284,7 +290,7 @@ refer to the applicable agreement for further details.
 ;          |FullAdder:\addsloop:9:add1to31|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder2|FullAdder:\addsloop:9:add1to31         ; FullAdder          ; work         ;
 ;       |FullAdder32:adder|                     ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder                                         ; FullAdder32        ; work         ;
 ;          |FullAdder:\addsloop:10:add1to31|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:10:add1to31         ; FullAdder          ; work         ;
-;          |FullAdder:\addsloop:11:add1to31|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:11:add1to31         ; FullAdder          ; work         ;
+;          |FullAdder:\addsloop:11:add1to31|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:11:add1to31         ; FullAdder          ; work         ;
 ;          |FullAdder:\addsloop:12:add1to31|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:12:add1to31         ; FullAdder          ; work         ;
 ;          |FullAdder:\addsloop:13:add1to31|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:13:add1to31         ; FullAdder          ; work         ;
 ;          |FullAdder:\addsloop:14:add1to31|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:14:add1to31         ; FullAdder          ; work         ;
@@ -309,12 +315,13 @@ refer to the applicable agreement for further details.
 ;          |FullAdder:\addsloop:5:add1to31|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:5:add1to31          ; FullAdder          ; work         ;
 ;          |FullAdder:\addsloop:6:add1to31|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:6:add1to31          ; FullAdder          ; work         ;
 ;          |FullAdder:\addsloop:7:add1to31|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:7:add1to31          ; FullAdder          ; work         ;
-;          |FullAdder:\addsloop:8:add1to31|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:8:add1to31          ; FullAdder          ; work         ;
+;          |FullAdder:\addsloop:8:add1to31|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:8:add1to31          ; FullAdder          ; work         ;
 ;          |FullAdder:\addsloop:9:add1to31|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|FullAdder32:adder|FullAdder:\addsloop:9:add1to31          ; FullAdder          ; work         ;
-;       |Registrador:PC|                        ; 13 (13)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|Registrador:PC                                            ; Registrador        ; work         ;
-;       |UCAlu:UCalu|                           ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|UCAlu:UCalu                                               ; UCAlu              ; work         ;
-;       |alu:ALU|                               ; 135 (2)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU                                                   ; alu                ; work         ;
-;          |FullAdder32:adder|                  ; 65 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|FullAdder32:adder                                 ; FullAdder32        ; work         ;
+;       |Registrador:Led_Reg|                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|Registrador:Led_Reg                                       ; Registrador        ; work         ;
+;       |Registrador:PC|                        ; 16 (16)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|Registrador:PC                                            ; Registrador        ; work         ;
+;       |UCAlu:UCalu|                           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|UCAlu:UCalu                                               ; UCAlu              ; work         ;
+;       |alu:ALU|                               ; 130 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU                                                   ; alu                ; work         ;
+;          |FullAdder32:adder|                  ; 64 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|FullAdder32:adder                                 ; FullAdder32        ; work         ;
 ;             |FullAdder:\addsloop:10:add1to31| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|FullAdder32:adder|FullAdder:\addsloop:10:add1to31 ; FullAdder          ; work         ;
 ;             |FullAdder:\addsloop:11:add1to31| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|FullAdder32:adder|FullAdder:\addsloop:11:add1to31 ; FullAdder          ; work         ;
 ;             |FullAdder:\addsloop:12:add1to31| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|FullAdder32:adder|FullAdder:\addsloop:12:add1to31 ; FullAdder          ; work         ;
@@ -346,17 +353,16 @@ refer to the applicable agreement for further details.
 ;             |FullAdder:\addsloop:7:add1to31|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|FullAdder32:adder|FullAdder:\addsloop:7:add1to31  ; FullAdder          ; work         ;
 ;             |FullAdder:\addsloop:8:add1to31|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|FullAdder32:adder|FullAdder:\addsloop:8:add1to31  ; FullAdder          ; work         ;
 ;             |FullAdder:\addsloop:9:add1to31|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|FullAdder32:adder|FullAdder:\addsloop:9:add1to31  ; FullAdder          ; work         ;
-;             |FullAdder:a0|                    ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|FullAdder32:adder|FullAdder:a0                    ; FullAdder          ; work         ;
-;          |mux2way:choiceB|                    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|mux2way:choiceB                                   ; mux2way            ; work         ;
+;             |FullAdder:a0|                    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|FullAdder32:adder|FullAdder:a0                    ; FullAdder          ; work         ;
 ;          |mux4way:final|                      ; 66 (66)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|alu:ALU|mux4way:final                                     ; mux4way            ; work         ;
-;       |bancoRegistradores:BankRegister|       ; 278 (278)           ; 256 (256)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|bancoRegistradores:BankRegister                           ; bancoRegistradores ; work         ;
-;       |mux2way:MuxPC|                         ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|mux2way:MuxPC                                             ; mux2way            ; work         ;
+;       |bancoRegistradores:BankRegister|       ; 304 (304)           ; 256 (256)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|bancoRegistradores:BankRegister                           ; bancoRegistradores ; work         ;
+;       |mux2way:MuxPC|                         ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|mux2way:MuxPC                                             ; mux2way            ; work         ;
 ;       |mux2way:MuxRegRam|                     ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|mux2way:MuxRegRam                                         ; mux2way            ; work         ;
-;       |mux2way:MuxRtRd|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|mux2way:MuxRtRd                                           ; mux2way            ; work         ;
-;       |mux2way:MuxSaidaBankRegister|          ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|mux2way:MuxSaidaBankRegister                              ; mux2way            ; work         ;
-;       |ram:Ram|                               ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|ram:Ram                                                   ; ram                ; work         ;
-;       |romMif:Rom|                            ; 38 (38)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|romMif:Rom                                                ; romMif             ; work         ;
-;    |UCFd:ucfd|                                ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|UCFd:ucfd                                                                 ; UCFd               ; work         ;
+;       |mux2way:MuxSaidaBankRegister|          ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|mux2way:MuxSaidaBankRegister                              ; mux2way            ; work         ;
+;       |or32:inLed|                            ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|or32:inLed                                                ; or32               ; work         ;
+;       |ram:Ram|                               ; 11468 (11468)       ; 16384 (16384)             ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|ram:Ram                                                   ; ram                ; work         ;
+;       |romMif:Rom|                            ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|FluxoDeDados:fd|romMif:Rom                                                ; romMif             ; work         ;
+;    |UCFd:ucfd|                                ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|UCFd:ucfd                                                                 ; UCFd               ; work         ;
 ;    |conversorHex7Seg:convhex1|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7Seg:convhex1                                                 ; conversorHex7Seg   ; work         ;
 ;    |conversorHex7Seg:convhex2|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7Seg:convhex2                                                 ; conversorHex7Seg   ; work         ;
 ;    |conversorHex7Seg:convhex3|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7Seg:convhex3                                                 ; conversorHex7Seg   ; work         ;
@@ -364,6 +370,7 @@ refer to the applicable agreement for further details.
 ;    |conversorHex7Seg:convhex5|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7Seg:convhex5                                                 ; conversorHex7Seg   ; work         ;
 ;    |conversorHex7Seg:convhex6|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7Seg:convhex6                                                 ; conversorHex7Seg   ; work         ;
 ;    |conversorHex7Seg:convhex7|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|conversorHex7Seg:convhex7                                                 ; conversorHex7Seg   ; work         ;
+;    |edgeDetector:detectorSub|                 ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|edgeDetector:detectorSub                                                  ; edgeDetector       ; work         ;
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1142,1031 +1149,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; FluxoDeDados:fd|bancoRegistradores:BankRegister|registrador[10][0]  ; Lost fanout                            ;
 ; FluxoDeDados:fd|bancoRegistradores:BankRegister|registrador[9][0]   ; Lost fanout                            ;
 ; FluxoDeDados:fd|bancoRegistradores:BankRegister|registrador[8][0]   ; Lost fanout                            ;
-; FluxoDeDados:fd|ram:Ram|ram~38                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~70                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~102                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~134                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~166                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~198                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~230                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~262                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~294                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~326                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~358                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~390                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~422                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~454                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~486                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~518                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~550                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~582                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~614                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~646                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~678                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~710                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~742                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~774                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~806                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~838                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~870                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~902                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~934                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~966                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~998                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1030                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~39                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~71                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~103                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~135                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~167                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~199                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~231                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~263                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~295                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~327                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~359                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~391                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~423                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~455                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~487                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~519                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~551                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~583                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~615                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~647                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~679                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~711                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~743                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~775                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~807                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~839                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~871                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~903                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~935                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~967                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~999                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1031                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~40                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~72                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~104                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~136                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~168                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~200                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~232                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~264                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~296                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~328                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~360                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~392                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~424                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~456                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~488                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~520                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~552                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~584                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~616                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~648                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~680                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~712                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~744                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~776                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~808                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~840                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~872                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~904                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~936                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~968                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1000                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1032                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~41                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~73                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~105                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~137                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~169                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~201                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~233                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~265                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~297                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~329                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~361                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~393                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~425                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~457                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~489                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~521                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~553                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~585                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~617                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~649                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~681                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~713                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~745                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~777                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~809                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~841                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~873                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~905                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~937                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~969                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1001                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1033                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~42                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~74                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~106                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~138                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~170                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~202                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~234                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~266                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~298                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~330                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~362                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~394                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~426                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~458                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~490                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~522                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~554                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~586                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~618                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~650                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~682                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~714                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~746                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~778                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~810                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~842                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~874                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~906                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~938                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~970                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1002                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1034                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~43                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~75                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~107                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~139                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~171                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~203                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~235                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~267                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~299                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~331                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~363                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~395                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~427                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~459                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~491                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~523                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~555                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~587                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~619                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~651                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~683                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~715                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~747                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~779                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~811                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~843                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~875                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~907                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~939                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~971                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1003                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1035                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~44                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~76                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~108                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~140                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~172                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~204                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~236                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~268                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~300                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~332                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~364                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~396                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~428                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~460                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~492                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~524                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~556                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~588                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~620                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~652                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~684                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~716                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~748                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~780                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~812                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~844                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~876                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~908                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~940                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~972                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1004                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1036                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~45                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~77                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~109                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~141                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~173                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~205                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~237                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~269                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~301                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~333                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~365                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~397                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~429                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~461                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~493                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~525                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~557                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~589                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~621                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~653                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~685                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~717                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~749                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~781                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~813                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~845                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~877                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~909                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~941                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~973                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1005                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1037                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~46                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~78                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~110                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~142                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~174                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~206                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~238                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~270                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~302                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~334                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~366                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~398                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~430                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~462                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~494                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~526                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~558                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~590                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~622                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~654                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~686                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~718                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~750                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~782                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~814                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~846                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~878                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~910                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~942                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~974                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1006                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1038                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~47                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~79                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~111                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~143                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~175                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~207                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~239                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~271                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~303                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~335                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~367                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~399                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~431                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~463                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~495                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~527                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~559                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~591                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~623                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~655                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~687                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~719                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~751                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~783                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~815                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~847                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~879                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~911                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~943                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~975                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1007                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1039                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~48                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~80                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~112                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~144                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~176                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~208                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~240                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~272                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~304                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~336                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~368                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~400                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~432                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~464                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~496                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~528                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~560                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~592                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~624                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~656                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~688                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~720                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~752                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~784                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~816                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~848                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~880                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~912                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~944                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~976                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1008                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1040                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~49                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~81                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~113                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~145                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~177                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~209                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~241                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~273                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~305                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~337                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~369                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~401                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~433                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~465                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~497                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~529                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~561                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~593                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~625                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~657                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~689                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~721                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~753                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~785                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~817                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~849                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~881                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~913                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~945                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~977                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1009                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1041                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~50                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~82                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~114                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~146                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~178                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~210                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~242                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~274                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~306                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~338                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~370                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~402                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~434                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~466                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~498                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~530                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~562                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~594                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~626                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~658                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~690                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~722                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~754                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~786                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~818                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~850                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~882                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~914                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~946                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~978                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1010                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1042                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~51                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~83                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~115                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~147                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~179                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~211                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~243                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~275                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~307                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~339                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~371                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~403                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~435                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~467                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~499                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~531                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~563                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~595                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~627                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~659                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~691                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~723                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~755                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~787                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~819                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~851                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~883                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~915                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~947                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~979                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1011                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1043                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~52                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~84                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~116                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~148                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~180                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~212                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~244                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~276                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~308                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~340                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~372                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~404                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~436                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~468                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~500                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~532                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~564                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~596                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~628                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~660                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~692                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~724                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~756                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~788                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~820                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~852                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~884                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~916                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~948                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~980                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1012                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1044                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~53                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~85                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~117                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~149                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~181                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~213                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~245                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~277                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~309                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~341                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~373                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~405                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~437                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~469                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~501                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~533                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~565                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~597                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~629                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~661                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~693                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~725                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~757                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~789                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~821                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~853                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~885                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~917                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~949                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~981                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1013                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1045                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~54                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~86                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~118                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~150                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~182                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~214                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~246                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~278                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~310                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~342                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~374                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~406                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~438                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~470                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~502                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~534                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~566                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~598                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~630                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~662                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~694                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~726                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~758                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~790                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~822                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~854                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~886                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~918                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~950                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~982                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1014                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1046                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~55                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~87                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~119                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~151                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~183                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~215                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~247                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~279                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~311                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~343                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~375                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~407                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~439                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~471                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~503                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~535                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~567                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~599                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~631                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~663                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~695                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~727                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~759                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~791                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~823                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~855                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~887                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~919                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~951                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~983                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1015                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1047                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~56                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~88                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~120                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~152                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~184                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~216                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~248                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~280                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~312                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~344                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~376                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~408                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~440                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~472                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~504                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~536                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~568                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~600                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~632                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~664                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~696                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~728                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~760                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~792                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~824                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~856                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~888                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~920                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~952                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~984                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1016                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1048                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~57                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~89                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~121                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~153                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~185                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~217                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~249                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~281                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~313                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~345                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~377                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~409                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~441                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~473                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~505                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~537                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~569                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~601                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~633                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~665                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~697                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~729                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~761                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~793                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~825                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~857                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~889                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~921                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~953                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~985                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1017                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1049                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~58                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~90                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~122                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~154                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~186                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~218                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~250                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~282                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~314                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~346                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~378                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~410                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~442                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~474                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~506                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~538                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~570                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~602                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~634                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~666                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~698                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~730                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~762                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~794                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~826                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~858                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~890                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~922                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~954                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~986                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1018                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1050                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~59                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~91                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~123                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~155                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~187                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~219                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~251                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~283                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~315                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~347                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~379                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~411                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~443                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~475                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~507                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~539                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~571                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~603                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~635                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~667                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~699                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~731                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~763                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~795                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~827                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~859                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~891                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~923                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~955                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~987                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1019                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1051                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~60                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~92                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~124                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~156                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~188                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~220                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~252                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~284                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~316                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~348                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~380                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~412                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~444                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~476                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~508                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~540                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~572                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~604                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~636                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~668                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~700                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~732                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~764                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~796                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~828                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~860                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~892                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~924                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~956                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~988                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1020                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1052                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~61                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~93                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~125                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~157                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~189                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~221                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~253                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~285                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~317                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~349                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~381                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~413                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~445                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~477                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~509                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~541                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~573                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~605                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~637                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~669                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~701                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~733                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~765                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~797                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~829                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~861                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~893                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~925                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~957                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~989                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1021                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1053                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~62                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~94                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~126                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~158                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~190                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~222                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~254                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~286                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~318                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~350                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~382                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~414                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~446                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~478                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~510                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~542                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~574                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~606                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~638                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~670                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~702                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~734                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~766                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~798                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~830                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~862                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~894                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~926                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~958                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~990                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1022                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1054                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~63                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~95                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~127                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~159                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~191                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~223                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~255                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~287                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~319                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~351                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~383                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~415                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~447                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~479                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~511                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~543                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~575                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~607                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~639                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~671                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~703                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~735                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~767                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~799                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~831                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~863                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~895                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~927                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~959                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~991                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1023                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1055                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~64                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~96                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~128                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~160                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~192                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~224                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~256                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~288                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~320                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~352                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~384                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~416                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~448                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~480                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~512                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~544                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~576                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~608                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~640                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~672                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~704                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~736                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~768                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~800                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~832                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~864                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~896                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~928                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~960                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~992                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1024                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1056                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~65                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~97                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~129                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~161                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~193                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~225                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~257                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~289                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~321                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~353                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~385                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~417                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~449                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~481                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~513                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~545                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~577                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~609                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~641                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~673                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~705                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~737                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~769                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~801                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~833                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~865                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~897                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~929                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~961                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~993                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1025                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1057                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~66                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~98                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~130                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~162                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~194                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~226                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~258                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~290                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~322                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~354                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~386                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~418                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~450                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~482                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~514                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~546                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~578                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~610                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~642                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~674                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~706                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~738                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~770                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~802                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~834                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~866                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~898                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~930                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~962                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~994                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1026                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1058                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~67                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~99                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~131                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~163                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~195                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~227                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~259                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~291                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~323                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~355                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~387                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~419                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~451                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~483                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~515                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~547                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~579                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~611                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~643                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~675                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~707                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~739                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~771                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~803                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~835                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~867                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~899                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~931                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~963                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~995                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1027                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1059                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~68                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~100                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~132                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~164                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~196                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~228                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~260                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~292                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~324                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~356                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~388                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~420                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~452                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~484                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~516                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~548                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~580                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~612                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~644                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~676                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~708                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~740                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~772                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~804                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~836                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~868                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~900                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~932                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~964                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~996                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1028                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1060                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~69                                      ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~101                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~133                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~165                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~197                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~229                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~261                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~293                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~325                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~357                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~389                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~421                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~453                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~485                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~517                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~549                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~581                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~613                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~645                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~677                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~709                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~741                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~773                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~805                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~837                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~869                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~901                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~933                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~965                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~997                                     ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1029                                    ; Stuck at GND due to stuck port data_in ;
-; FluxoDeDados:fd|ram:Ram|ram~1061                                    ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1794                            ;                                        ;
+; Total Number of Removed Registers = 770                             ;                                        ;
 +---------------------------------------------------------------------+----------------------------------------+
 
 
@@ -2175,12 +1158,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 286   ;
+; Total registers                              ; 16672 ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 13    ;
+; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 256   ;
+; Number of registers using Clock Enable       ; 16640 ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -2190,11 +1173,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |mips|FluxoDeDados:fd|Registrador:PC|DOUT[17]                    ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |mips|FluxoDeDados:fd|Registrador:PC|DOUT[24]                    ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |mips|FluxoDeDados:fd|alu:ALU|mux4way:final|selected[19]         ;
-; 9:1                ; 32 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |mips|FluxoDeDados:fd|bancoRegistradores:BankRegister|saidaB[25] ;
-; 9:1                ; 32 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |mips|FluxoDeDados:fd|bancoRegistradores:BankRegister|saidaA[15] ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |mips|FluxoDeDados:fd|Registrador:PC|DOUT[17]                    ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; Yes        ; |mips|FluxoDeDados:fd|Registrador:PC|DOUT[18]                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |mips|UCFd:ucfd|HabEscMEM                                        ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |mips|FluxoDeDados:fd|alu:ALU|mux4way:final|selected[29]         ;
+; 9:1                ; 32 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |mips|FluxoDeDados:fd|bancoRegistradores:BankRegister|saidaB[10] ;
+; 9:1                ; 32 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |mips|FluxoDeDados:fd|bancoRegistradores:BankRegister|saidaA[31] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
@@ -2224,7 +1208,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; data_width     ; 32    ; Signed Integer                                 ;
-; addr_width     ; 16    ; Signed Integer                                 ;
+; addr_width     ; 6     ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -2296,7 +1280,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                                        ;
 +----------------+-------+---------------------------------------------+
 ; data_width     ; 32    ; Signed Integer                              ;
-; addr_width     ; 5     ; Signed Integer                              ;
+; addr_width     ; 9     ; Signed Integer                              ;
 +----------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -2308,6 +1292,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------+
 ; datalength     ; 32    ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDeDados:fd|Decoder:Dec ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                  ;
+; addr_width     ; 10    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDeDados:fd|Registrador:Led_Reg ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; larguradados   ; 1     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2388,6 +1393,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-------------------------+
 
 
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDeDados:fd|Registrador:Led_Reg" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "FluxoDeDados:fd|FullAdder32:adder2"                                                    ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -2451,13 +1465,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-----------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FluxoDeDados:fd"                                                                     ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; outr0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDeDados:fd"                                                                            ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; outr0        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outr1[31..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outr2[31..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outr3[31..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outr4[31..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outr5[31..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outr6[31..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outr7[31..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -2465,21 +1486,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 488                         ;
-; cycloneiii_ff         ; 286                         ;
-;     ENA               ; 256                         ;
-;     SLD               ; 13                          ;
-;     plain             ; 17                          ;
-; cycloneiii_lcell_comb ; 742                         ;
-;     normal            ; 742                         ;
+; boundary_port         ; 273                         ;
+; cycloneiii_ff         ; 16672                       ;
+;     ENA               ; 16640                       ;
+;     SLD               ; 16                          ;
+;     plain             ; 16                          ;
+; cycloneiii_lcell_comb ; 12222                       ;
+;     normal            ; 12222                       ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 37                          ;
-;         3 data inputs ; 58                          ;
-;         4 data inputs ; 636                         ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 35                          ;
+;         3 data inputs ; 94                          ;
+;         4 data inputs ; 12073                       ;
 ;                       ;                             ;
-; Max LUT depth         ; 41.00                       ;
-; Average LUT depth     ; 23.34                       ;
+; Max LUT depth         ; 49.00                       ;
+; Average LUT depth     ; 17.71                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2488,7 +1509,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:48     ;
+; Top            ; 00:00:57     ;
 +----------------+--------------+
 
 
@@ -2498,7 +1519,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 30 18:13:50 2018
+    Info: Processing started: Thu Nov 01 19:13:50 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
@@ -2544,92 +1565,102 @@ Info (12021): Found 2 design units, including 1 entities, in source file dmux32w
     Info (12022): Found design unit 1: dmux32way-dmux_arch File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/dmux32way.vhd Line: 14
     Info (12023): Found entity 1: dmux32way File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/dmux32way.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fluxodedados.vhd
-    Info (12022): Found design unit 1: FluxoDeDados-arch File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 46
+    Info (12022): Found design unit 1: FluxoDeDados-arch File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 47
     Info (12023): Found entity 1: FluxoDeDados File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ucfd.vhd
     Info (12022): Found design unit 1: UCFd-mux_arch File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/UCfd.vhd Line: 12
     Info (12023): Found entity 1: UCFd File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/UCfd.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mips.vhd
-    Info (12022): Found design unit 1: mips-mux_arch File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 57
+    Info (12022): Found design unit 1: mips-mux_arch File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 49
     Info (12023): Found entity 1: mips File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
     Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/conversorHex7Seg.vhd Line: 17
     Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decoder.vhd
+    Info (12022): Found design unit 1: Decoder-arch File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/Decoder.vhd Line: 21
+    Info (12023): Found entity 1: Decoder File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/Decoder.vhd Line: 5
+Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/edgeDetector.vhd Line: 4
 Info (12127): Elaborating entity "mips" for the top level hierarchy
-Info (12128): Elaborating entity "FluxoDeDados" for hierarchy "FluxoDeDados:fd" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 74
-Info (12128): Elaborating entity "mux2way" for hierarchy "FluxoDeDados:fd|mux2way:MuxPC" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 97
-Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:PC" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 100
-Info (12128): Elaborating entity "FullAdder32" for hierarchy "FluxoDeDados:fd|FullAdder32:adder" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 103
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(23): used implicit default value for signal "opcodeDebug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(24): used implicit default value for signal "Mux1Debug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 24
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(25): used implicit default value for signal "Mux2Debug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 25
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(26): used implicit default value for signal "HabEscritaRegDebug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 26
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(27): used implicit default value for signal "Mux3Debug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 27
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(28): used implicit default value for signal "Mux4Debug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 28
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(31): used implicit default value for signal "BEQDebug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 31
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(33): used implicit default value for signal "HabLeMEMDebug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 33
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(34): used implicit default value for signal "HabEscMEMDebug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 34
+Warning (10541): VHDL Signal Declaration warning at mips.vhd(35): used implicit default value for signal "ULAopDebug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 35
+Warning (10873): Using initial value X (don't care) for net "LEDG[8..1]" at mips.vhd(18) File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 18
+Info (12128): Elaborating entity "FluxoDeDados" for hierarchy "FluxoDeDados:fd" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 67
+Info (12128): Elaborating entity "mux2way" for hierarchy "FluxoDeDados:fd|mux2way:MuxPC" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 103
+Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:PC" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 106
+Info (12128): Elaborating entity "FullAdder32" for hierarchy "FluxoDeDados:fd|FullAdder32:adder" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 109
 Info (12128): Elaborating entity "FullAdder" for hierarchy "FluxoDeDados:fd|FullAdder32:adder|FullAdder:a0" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FullAdder32.vhd Line: 31
-Info (12128): Elaborating entity "romMif" for hierarchy "FluxoDeDados:fd|romMif:Rom" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 106
+Info (12128): Elaborating entity "romMif" for hierarchy "FluxoDeDados:fd|romMif:Rom" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 112
 Warning (10541): VHDL Signal Declaration warning at romMif.vhd(23): used implicit default value for signal "content" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/romMif.vhd Line: 23
-Info (12128): Elaborating entity "mux2way" for hierarchy "FluxoDeDados:fd|mux2way:MuxRtRd" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 109
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "FluxoDeDados:fd|bancoRegistradores:BankRegister" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 112
-Info (12128): Elaborating entity "extend16to32" for hierarchy "FluxoDeDados:fd|extend16to32:Ext" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 124
-Info (12128): Elaborating entity "UCAlu" for hierarchy "FluxoDeDados:fd|UCAlu:UCalu" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 132
-Info (12128): Elaborating entity "alu" for hierarchy "FluxoDeDados:fd|alu:ALU" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 136
+Info (12128): Elaborating entity "mux2way" for hierarchy "FluxoDeDados:fd|mux2way:MuxRtRd" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 115
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "FluxoDeDados:fd|bancoRegistradores:BankRegister" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 118
+Info (12128): Elaborating entity "extend16to32" for hierarchy "FluxoDeDados:fd|extend16to32:Ext" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 130
+Info (12128): Elaborating entity "UCAlu" for hierarchy "FluxoDeDados:fd|UCAlu:UCalu" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 137
+Info (12128): Elaborating entity "alu" for hierarchy "FluxoDeDados:fd|alu:ALU" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 141
 Info (12128): Elaborating entity "mux2way" for hierarchy "FluxoDeDados:fd|alu:ALU|mux2way:choiceA" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/alu.vhd Line: 63
 Info (12128): Elaborating entity "mux4way" for hierarchy "FluxoDeDados:fd|alu:ALU|mux4way:final" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/alu.vhd Line: 74
 Info (12128): Elaborating entity "or32" for hierarchy "FluxoDeDados:fd|alu:ALU|or32:flag" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/alu.vhd Line: 78
-Info (12128): Elaborating entity "ram" for hierarchy "FluxoDeDados:fd|ram:Ram" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 146
-Info (12128): Elaborating entity "UCFd" for hierarchy "UCFd:ucfd" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 127
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:convhex1" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 141
+Info (12128): Elaborating entity "ram" for hierarchy "FluxoDeDados:fd|ram:Ram" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 151
+Info (12128): Elaborating entity "Decoder" for hierarchy "FluxoDeDados:fd|Decoder:Dec" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 164
+Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:Led_Reg" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/FluxoDeDados.vhd Line: 167
+Info (12128): Elaborating entity "UCFd" for hierarchy "UCFd:ucfd" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 103
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:convhex1" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 117
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 125
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "FluxoDeDados:fd|ram:Ram|ram" is uninferred due to asynchronous read logic File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/ram.vhd Line: 30
-Warning (113031): 1 out of 256 addresses are reinitialized. The latest initialized data will replace the existing data. There are 1 warnings found, and 1 warnings are reported. File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/initROM.mif Line: 1
-    Warning (113030): Memory Initialization File address 12 is reinitialized File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/ Line: 20
-Critical Warning (127005): Memory depth (65536) in the design file differs from memory depth (256) in the Memory Initialization File "C:/Users/leo_v/MIPS_Pipeline/Projeto2/initROM.mif" -- setting initial value for remaining addresses to 0
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "opcodeDebug[3]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 33
-    Warning (13410): Pin "opcodeDebug[4]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 33
-    Warning (13410): Pin "HabEscMEMDebug" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 44
-    Warning (13410): Pin "out_PCTeste[0]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 46
-    Warning (13410): Pin "out_PCTeste[1]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 46
-    Warning (13410): Pin "testeOutRam[4]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[5]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[6]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[7]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[8]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[9]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[10]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[11]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[12]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[13]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[14]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[15]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[16]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[17]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[18]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[19]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[20]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[21]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[22]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[23]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[24]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[25]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[26]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[27]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[28]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[29]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[30]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
-    Warning (13410): Pin "testeOutRam[31]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 51
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 18
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 18
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 18
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 18
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 18
+    Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 18
+    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 18
+    Warning (13410): Pin "LEDG[8]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 18
+    Warning (13410): Pin "opcodeDebug[0]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 23
+    Warning (13410): Pin "opcodeDebug[1]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 23
+    Warning (13410): Pin "opcodeDebug[2]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 23
+    Warning (13410): Pin "opcodeDebug[3]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 23
+    Warning (13410): Pin "opcodeDebug[4]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 23
+    Warning (13410): Pin "opcodeDebug[5]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 23
+    Warning (13410): Pin "Mux1Debug" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 24
+    Warning (13410): Pin "Mux2Debug" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 25
+    Warning (13410): Pin "HabEscritaRegDebug" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 26
+    Warning (13410): Pin "Mux3Debug" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 27
+    Warning (13410): Pin "Mux4Debug" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 28
+    Warning (13410): Pin "BEQDebug" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 31
+    Warning (13410): Pin "HabLeMEMDebug" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 33
+    Warning (13410): Pin "HabEscMEMDebug" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 34
+    Warning (13410): Pin "ULAopDebug[0]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 35
+    Warning (13410): Pin "ULAopDebug[1]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 35
+    Warning (13410): Pin "out_PCTeste[0]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 36
+    Warning (13410): Pin "out_PCTeste[1]" is stuck at GND File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 36
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 768 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 7
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 7
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 7
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/leo_v/MIPS_Pipeline/Projeto2/mips.vhd Line: 10
-Info (21057): Implemented 1475 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 29116 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 483 output pins
-    Info (21061): Implemented 987 logic cells
+    Info (21059): Implemented 268 output pins
+    Info (21061): Implemented 28843 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 4871 megabytes
-    Info: Processing ended: Tue Oct 30 18:15:02 2018
-    Info: Elapsed time: 00:01:12
-    Info: Total CPU time (on all processors): 00:01:25
+    Info: Peak virtual memory: 4907 megabytes
+    Info: Processing ended: Thu Nov 01 19:15:08 2018
+    Info: Elapsed time: 00:01:18
+    Info: Total CPU time (on all processors): 00:01:39
 
 

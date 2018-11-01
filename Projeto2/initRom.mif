@@ -1,4 +1,4 @@
-DEPTH = 256;                   -- The size of data in bits
+DEPTH = 64;                   -- The size of data in bits
 WIDTH = 32;                    -- The size of memory in words
 ADDRESS_RADIX = DEC;          -- The radix for address values
 DATA_RADIX = BIN;             -- The radix for data values
@@ -16,7 +16,8 @@ BEGIN
 8 : 00010000100001000000000000000001;       -- BEQ   R4 com R4
 9 : 00001000000000000000000000001011;       -- JUMP  -> 11
 10: 00001000000000000000000000001001;       -- JUMP  -> 9
-11: 101011 00000000110000000000000101;      -- SW
+11: 10101100000000110000000000000101;       -- SW
 12: 10001100000001010000000000000101;	    -- LW
-[13..255]: 00000000000000000000000000000000; -- Others
+13: 10101100000000110000011100000101;	    --SW de mais que 512
+[14..63]: 00000000000000000000000000000000; -- Others
 END;

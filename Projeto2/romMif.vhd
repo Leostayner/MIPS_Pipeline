@@ -7,7 +7,7 @@ entity romMif is
     generic
     (
         DATA_WIDTH : natural := 32;
-        ADDR_WIDTH : natural := 16
+        ADDR_WIDTH : natural := 6  -- 2 elevado a 6 é 64
     );
 
     port (

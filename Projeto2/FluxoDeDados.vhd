@@ -13,14 +13,15 @@ entity FluxoDeDados is
 		sel_MuxRegRam: in std_logic;
 		hab_Escrita : in std_logic;
 		habLeituraMem: in std_logic;
-		habEscritaMem: in std_logic;
+		habEscritaMem: in std_logic;	
+		out_Led : out std_logic;
+		
 		
 		BEQ: in std_logic;
 		mux_beq: out std_logic;
 		
 		ULAop: in std_logic_vector(1 downto 0);
 		opcode: out std_logic_vector(5 downto 0);
-		
 	
 			  ---------Teste Wave Froms----------------
 	  outR0 : out std_logic_vector(31 downto 0);
@@ -83,6 +84,11 @@ signal out_BankRB : std_logic_vector(31 downto 0);
 --ram
 signal ram_out : std_logic_vector(31 downto 0);
 	
+--Decoder
+signal flag_decoder: std_logic_vector(1 downto 0);
+signal led_b: std_logic;
+	
+	
 begin
 
 	pcDebug <= out_PC;
@@ -98,7 +104,7 @@ begin
 		port map(i1 => out_MuxBeq , i2 => pcorjump , sel => sel_MuxPC, selected => out_MuxPC);
 	
 	PC : entity work.Registrador 
-		port map (DIN => out_MuxPC, DOUT => out_PC, ENABLE => "11111" ,CLK => clk, RST => '0');
+		port map (DIN => out_MuxPC, DOUT => out_PC, ENABLE => '1' ,CLK => clk, RST => '0');
 		
 	adder: entity work.FullAdder32
 		port map (a => "00000000000000000000000000000100",b => out_PC, c => '0', soma => pcAddOut);
@@ -127,12 +133,11 @@ begin
 	MuxSaidaBankRegister : entity work.mux2way
 		port map(i1 => out_BankRB , i2=> extendedImmediate, sel => sel_MuxSaidaBankReg, selected => out_MuxBankRegister);
 		 
-		  ------------------------------------------
 		
 	UCalu: entity work.UCAlu
 		port map(funct => out_Rom(5 downto 0), CUfd => ULAop, output => UCAluOut );
 		
-	--checar qm controla o invA invB e o Cin	
+
 	ALU: entity work.alu
 		port map(A =>out_BankRA, B=>out_MuxBankRegister, cin => UCAluOut(2), invA => UCAluOut(3), invB => UCAluOut(2), func => UCAluOut(1 downto 0), output => AluOut, zero => aluFlag, overflow => overflow, resultadoSoma => resultadoSoma);
 	
@@ -144,7 +149,7 @@ begin
 		port map(i1 => AluOut, i2=> ram_out, sel => sel_MuxRegRam, selected => out_MuxRegRam);
 		
 	Ram: entity work.ram
-		port map(clk => clk,addr => to_integer(unsigned(AluOut)), data => out_BankRB , canRead => habLeituraMem ,canWrite => habEscritaMem ,q =>ram_out);
+		port map(clk => clk,addr => to_integer(unsigned(AluOut)), data => out_BankRB , canRead => habLeituraMem and flag_decoder(0) ,canWrite => habEscritaMem and flag_decoder(0), q =>ram_out);
 		
 	testeOutRam <= ram_out;
 	
@@ -155,5 +160,15 @@ begin
 		port map(i1 => pcAddOut, i2 => pcImmeAddOut, sel => beqAnd, selected => out_MuxBeq);
 	
 	mux_beq <= beqAnd;
+	
+	Dec : entity work.Decoder
+		port map(addr => to_integer(unsigned(AluOut)), q => flag_decoder);
 		
+	Led_Reg : entity work.Registrador generic map (larguraDados   => 1)
+		port map (DIN(0) => led_b, DOUT(0) => out_Led, ENABLE => flag_decoder(1), CLK => clk, RST => '0');
+	
+	inLed   : entity work.or32
+		port map( input => out_BankRB, output => led_b);
+		
+	
 end architecture;

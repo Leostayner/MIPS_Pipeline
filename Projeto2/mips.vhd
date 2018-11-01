@@ -5,10 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity mips is
 	 Port ( 
 		KEY: in std_logic_vector(3 downto 0);
-		
-		-----------Teste Clock--------
-		clk: in std_logic;
-		------------------------------
+		CLOCK_50: in std_logic;
 		
 		HEX1 : out std_logic_vector(6 downto 0); 
 		HEX2 : out std_logic_vector(6 downto 0); 
@@ -17,16 +14,9 @@ entity mips is
 		HEX5 : out std_logic_vector(6 downto 0); 
 		HEX6 : out std_logic_vector(6 downto 0); 
 		HEX7 : out std_logic_vector(6 downto 0); 
-
-			  ---------Teste Wave Froms----------------
-	   --otR0 : out std_logic_vector(31 downto 0);
-	   otR1 : out std_logic_vector(31 downto 0);
-	   otR2 : out std_logic_vector(31 downto 0);
-	   otR3 : out std_logic_vector(31 downto 0);
-	   otR4 : out std_logic_vector(31 downto 0);
-	   otR5 : out std_logic_vector(31 downto 0);
-	   otR6 : out std_logic_vector(31 downto 0);
-		otR7 : out std_logic_vector(31 downto 0);
+		
+		LEDG : out std_logic_vector(8 downto 0);
+		
 		
 		overflow : out STD_LOGIC;
 		resultadoSoma: out std_logic_vector((32 -1) downto 0);
@@ -51,6 +41,8 @@ entity mips is
 		testeOutRam : out STD_LOGIC_vector(31 downto 0)	
 	   ------------------------------------------		
 	 );
+		
+		
 	 
 end mips;
  
@@ -60,7 +52,6 @@ signal	opcode : std_logic_vector(5 downto 0);
 signal	Mux1,Mux2,HabEscritaReg,Mux3,Mux4,BEQ,HabLeMEM,HabEscMEM: std_logic;
 signal	ULAop: std_logic_vector(1 downto 0);
 
-signal outR0 :  std_logic_vector(31 downto 0);
 signal outR1 :  std_logic_vector(31 downto 0);
 signal outR2 :  std_logic_vector(31 downto 0);
 signal outR3 :  std_logic_vector(31 downto 0);
@@ -69,11 +60,13 @@ signal outR5 :  std_logic_vector(31 downto 0);
 signal outR6 :  std_logic_vector(31 downto 0);
 signal outR7 :  std_logic_vector(31 downto 0);
 
+signal clk : std_logic;
+
 begin
 
 	fd: entity work.FluxoDeDados
 		port map(
-		clk =>  not KEY(0),
+		clk =>  clk,
 		sel_MuxPC => Mux1,
 		sel_MuxRtRd => Mux2,
 		sel_MuxSaidaBankReg => Mux3,
@@ -84,45 +77,28 @@ begin
 		BEQ => BEQ,
 		mux_beq => mux_beq,	
 		ULAop => ULAop,
-		opcode => opcode,		   
-		--outR0 => otR0,
-	   outR1 => otR1,
-	   outR2 => otR2,
-	   outR3 => otR3,
-	   outR4 => otR4,
-	   outR5 => otR5, 
-	   outR6 => otR6,
-		outR7 => otR7,
+		opcode => opcode,
+		
+		out_Led => LEDG(0),
+		
+	   outR1 => outR1,
+	   outR2 => outR2,
+	   outR3 => outR3,
+	   outR4 => outR4,
+	   outR5 => outR5, 
+	   outR6 => outR6,
+		outR7 => outR7,
+		
+		
+		
 		overflow => overflow,
 		resultadoSoma => resultadoSoma,
 		pcDebug  => out_PCTeste,
 		testAluA => testAluA,
 		testAluB => testAluB,
 		testeAluRes => testeAluRes,
-		testeOutRam => testeOutRam);	
-		
-		--outR0 <= otR0;
-	   outR1 <= otR1;
-	   outR2 <= otR2;
-	   outR3 <= otR3;
-	   outR4 <= otR4;
-	   outR5 <= otR5; 
-	   outR6 <= otR6;
-		outR7 <= otR7;
-		
-		
-	
---- teste debug sinais unidade de controle - 
-	 opcodeDebug <= opcode;
-	 Mux1Debug <= Mux1;
-	 Mux2Debug <= Mux2;
-	 HabEscritaRegDebug <= HabEscritaReg;
-	 Mux3Debug <= Mux3;
-	 Mux4Debug <= Mux4;
-	 BEQDebug <= BEQ;
-	 HabLeMEMDebug <= HabLeMEM;
-	 HabEscMEMDebug <= HabEscMEM;
-	 ULAopDebug <= ULAop;
+		testeOutRam => testeOutRam);
+			
 	
 	ucfd: entity work.UCfd 
 			port map(
@@ -146,4 +122,6 @@ begin
 	convhex6: entity work.conversorHex7Seg port map ( dadoHex => outR6(3 downto 0), saida7seg => HEX6);
 	convhex7: entity work.conversorHex7Seg port map ( dadoHex => outR7(3 downto 0), saida7seg => HEX7);
 		
+	detectorSub: work.edgeDetector(bordaSubida) port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => clk);
+
 end architecture;

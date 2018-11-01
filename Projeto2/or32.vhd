@@ -11,7 +11,7 @@ end entity;
 
 architecture arch_or32 of or32 is 
 
-signal carries:std_logic_vector(31 downto 0);
+signal carries:std_logic_vector(30 downto 0);
 
 begin
 carries(0) <= input(0) or input(1);

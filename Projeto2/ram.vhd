@@ -9,7 +9,7 @@ entity ram is
 	generic 
 	(
 		DATA_WIDTH : natural := 32;
-		ADDR_WIDTH : natural := 5
+		ADDR_WIDTH : natural := 9 -- 2 elevado a 9 é 512
 	);
 
 	port 
@@ -32,8 +32,6 @@ attribute ram_init_file : string;
 attribute ram_init_file of ram:
 signal is "initRAM.mif";
 
-	-- Register to hold the address 
-signal addr_reg : natural range 0 to 2**ADDR_WIDTH-1;
 
 begin
 
@@ -49,6 +47,5 @@ begin
 	q <= ram(addr) when canRead = '1' else
 	     (others => '0');
 
-	
 
 end rtl;
