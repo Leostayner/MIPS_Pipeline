@@ -8,7 +8,6 @@ Hugo Mendes, Leonardo Medeiros, Martim José, Sabrina Simão
 O nosso projeto utiliza os displays de 7 segmentos da placa para mostrar os valores dos 7 registradores. O botão KEY0, é utilizado para avançar para próxima instrução (clock). O botão KEY1 é utilizado para resetar o PC, banco de registradores e LED. E por fim, o LEDG0 é utilizado para indicar que o programa tentou armazenar algo em um endereço que excedente (a última instrução). A baixo, pode-se visualizar o funcionamento do projeto:
 
 https://www.youtube.com/watch?v=L-Grf2-ksCI
-![Video de funcionamento](mipssc_video.mp4)
 
 Nos tópicos abaixo é possível ver as instruções que o progama roda e os valores que são utilizados pelas instruções.
 
@@ -48,7 +47,7 @@ Nos tópicos abaixo é possível ver as instruções que o progama roda e os val
 | [11..511] : 00000000000000000000000000000000; |
 
 ## Erros e Warnings
-![Resultado da compilação](compilation.png)
+![Resultado da compilação](compilation.PNG)
 
 A compilação final do nosso projeto não indicou nenhum erro, porém obtivemos os seguintes warnings:
 
