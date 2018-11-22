@@ -11,6 +11,7 @@ entity mips is
 		
 		
 		--OUTPUT
+		HEX0 : out std_logic_vector(6 downto 0);
 		HEX1 : out std_logic_vector(6 downto 0); 
 		HEX2 : out std_logic_vector(6 downto 0); 
 		HEX3 : out std_logic_vector(6 downto 0); 
@@ -39,6 +40,7 @@ signal	Mux1,Mux2,HabEscritaReg,Mux3,Mux4,BEQ,HabLeMEM,HabEscMEM: std_logic;
 signal	ULAop: std_logic_vector(1 downto 0);
 
 --REGISTRADOR
+signal out_pc:  std_logic_vector(31 downto 0);
 signal outR1 :  std_logic_vector(31 downto 0);
 signal outR2 :  std_logic_vector(31 downto 0);
 signal outR3 :  std_logic_vector(31 downto 0);
@@ -76,6 +78,7 @@ begin
 		
 		out_Led => LEDG(0),
 		
+		outR0 => out_pc,
 	   outR1 => outR1,
 	   outR2 => outR2,
 	   outR3 => outR3,
@@ -110,6 +113,8 @@ begin
 	convhex5: entity work.conversorHex7Seg port map ( dadoHex => outR5(3 downto 0), saida7seg => HEX5);
 	convhex6: entity work.conversorHex7Seg port map ( dadoHex => outR6(3 downto 0), saida7seg => HEX6);
 	convhex7: entity work.conversorHex7Seg port map ( dadoHex => outR7(3 downto 0), saida7seg => HEX7);
+	
+	convhex0: entity work.conversorHex7Seg port map ( dadoHex => out_pc(5 downto 2), saida7seg => HEX0);
 		
 	--PORT MAP DETECTO BORDA DE SUBIDA CLOCK
 	detectorSub: work.edgeDetector(bordaSubida) port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => clk);
