@@ -1,6 +1,6 @@
 Analysis & Synthesis report for mips
-Thu Nov 22 16:55:39 2018
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Thu Nov 22 18:49:21 2018
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -70,7 +70,7 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2016  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -78,19 +78,20 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 22 16:55:39 2018       ;
-; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 22 18:49:21 2018       ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; mips                                        ;
 ; Top-level Entity Name              ; mips                                        ;
 ; Family                             ; Cyclone IV E                                ;
@@ -106,92 +107,92 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                           ; Setting            ; Default Value      ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; mips               ; mips               ;
-; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation              ; 2                  ;                    ;
-; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
-; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
-; Use smart compilation                                            ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                      ; Off                ; Off                ;
-; Restructure Multiplexers                                         ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
-; Preserve fewer node names                                        ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; State Machine Processing                                         ; Auto               ; Auto               ;
-; Safe State Machine                                               ; Off                ; Off                ;
-; Extract Verilog State Machines                                   ; On                 ; On                 ;
-; Extract VHDL State Machines                                      ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
-; Parallel Synthesis                                               ; On                 ; On                 ;
-; DSP Block Balancing                                              ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                               ; On                 ; On                 ;
-; Power-Up Don't Care                                              ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
-; Remove Duplicate Registers                                       ; On                 ; On                 ;
-; Ignore CARRY Buffers                                             ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
-; Ignore LCELL Buffers                                             ; Off                ; Off                ;
-; Ignore SOFT Buffers                                              ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
-; Optimization Technique                                           ; Balanced           ; Balanced           ;
-; Carry Chain Length                                               ; 70                 ; 70                 ;
-; Auto Carry Chains                                                ; On                 ; On                 ;
-; Auto Open-Drain Pins                                             ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
-; Auto ROM Replacement                                             ; On                 ; On                 ;
-; Auto RAM Replacement                                             ; On                 ; On                 ;
-; Auto DSP Block Replacement                                       ; On                 ; On                 ;
-; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
-; Strict RAM Replacement                                           ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
-; Auto RAM Block Balancing                                         ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
-; Auto Resource Sharing                                            ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
-; Timing-Driven Synthesis                                          ; On                 ; On                 ;
-; Report Parameter Settings                                        ; On                 ; On                 ;
-; Report Source Assignments                                        ; On                 ; On                 ;
-; Report Connectivity Checks                                       ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
-; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
-; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
-; Clock MUX Protection                                             ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
-; Block Design Naming                                              ; Auto               ; Auto               ;
-; SDC constraint protection                                        ; Off                ; Off                ;
-; Synthesis Effort                                                 ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
-+------------------------------------------------------------------+--------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; mips               ; mips               ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                        ; 2                  ;                    ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -211,43 +212,43 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------+---------+
-; alu.vhd                          ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/alu.vhd                ;         ;
-; mux2way.vhd                      ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mux2way.vhd            ;         ;
-; mux4way.vhd                      ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mux4way.vhd            ;         ;
-; FullAdder.vhd                    ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FullAdder.vhd          ;         ;
-; FullAdder32.vhd                  ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FullAdder32.vhd        ;         ;
-; or32.vhd                         ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/or32.vhd               ;         ;
-; UCAlu.vhd                        ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/UCAlu.vhd              ;         ;
-; ram.vhd                          ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/ram.vhd                ;         ;
-; romMif.vhd                       ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/romMif.vhd             ;         ;
-; bancoRegistradores.vhd           ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/bancoRegistradores.vhd ;         ;
-; Registrador.vhd                  ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/Registrador.vhd        ;         ;
-; extend16to32.vhd                 ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/extend16to32.vhd       ;         ;
-; FluxoDeDados.vhd                 ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd       ;         ;
-; UCfd.vhd                         ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/UCfd.vhd               ;         ;
-; mips.vhd                         ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd               ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/conversorHex7Seg.vhd   ;         ;
-; Decoder.vhd                      ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/Decoder.vhd            ;         ;
-; edgeDetector.vhd                 ; yes             ; User VHDL File                         ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/edgeDetector.vhd       ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf         ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_ram_block.inc  ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mux.inc            ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_decode.inc         ;         ;
-; aglobal180.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc         ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_rdenreg.inc          ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altrom.inc             ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altram.inc             ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altdpram.inc           ;         ;
-; db/altsyncram_9g41.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/db/altsyncram_9g41.tdf ;         ;
-; initROM.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/initROM.mif            ;         ;
-; db/altsyncram_mle1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/db/altsyncram_mle1.tdf ;         ;
-; initram.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/initram.mif            ;         ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+---------+
+; alu.vhd                          ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/alu.vhd                ;         ;
+; mux2way.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mux2way.vhd            ;         ;
+; mux4way.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mux4way.vhd            ;         ;
+; FullAdder.vhd                    ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FullAdder.vhd          ;         ;
+; FullAdder32.vhd                  ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FullAdder32.vhd        ;         ;
+; or32.vhd                         ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/or32.vhd               ;         ;
+; UCAlu.vhd                        ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/UCAlu.vhd              ;         ;
+; ram.vhd                          ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/ram.vhd                ;         ;
+; romMif.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/romMif.vhd             ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/bancoRegistradores.vhd ;         ;
+; Registrador.vhd                  ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/Registrador.vhd        ;         ;
+; extend16to32.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/extend16to32.vhd       ;         ;
+; FluxoDeDados.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd       ;         ;
+; UCfd.vhd                         ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/UCfd.vhd               ;         ;
+; mips.vhd                         ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd               ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/conversorHex7Seg.vhd   ;         ;
+; Decoder.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/Decoder.vhd            ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/edgeDetector.vhd       ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf             ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_ram_block.inc      ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_mux.inc                ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_decode.inc             ;         ;
+; aglobal161.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc             ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/a_rdenreg.inc              ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altrom.inc                 ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altram.inc                 ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altdpram.inc               ;         ;
+; db/altsyncram_9g41.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/db/altsyncram_9g41.tdf ;         ;
+; initROM.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/initROM.mif            ;         ;
+; db/altsyncram_mle1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/db/altsyncram_mle1.tdf ;         ;
+; initRAM.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/initRAM.mif            ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------+
@@ -1156,7 +1157,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -1165,100 +1166,106 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 22 16:55:14 2018
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Thu Nov 22 18:48:42 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: alu-alu_arch File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/alu.vhd Line: 25
-    Info (12023): Found entity 1: alu File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/alu.vhd Line: 5
+    Info (12022): Found design unit 1: alu-alu_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/alu.vhd Line: 25
+    Info (12023): Found entity 1: alu File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/alu.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux2way.vhd
-    Info (12022): Found design unit 1: mux2way-mux_arch File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mux2way.vhd Line: 22
-    Info (12023): Found entity 1: mux2way File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mux2way.vhd Line: 5
+    Info (12022): Found design unit 1: mux2way-mux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mux2way.vhd Line: 22
+    Info (12023): Found entity 1: mux2way File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mux2way.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux4way.vhd
-    Info (12022): Found design unit 1: mux4way-mux_arch File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mux4way.vhd Line: 20
-    Info (12023): Found entity 1: mux4way File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mux4way.vhd Line: 5
+    Info (12022): Found design unit 1: mux4way-mux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mux4way.vhd Line: 20
+    Info (12023): Found entity 1: mux4way File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mux4way.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fulladder.vhd
-    Info (12022): Found design unit 1: FullAdder-arch_FullAdder File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FullAdder.vhd Line: 18
-    Info (12023): Found entity 1: FullAdder File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FullAdder.vhd Line: 6
+    Info (12022): Found design unit 1: FullAdder-arch_FullAdder File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FullAdder.vhd Line: 18
+    Info (12023): Found entity 1: FullAdder File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FullAdder.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file fulladder32.vhd
-    Info (12022): Found design unit 1: FullAdder32-arch_FullAdder File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FullAdder32.vhd Line: 20
-    Info (12023): Found entity 1: FullAdder32 File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FullAdder32.vhd Line: 6
+    Info (12022): Found design unit 1: FullAdder32-arch_FullAdder File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FullAdder32.vhd Line: 20
+    Info (12023): Found entity 1: FullAdder32 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FullAdder32.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file or32.vhd
-    Info (12022): Found design unit 1: or32-arch_or32 File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/or32.vhd Line: 17
-    Info (12023): Found entity 1: or32 File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/or32.vhd Line: 5
+    Info (12022): Found design unit 1: or32-arch_or32 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/or32.vhd Line: 17
+    Info (12023): Found entity 1: or32 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/or32.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ucalu.vhd
-    Info (12022): Found design unit 1: UCAlu-mux_arch File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/UCAlu.vhd Line: 18
-    Info (12023): Found entity 1: UCAlu File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/UCAlu.vhd Line: 5
+    Info (12022): Found design unit 1: UCAlu-mux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/UCAlu.vhd Line: 18
+    Info (12023): Found entity 1: UCAlu File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/UCAlu.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
-    Info (12022): Found design unit 1: ram-rtl File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/ram.vhd Line: 30
-    Info (12023): Found entity 1: ram File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/ram.vhd Line: 7
+    Info (12022): Found design unit 1: ram-rtl File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/ram.vhd Line: 30
+    Info (12023): Found entity 1: ram File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/ram.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file rommif.vhd
-    Info (12022): Found design unit 1: romMif-initFileROM File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/romMif.vhd Line: 23
-    Info (12023): Found entity 1: romMif File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/romMif.vhd Line: 5
+    Info (12022): Found design unit 1: romMif-initFileROM File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/romMif.vhd Line: 23
+    Info (12023): Found entity 1: romMif File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/romMif.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/bancoRegistradores.vhd Line: 44
-    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/bancoRegistradores.vhd Line: 6
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/bancoRegistradores.vhd Line: 44
+    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/bancoRegistradores.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file registrador.vhd
-    Info (12022): Found design unit 1: Registrador-comportamento File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/Registrador.vhd Line: 21
-    Info (12023): Found entity 1: Registrador File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/Registrador.vhd Line: 4
+    Info (12022): Found design unit 1: Registrador-comportamento File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/Registrador.vhd Line: 21
+    Info (12023): Found entity 1: Registrador File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/Registrador.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file extend16to32.vhd
-    Info (12022): Found design unit 1: extend16to32-arch_or32 File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/extend16to32.vhd Line: 15
-    Info (12023): Found entity 1: extend16to32 File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/extend16to32.vhd Line: 5
+    Info (12022): Found design unit 1: extend16to32-arch_or32 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/extend16to32.vhd Line: 15
+    Info (12023): Found entity 1: extend16to32 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/extend16to32.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux32way.vhd
-    Info (12022): Found design unit 1: mux32way-mux_arch File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mux32way.vhd Line: 17
-    Info (12023): Found entity 1: mux32way File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mux32way.vhd Line: 5
+    Info (12022): Found design unit 1: mux32way-mux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mux32way.vhd Line: 17
+    Info (12023): Found entity 1: mux32way File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mux32way.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dmux32way.vhd
-    Info (12022): Found design unit 1: dmux32way-dmux_arch File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/dmux32way.vhd Line: 18
-    Info (12023): Found entity 1: dmux32way File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/dmux32way.vhd Line: 5
+    Info (12022): Found design unit 1: dmux32way-dmux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/dmux32way.vhd Line: 18
+    Info (12023): Found entity 1: dmux32way File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/dmux32way.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fluxodedados.vhd
-    Info (12022): Found design unit 1: FluxoDeDados-arch File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 41
-    Info (12023): Found entity 1: FluxoDeDados File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 5
+    Info (12022): Found design unit 1: FluxoDeDados-arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 41
+    Info (12023): Found entity 1: FluxoDeDados File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ucfd.vhd
-    Info (12022): Found design unit 1: UCFd-mux_arch File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/UCfd.vhd Line: 17
-    Info (12023): Found entity 1: UCFd File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/UCfd.vhd Line: 5
+    Info (12022): Found design unit 1: UCFd-mux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/UCfd.vhd Line: 17
+    Info (12023): Found entity 1: UCFd File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/UCfd.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mips.vhd
-    Info (12022): Found design unit 1: mips-mux_arch File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 31
-    Info (12023): Found entity 1: mips File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 5
+    Info (12022): Found design unit 1: mips-mux_arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 31
+    Info (12023): Found entity 1: mips File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoder.vhd
-    Info (12022): Found design unit 1: Decoder-arch File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/Decoder.vhd Line: 24
-    Info (12023): Found entity 1: Decoder File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/Decoder.vhd Line: 5
+    Info (12022): Found design unit 1: Decoder-arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/Decoder.vhd Line: 24
+    Info (12023): Found entity 1: Decoder File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/Decoder.vhd Line: 5
 Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/edgeDetector.vhd Line: 15
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/edgeDetector.vhd Line: 33
-    Info (12023): Found entity 1: edgeDetector File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/edgeDetector.vhd Line: 4
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/edgeDetector.vhd Line: 15
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/edgeDetector.vhd Line: 33
+    Info (12023): Found entity 1: edgeDetector File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/edgeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file forwarding_unit.vhd
+    Info (12022): Found design unit 1: forwarding_unit-arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/forwarding_unit.vhd Line: 18
+    Info (12023): Found entity 1: forwarding_unit File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/forwarding_unit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hazard_detection_unit.vhd
+    Info (12022): Found design unit 1: hazard_detection_unit-arch File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/hazard_detection_unit.vhd Line: 19
+    Info (12023): Found entity 1: hazard_detection_unit File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/hazard_detection_unit.vhd Line: 5
 Info (12127): Elaborating entity "mips" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "LEDG[8..1]" at mips.vhd(23) File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
-Info (12128): Elaborating entity "FluxoDeDados" for hierarchy "FluxoDeDados:fd" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 61
-Warning (10036): Verilog HDL or VHDL warning at FluxoDeDados.vhd(55): object "beqAnd" assigned a value but never read File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 55
-Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:PC" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 109
-Info (12128): Elaborating entity "FullAdder32" for hierarchy "FluxoDeDados:fd|FullAdder32:adder" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 115
-Info (12128): Elaborating entity "FullAdder" for hierarchy "FluxoDeDados:fd|FullAdder32:adder|FullAdder:a0" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FullAdder32.vhd Line: 37
-Info (12128): Elaborating entity "romMif" for hierarchy "FluxoDeDados:fd|romMif:Rom" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 119
-Warning (10541): VHDL Signal Declaration warning at romMif.vhd(26): used implicit default value for signal "content" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/romMif.vhd Line: 26
-Info (12128): Elaborating entity "mux2way" for hierarchy "FluxoDeDados:fd|mux2way:MuxRtRd" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 123
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "FluxoDeDados:fd|bancoRegistradores:BankRegister" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 127
-Warning (10492): VHDL Process Statement warning at bancoRegistradores.vhd(54): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/bancoRegistradores.vhd Line: 54
-Info (12128): Elaborating entity "extend16to32" for hierarchy "FluxoDeDados:fd|extend16to32:Ext" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 139
-Info (12128): Elaborating entity "mux2way" for hierarchy "FluxoDeDados:fd|mux2way:MuxSaidaBankRegister" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 143
-Info (12128): Elaborating entity "UCAlu" for hierarchy "FluxoDeDados:fd|UCAlu:UCalu" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 147
-Info (12128): Elaborating entity "alu" for hierarchy "FluxoDeDados:fd|alu:ALU" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 151
-Info (12128): Elaborating entity "mux2way" for hierarchy "FluxoDeDados:fd|alu:ALU|mux2way:choiceA" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/alu.vhd Line: 76
-Info (12128): Elaborating entity "mux4way" for hierarchy "FluxoDeDados:fd|alu:ALU|mux4way:final" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/alu.vhd Line: 89
-Info (12128): Elaborating entity "or32" for hierarchy "FluxoDeDados:fd|alu:ALU|or32:flag" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/alu.vhd Line: 94
-Info (12128): Elaborating entity "ram" for hierarchy "FluxoDeDados:fd|ram:Ram" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 159
-Info (12128): Elaborating entity "Decoder" for hierarchy "FluxoDeDados:fd|Decoder:Dec" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 167
-Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:Led_Reg" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 171
-Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:Reg_IF_ID" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 193
-Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:Reg_ID_EX" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 198
-Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:Reg_EX_MEM" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 205
-Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:Reg_MEM_WB" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 211
-Info (12128): Elaborating entity "UCFd" for hierarchy "UCFd:ucfd" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 93
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:convhex1" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 109
-Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 120
+Warning (10873): Using initial value X (don't care) for net "LEDG[8..1]" at mips.vhd(23) File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
+Info (12128): Elaborating entity "FluxoDeDados" for hierarchy "FluxoDeDados:fd" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 61
+Warning (10036): Verilog HDL or VHDL warning at FluxoDeDados.vhd(55): object "beqAnd" assigned a value but never read File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 55
+Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:PC" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 109
+Info (12128): Elaborating entity "FullAdder32" for hierarchy "FluxoDeDados:fd|FullAdder32:adder" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 115
+Info (12128): Elaborating entity "FullAdder" for hierarchy "FluxoDeDados:fd|FullAdder32:adder|FullAdder:a0" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FullAdder32.vhd Line: 37
+Info (12128): Elaborating entity "romMif" for hierarchy "FluxoDeDados:fd|romMif:Rom" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 119
+Warning (10541): VHDL Signal Declaration warning at romMif.vhd(26): used implicit default value for signal "content" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/romMif.vhd Line: 26
+Info (12128): Elaborating entity "mux2way" for hierarchy "FluxoDeDados:fd|mux2way:MuxRtRd" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 123
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "FluxoDeDados:fd|bancoRegistradores:BankRegister" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 127
+Warning (10492): VHDL Process Statement warning at bancoRegistradores.vhd(54): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/bancoRegistradores.vhd Line: 54
+Info (12128): Elaborating entity "extend16to32" for hierarchy "FluxoDeDados:fd|extend16to32:Ext" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 139
+Info (12128): Elaborating entity "mux2way" for hierarchy "FluxoDeDados:fd|mux2way:MuxSaidaBankRegister" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 143
+Info (12128): Elaborating entity "UCAlu" for hierarchy "FluxoDeDados:fd|UCAlu:UCalu" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 147
+Info (12128): Elaborating entity "alu" for hierarchy "FluxoDeDados:fd|alu:ALU" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 151
+Info (12128): Elaborating entity "mux2way" for hierarchy "FluxoDeDados:fd|alu:ALU|mux2way:choiceA" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/alu.vhd Line: 76
+Info (12128): Elaborating entity "mux4way" for hierarchy "FluxoDeDados:fd|alu:ALU|mux4way:final" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/alu.vhd Line: 89
+Info (12128): Elaborating entity "or32" for hierarchy "FluxoDeDados:fd|alu:ALU|or32:flag" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/alu.vhd Line: 94
+Info (12128): Elaborating entity "ram" for hierarchy "FluxoDeDados:fd|ram:Ram" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 159
+Info (12128): Elaborating entity "Decoder" for hierarchy "FluxoDeDados:fd|Decoder:Dec" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 167
+Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:Led_Reg" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 171
+Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:Reg_IF_ID" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 193
+Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:Reg_ID_EX" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 198
+Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:Reg_EX_MEM" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 205
+Info (12128): Elaborating entity "Registrador" for hierarchy "FluxoDeDados:fd|Registrador:Reg_MEM_WB" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/FluxoDeDados.vhd Line: 211
+Info (12128): Elaborating entity "UCFd" for hierarchy "UCFd:ucfd" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 93
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:convhex1" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 109
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 120
 Warning (276020): Inferred RAM node "FluxoDeDados:fd|ram:Ram|ram_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "FluxoDeDados:fd|romMif:Rom|content_rtl_0" 
@@ -1301,7 +1308,7 @@ Info (12133): Instantiated megafunction "FluxoDeDados:fd|romMif:Rom|altsyncram:c
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "initROM.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9g41.tdf
-    Info (12023): Found entity 1: altsyncram_9g41 File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/db/altsyncram_9g41.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_9g41 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/db/altsyncram_9g41.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "FluxoDeDados:fd|ram:Ram|altsyncram:ram_rtl_0"
 Info (12133): Instantiated megafunction "FluxoDeDados:fd|ram:Ram|altsyncram:ram_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1320,32 +1327,32 @@ Info (12133): Instantiated megafunction "FluxoDeDados:fd|ram:Ram|altsyncram:ram_
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "initRAM.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mle1.tdf
-    Info (12023): Found entity 1: altsyncram_mle1 File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/db/altsyncram_mle1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_mle1 File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/db/altsyncram_mle1.tdf Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
-    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
-    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
-    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
-    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
-    Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
-    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
-    Warning (13410): Pin "LEDG[8]" is stuck at GND File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
+    Warning (13410): Pin "LEDG[8]" is stuck at GND File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 9
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/leo_v/Desktop/Org/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 9
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 9
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Hugo/Documents/GitHub/MIPS_Pipeline/MIPS_Pipeline/mips.vhd Line: 9
 Info (21057): Implemented 3220 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 65 output pins
     Info (21061): Implemented 3086 logic cells
     Info (21064): Implemented 64 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Thu Nov 22 16:55:39 2018
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Thu Nov 22 18:49:21 2018
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:01:07
 
 

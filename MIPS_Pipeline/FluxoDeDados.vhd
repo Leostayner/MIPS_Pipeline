@@ -212,5 +212,23 @@ begin
 		port map (DIN => out_EX_MEM(106 downto 105) & ram_out & out_EX_MEM(68 downto 37) & out_EX_MEM(4 downto 0) , 
 					 DOUT => out_MEM_WB, ENABLE => '1', CLK => clk, RST => reset);
 	
+	--HAZARD DETECTION UNIT--
+	Hazard     : entity work.hazard_detection_unit
+						
+						port map(ID_EXMemRead => out_ID_EX(143), ID_EXRegisterRt => out_ID_EX(9 downto 5), 
+						
+						IF_IDRegisterRs => out_IF_ID(20 downto 16), IF_IDRegisterRt => out_IF_ID(15 downto 11), 
+						
+						PC_Enable => ???, IF_ID_Enable => ???, ID_EX_Enable =>???);
+						
+	--FOWARDING UNIT--
+	Foward    : entity work.fowarding_unit
+						
+						port map(EX_MEMRegWrite =>, MEM_WBRegWrite =>, EX_MEMRegisterRd =>,
+						
+						ID_EXRegisterRs =>, MEM_WBRegisterRd=>, ID_EXRegisterRt =>, 
+						
+						ForwardA =>, ForwardB => );
+	
 	
 end architecture;
