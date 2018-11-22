@@ -1,10 +1,11 @@
 |mips
-KEY[0] => edgedetector:detectorSub.entrada
+KEY[0] => ~NO_FANOUT~
 KEY[1] => edgedetector:detectorSub2.entrada
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
 CLOCK_50 => edgedetector:detectorSub.clk
 CLOCK_50 => edgedetector:detectorSub2.clk
+CLOCK_50 => divisorgenerico:fazDivisaoInteiro1.clk
 HEX0[0] << conversorhex7seg:convhex0.saida7seg[0]
 HEX0[1] << conversorhex7seg:convhex0.saida7seg[1]
 HEX0[2] << conversorhex7seg:convhex0.saida7seg[2]
@@ -10850,5 +10851,68 @@ clk => saidaQ.CLK
 entrada => saida.IN1
 entrada => saidaQ.DATAIN
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips|divisorGenerico:fazDivisaoInteiro1
+setup[0] => Div0.IN63
+setup[1] => Div0.IN62
+setup[2] => Div0.IN61
+setup[3] => Div0.IN60
+setup[4] => Div0.IN59
+setup[5] => Div0.IN58
+setup[6] => Div0.IN57
+setup[7] => Div0.IN56
+setup[8] => Div0.IN55
+setup[9] => Div0.IN54
+setup[10] => Div0.IN53
+setup[11] => Div0.IN52
+setup[12] => Div0.IN51
+setup[13] => Div0.IN50
+setup[14] => Div0.IN49
+setup[15] => Div0.IN48
+setup[16] => Div0.IN47
+setup[17] => Div0.IN46
+setup[18] => Div0.IN45
+setup[19] => Div0.IN44
+setup[20] => Div0.IN43
+setup[21] => Div0.IN42
+setup[22] => Div0.IN41
+setup[23] => Div0.IN40
+setup[24] => Div0.IN39
+setup[25] => Div0.IN38
+setup[26] => Div0.IN37
+setup[27] => Div0.IN36
+setup[28] => Div0.IN35
+setup[29] => Div0.IN34
+setup[30] => Div0.IN33
+setup[31] => Div0.IN32
+clk => tick.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+clk => contador[14].CLK
+clk => contador[15].CLK
+clk => contador[16].CLK
+clk => contador[17].CLK
+clk => contador[18].CLK
+clk => contador[19].CLK
+clk => contador[20].CLK
+clk => contador[21].CLK
+clk => contador[22].CLK
+clk => contador[23].CLK
+clk => contador[24].CLK
+clk => contador[25].CLK
+saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
 
 

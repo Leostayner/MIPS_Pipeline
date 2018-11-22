@@ -51,6 +51,7 @@ signal outR7 :  std_logic_vector(31 downto 0);
 
 --CLOCK
 signal clk : std_logic;
+signal div_clk : std_logic;
 
 --RESET
 signal reset: std_logic;
@@ -117,9 +118,15 @@ begin
 	convhex0: entity work.conversorHex7Seg port map ( dadoHex => out_pc(5 downto 2), saida7seg => HEX0);
 		
 	--PORT MAP DETECTO BORDA DE SUBIDA CLOCK
-	detectorSub: work.edgeDetector(bordaSubida) port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => clk);
+	detectorSub: work.edgeDetector(bordaSubida) port map (clk => CLOCK_50, entrada => div_clk, saida => clk);
 
 	--PORT MAP DETECTO BORDA DE SUBIDA RESET
 	detectorSub2: work.edgeDetector(bordaSubida) port map (clk => CLOCK_50, entrada => (not KEY(1)), saida => reset);
 
+	
+	--PORT MAP DIVISOR
+	fazDivisaoInteiro1: entity work.divisorGenerico(divInteiro)
+            generic map (divisor => 50000000)   -- divide por frequencia.
+            port map (clk => CLOCK_50, saida_clk => div_clk, setup => 3);
+				
 end architecture;
