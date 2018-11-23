@@ -7,7 +7,7 @@ Hugo Mendes, Leonardo Medeiros, Martim José, Sabrina Simão
 ## Como utilizar
 O nosso projeto utiliza os displays de 7 segmentos da placa para mostrar os valores dos 7 registradores, e o último segmento para mostrar em qual instrução está (sendo limitado até 15/F). O botão KEY0, é utilizado para avançar para próxima instrução (clock). O botão KEY1 é utilizado para resetar o PC, banco de registradores e LED. E por fim, o LEDG0 é utilizado para indicar que o programa tentou armazenar algo em um endereço que excedente (a última instrução).A baixo, pode-se visualizar o funcionamento do projeto:
 
-Video
+https://www.youtube.com/watch?v=NN2UL7stdgA
 
 Nos tópicos abaixo é possível ver as instruções que o progama roda e os valores que são utilizados pelas instruções.
 
